@@ -6,3 +6,13 @@
 • compare slt
 • jump and link jal
 • stores sw
+
+
+auipc: necessità di un mux davanti allo shift left perchè dobbiamo sommare imm a pc e ci manca il collegamento, ci serve imm non shiftato. il mux finale diventa da 3 perchè dobbiamo scrivere nel RG
+lui: bisogna mettere l'immediate nel RG
+beq: non servono modifiche
+lw:
+srai: aggiungiamo uno B.sfihter e vediamo come collegare questa uscita a RG--> il mux finale diventa da 4, quanti register davanti?
+andi,xor:la gestisce la ALU
+alt: compare rs1 e rs2 e a seconda del risultato va a scrivere, gestito dalla ALU
+jal: serve un collegamnto da PC+4 a RF, può servire un mux prima del registro IF/ID
