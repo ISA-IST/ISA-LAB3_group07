@@ -1,0 +1,8 @@
+• arithmetic add, addi, auipc, lui
+• branches beq
+• loads lw
+• shifts srai
+• logical andi, xor
+• compare slt
+• jump and link jal
+• stores sw
