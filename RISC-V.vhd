@@ -23,14 +23,17 @@ END COMPONENT;
 COMPONENT control IS
 PORT (
 	OPCODE : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-  FUNC3  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-  FUNC7  : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-
 	ALU_CTRL : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	ALU_SRC1, SEL_MUX_JAL_AUIPC,REG_WRITE, BRANCH ,SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
 	MEM_TO_REG : OUT STD_LOGIC_VECTOR(1 DOWNTO 0) --"FINAL MUX",
+);
+END COMPONENT;
 
-
+COMPONENT alu_control IS
+PORT (
+  FUNC3  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+  ALU_OP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	ALU_CTRL : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
 );
 END COMPONENT;
 
@@ -62,10 +65,11 @@ END COMPONENT;
 SIGNAL READ_REG_1,READ_REG_2 :std_logic_vector (4 downto 0);
 -- SIGNAL FROM id TO CONTROL
 SIGNAL OPCODE_SGN : std_logic_vector (6 downto 0);
-
-
 --SIGNAL FROM id TO imm_gen
 SIGNAL INSTR_SGN :std_logic_vector(31 downto 0);
+--SIGNAL FROM id TO ex
+SIGNAL PC_SGN : std_logic_vector(63 downto 0);
 
 BEGIN
-  ID : regn_bit ( N <= 98, PC => D(97 downto 32), INSTR => D(31 downto 0), CLK => CLK , RST_n => RST_n , Q(97 downto 91) => OPCODE_SGN , Q() => , Q() =>READ_REG_1, Q() => READ_REG_2 )
+  ID : regn_bit GENERIC MAP(N => 96) PORT MAP(  D(95 downto 32) => PC ,  D(31 downto 0) => INSTR , CLK => CLK , RST_n => RST_n , Q(95 downto 32) => PC_SGN,
+      Q(31 downto 25) => OPCODE_SGN , Q(26 downto 22) => READ_REG_1, Q(22 downto 18) => READ_REG_2, Q(31 downto 0) => INSTR_SGN);
