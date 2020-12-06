@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
 ENTITY RISC_V IS
-PORT( CLOCK,RST_n : IN std_logic;
+PORT( CLK,RST_n : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
       READ_DATA :    IN std_logic_vector(31 downto 0);
       PC :      OUT std_logic_vector(63 downto 0);
