@@ -1,5 +1,5 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
 
 ENTITY control IS
 PORT (
@@ -22,9 +22,9 @@ END control;
 
 ARCHITECTURE BEH OF control IS
 
-CTRL_GEN : PROCESS(OPCODE)
+CTRL_GEN : PROCESS(OPCODE,FUNC3)
 
-           begin
+           BEGIN
 						 --DEFAULT ASSIGNMENTS
 					BRANCH      <= '0';
 					MEM_WRITE   <= '0';
@@ -39,72 +39,72 @@ CTRL_GEN : PROCESS(OPCODE)
 					SEL_MUX_JAL_AUIPC <= '0'; --ALWAYS ON JAL
 
 
-					 case(OPCODE) is
+					 CASE(OPCODE) is
 
-					 	when "0110111"  =>       --LUI
+					 	WHEN "0110111"  =>       --LUI
 							MEM_TO_REG <= "10";
 
 
-						when "0010111"  =>       --ALUIPC
+						WHEN "0010111"  =>       --ALUIPC
 							SEL_MUX_ADD_SUM <= '1';
 							MEM_TO_REG <= "11";
 							SEL_MUX_JAL_AUIPC <= '1';
 
 
-						when "1101111"  =>       --JAL
+						WHEN "1101111"  =>       --JAL
 							MEM_TO_REG <= "11";
 
-						when "1100011"  =>       --BEQ
+						WHEN "1100011"  =>       --BEQ
 							ALU_CTRL <= "011";
 							BRANCH <= '1';
 
 
 
-						when "0000011"  =>       --LW
+						WHEN "0000011"  =>       --LW
 							REG_WRITE <= '1';
 							MEM_READ  <= '1';
 							MEM_TO_REG <= "00";
 
-						when"0100011"  =>       --SW
+						WHEN"0100011"  =>       --SW
 							MEM_WRITE <= '1';
 
-						when "0010011"  =>       --ADDI, ANDI, SRAI
+						WHEN "0010011"  =>       --ADDI, ANDI, SRAI
 
              MEM_TO_REG <= "01";
 
-							if (FUNC3 = "000") then --ADDI
+							IF (FUNC3 = "000") then --ADDI
 								ALU_CTRL <= "000";
 								ALU_SRC1 <= '1';
-							elsif (FUNC3 = "111")
+							elsIF (FUNC3 = "111")
 								ALU_CTRL <= "001"; --ANDI
-							end if;
+							END IF;
 
-							if (FUNC3 = "101") then --SRAI
+							IF (FUNC3 = "101") then --SRAI
 								ALU_CTRL <= "010";
-							end if;
+							END IF;
 
 
-						when "0110011"  =>         --ADD, XOR, SLT
+						WHEN "0110011"  =>         --ADD, XOR, SLT
 
 							MEM_TO_REG <= "01";
 
-							if (FUNC3 = "000") then --ADD
+							IF (FUNC3 = "000") then --ADD
 								ALU_CTRL <= "000";
-							elsif FUNC3 = "100" then  --ADD
+							elsIF FUNC3 = "100" then  --ADD
 								ALU_CTRL <= "100";       -- XOR
-							end if;
+							END IF;
 
- 							if (FUNC3 = "010") then     --SLT
+ 							IF (FUNC3 = "010") then     --SLT
 								ALU_CTRL <= "011"       -- SUBTRACT COMMAND
 
- 							end if;
+ 							END IF;
 
 
 
 
-					 	when others =>            --DEFAULT
+					 	WHEN OTHERS =>            --DEFAULT
 
-					 end case;
+					 END CASE;
 
 
 END BEH;
