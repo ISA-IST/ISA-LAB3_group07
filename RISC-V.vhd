@@ -2,8 +2,8 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-ENTITY RISK_V IS
-PORT( CLOCK,RST : IN std_logic;
+ENTITY RISC_V IS
+PORT( CLOCK,RST_n : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
       READ_DATA :    IN std_logic_vector(31 downto 0);
       PC :      OUT std_logic_vector(63 downto 0);
@@ -11,7 +11,7 @@ PORT( CLOCK,RST : IN std_logic;
       );
 END ENTITY;
 
-ARCHITECTURE beh OF RISK_F IS
+ARCHITECTURE beh OF RISC_V IS
 COMPONENT ALU IS
 PORT( DATA_A,DATA_B: IN std_logic_vector(63 downto 0);
       CTRL: IN std_logic_vector(2 downto 0);
@@ -49,5 +49,23 @@ PORT(
 		DATA_OUT_1, DATA_OUT_2: OUT STD_LOGIC_VECTOR(63 DOWNTO 0));
 
 END COMPONENT;
+
+COMPONENT regnbit IS
+	GENERIC ( N : POSITIVE := 2
+				);
+	PORT( D    : IN STD_LOGIC_VECTOR(N-1 downto 0);
+		  CLK, RST_n : IN STD_LOGIC;
+		  Q    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+		 );
+END COMPONENT;
+-- SIGNAL FORM id TO rf
+SIGNAL READ_REG_1,READ_REG_2 :std_logic_vector (4 downto 0);
+-- SIGNAL FROM id TO CONTROL
+SIGNAL OPCODE_SGN : std_logic_vector (6 downto 0);
+
+
+--SIGNAL FROM id TO imm_gen
+SIGNAL INSTR_SGN :std_logic_vector(31 downto 0);
+
 BEGIN
-  ID : regn_bit ()
+  ID : regn_bit ( N <= 98, PC => D(97 downto 32), INSTR => D(31 downto 0), CLK => CLK , RST_n => RST_n , Q(97 downto 91) => OPCODE_SGN , Q() => , Q() =>READ_REG_1, Q() => READ_REG_2 )
