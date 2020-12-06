@@ -71,5 +71,5 @@ SIGNAL INSTR_SGN :std_logic_vector(31 downto 0);
 SIGNAL PC_SGN : std_logic_vector(63 downto 0);
 
 BEGIN
-  ID : regn_bit GENERIC MAP(N => 96) PORT MAP(  D(95 downto 32) => PC ,  D(31 downto 0) => INSTR , CLK => CLK , RST_n => RST_n , Q(95 downto 32) => PC_SGN,
+  ID : regnbit GENERIC MAP(N => 96) PORT MAP(  D(95 downto 32) => PC ,  D(31 downto 0) => INSTR , CLK => CLK , RST_n => RST_n , Q(95 downto 32) => PC_SGN,
       Q(31 downto 25) => OPCODE_SGN , Q(26 downto 22) => READ_REG_1, Q(22 downto 18) => READ_REG_2, Q(31 downto 0) => INSTR_SGN);

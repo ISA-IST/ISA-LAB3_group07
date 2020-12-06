@@ -16,11 +16,12 @@ BEGIN
 --INT_OUT <= to_integer(to_signed(DATA_OUT));
   process(CTRL)
   variable OUT_signed : signed (63 downto 0);
-  variable INT_B : integer range 0 to 2^64-1;
-  variable error: integer range 0 to 1;
-  INT_B <= to_integer(to_unsigned(DATA_B))
+  variable INT_B : integer range 0 to 2**5-1 := 0;
+  variable error: integer range 0 to 1 := 0;
+
     begin
-	error := 0;
+    INT_B := to_integer(unsigned(DATA_B(4 downto 0)));
+   	error := 0;
     case CTRL is
       --AND
       when "001" =>  DATA_OUT <= DATA_A and DATA_B;
@@ -37,13 +38,13 @@ BEGIN
       when "100" =>  DATA_OUT <= DATA_A xor DATA_B;
 
       -- BARREL SHIFTER
-      when "010" => DATA_OUT <= DATA_A << INT_B;
+      when "010" => DATA_OUT <= std_logic_vector(shift_right(unsigned(DATA_A), INT_B));
 
       when others => DATA_OUT <= (OTHERS => '0');
                       ZERO <= '0';
 					  error := 1;
     end case;
-	if DATA_OUT = (OTHERS=>'0') AND error = 0 then
+	if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" AND error = 0 then
                       ZERO <= '1';
     end if;
   end process;
