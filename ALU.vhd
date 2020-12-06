@@ -16,19 +16,21 @@ BEGIN
 --INT_OUT <= to_integer(to_signed(DATA_OUT));
   process(CTRL)
   variable OUT_signed : signed (63 downto 0);
-  variable INT_B : integer range 2^64-1 to 0;
+  variable INT_B : integer range 0 to 2^64-1;
+  variable error: integer range 0 to 1;
   INT_B <= to_integer(to_unsigned(DATA_B))
     begin
+	error := 0;
     case CTRL is
       --AND
       when "001" =>  DATA_OUT <= DATA_A and DATA_B;
                     
       --ADD
-      when "000" =>  OUT_signed = signed(DATA_A) + signed(DATA_B);
+      when "000" =>  OUT_signed := signed(DATA_A) + signed(DATA_B);
                     DATA_OUT <= std_logic_vector(OUT_signed);
                    
       -- SUB
-      when "011" =>  OUT_signed = signed(DATA_A) - signed(DATA_B);
+      when "011" =>  OUT_signed := signed(DATA_A) - signed(DATA_B);
                     DATA_OUT <= std_logic_vector(OUT_signed);
                     
       -- XOR
@@ -39,9 +41,10 @@ BEGIN
                    
       when others => DATA_OUT <= (OTHERS => '0');
                       ZERO <= '0';
+					  error := 1;
     end case;
-	if DATA_OUT = (OTHERS=>'0') then
-               ZERO <= '1';
+	if DATA_OUT = (OTHERS=>'0') AND error = 0 then
+                      ZERO <= '1';
     end if;
   end process;
 END ARCHITECTURE;
