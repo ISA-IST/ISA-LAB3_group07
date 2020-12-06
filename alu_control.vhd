@@ -31,13 +31,13 @@ ALU_CTRL_GEN: PROCESS(FUNC3,ALU_OP)
           ALU_CTRL <= "100";
         END IF;
         IF (FUNC3 = "010") then     --SLT
-          ALU_CTRL <= "011"       -- SUBTRACT COMMAND
+          ALU_CTRL <= "011";       -- SUBTRACT COMMAND
         END IF;
 
       WHEN "11" => --ADDI, ANDI, SRAI
         IF (FUNC3 = "000") then --ADDI
           ALU_CTRL <= "000";
-        ELSIF (FUNC3 = "111")
+        ELSIF (FUNC3 = "111") then
           ALU_CTRL <= "001"; --ANDI
         END IF;
         IF (FUNC3 = "101") then --SRAI
