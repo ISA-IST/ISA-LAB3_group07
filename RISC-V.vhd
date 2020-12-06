@@ -6,7 +6,7 @@ ENTITY RISC_V IS
 PORT( CLK,RST_n : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
       READ_DATA :    IN std_logic_vector(31 downto 0);
-      PC :      OUT std_logic_vector(63 downto 0);
+      PC :      BUFFER std_logic_vector(63 downto 0);
       ADDRESS, WRITE_DATA : OUT std_logic_vector(31 downto 0)
       );
 END ENTITY;
@@ -61,15 +61,19 @@ COMPONENT regnbit IS
 		  Q    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
 		 );
 END COMPONENT;
--- SIGNAL FORM id TO rf
-SIGNAL READ_REG_1,READ_REG_2 :std_logic_vector (4 downto 0);
--- SIGNAL FROM id TO CONTROL
-SIGNAL OPCODE_SGN : std_logic_vector (6 downto 0);
---SIGNAL FROM id TO imm_gen
-SIGNAL INSTR_SGN :std_logic_vector(31 downto 0);
+
 --SIGNAL FROM id TO ex
-SIGNAL PC_SGN : std_logic_vector(63 downto 0);
+SIGNAL PC_SGN , PC_SGN_4 : std_logic_vector(63 downto 0);
+
+--SIGNAL FROM add+4 TO id
+SIGNAL NEXT_PC : std_logic_vector(63 downto 0);
 
 BEGIN
-  ID : regnbit GENERIC MAP(N => 96) PORT MAP(  D(95 downto 32) => PC ,  D(31 downto 0) => INSTR , CLK => CLK , RST_n => RST_n , Q(95 downto 32) => PC_SGN,
-      Q(31 downto 25) => OPCODE_SGN , Q(26 downto 22) => READ_REG_1, Q(22 downto 18) => READ_REG_2, Q(31 downto 0) => INSTR_SGN);
+
+  NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
+
+  ID1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN);
+
+
+
+  ID2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN_4);
