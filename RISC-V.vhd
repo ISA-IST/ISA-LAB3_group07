@@ -72,13 +72,14 @@ PORT(
 		 );
 END COMPONENT;
 
+
 --SIGNAL FROM id TO ex
-SIGNAL PC_SGN , PC_SGN_4 : std_logic_vector(63 downto 0);
+SIGNAL PC_1 , NEXT_PC_1 : std_logic_vector(63 downto 0);
 
 --SIGNAL FROM add+4 TO id
-SIGNAL NEXT_ADD : std_logic_vector(63 downto 0);
+SIGNAL NEXT_PC : std_logic_vector(63 downto 0);
 
-BEGIN
+
 --SIGNAL FROM MUX_1 TO PC
 SIGNAL ADD : std_logic_vector(63 downto 0);
 
@@ -87,13 +88,72 @@ SIGNAL JUMP_ADD :std_logic_vector(63 downto 0);
 --SIGNAL FROM WB TO MUX_1
 SIGNAL SEL_ADD:std_logic;
 
+--SIGNAL FROM WB TO REG_FILES
+SIGNAL WRITE_REG : std_logic_vector (4 downto 0);
+SIGNAL REG_WRITE_3 : std_logic;
+
+--SIGNAL FROM MUX_FIN TO REG_FILES
+SIGNAL WRITE_DATA : std_logic_vector(63 downto 0);
+
+--FROM REG_FILES TO EX
+SIGNAL READ_DATA1, READ_DATA2 :SIGNAL std_logic_vector (63 downto 0);
+
+--FROM IMMED_GEN TO EX
+SIGNAL IMM : std_logic_vector (63 downto 0);
+
+--FROM CONTROL TO EX
+SIGNAL REG_WRITE, ALU_SRC,SEL_MUX_JAL_AUIPC,BRANCH,SEL_MUX_ADD_SUM: std_logic;
+SIGNAL ALU_CTRL: std_logic_vector(2 downto 0);
+SIGNAL MEM_TO_REG : std_logic_vector(1 downto 0);
+
+-- FROM EX TO alu_control
+SIGNAL ALU_CTRL_1: std_logic_vector(2 downto 0);
+-- FROM EX TO MUX_ALU
+SIGNAL ALU_SRC_1 : std_logic;
+-- FROM EX TO MUX_JAL_AUIPC
+SIGNAL SEL_MUX_JAL_AUIPC_1 : std_logic;
+SIGNAL NEXT_PC_2 : std_logic_vector(63 downto 0);
+-- FROM EX TO MEM
+SIGNAL REG_WRITE_1, BRANCH_1 : std_logic;
+SIGNAL MEM_TO_REG_1: std_logic_vector(1 downto 0);
+
+--from ex to MUX_ADD_SUM
+SIGNAL SEL_MUX_ADD_SUM_1 : std_logic;
+SIGNAL IMM_1 : std_logic_vector (63 downto 0); -- VA ANCHE AL MUX_ALU
+SIGNAL IMM_1_SHIFT : std_logic_vector (63 downto 0);
+--FROM EX TO ADD_SUM
+SIGNAL PC_2 : std_logic_vector(63 downto 0);
+
+-- FROM EX TO alu_control AND MEM
+SIGNal INSTR_1 : std_logic_vector (7 downto 0);
+
+
+
 BEGIN
   MUX_1 : mux_2to1_nbit GENERIC MAP(N => 64) PORT MAP(NEXT_ADD,JUMP_ADD,SEL_ADD,ADD)
-  NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
+  NEXT_ADD <= std_logic_vector(unsigned(PC) + 4);
   PC_REG : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> ADD , CLK => CLK , RST_n => RST_n , Q => PC);
 
-  ID1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN);
+  ID_1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_1);
+  ID_2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => NEXT_PC_1);
 
-  ID2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN_4);
+  REG_FILES : RF_32_64b PORT MAP (CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2 )
 
-  
+  IMMED_GEN : imm_gen PORT MAP (INSTR,IMM);
+
+
+  CONTR : control PORT MAP (INSTR(6 downto 0), ALU_CTRL, ALU_SRC,SEL_MUX_JAL_AUIPC,REG_WRITE, BRANCH, SEL_MUX_ADD_SUM,MEM_TO_REG);
+
+  EX_1 : regnbit GENERIC MAP (N => 3) PORT MAP( ALU_CTRL , CLK , RST_n , ALU_CTRL_1 );
+  EX_2 : regnbit GENERIC MAP (N => 1) PORT MAP( ALU_SRC , CLK , RST_n , ALU_SRC_1 );
+  EX_3 : regnbit GENERIC MAP (N => 1) PORT MAP( SEL_MUX_JAL_AUIPC , CLK , RST_n , SEL_MUX_JAL_AUIPC_1 );
+  EX_4 : regnbit GENERIC MAP (N => 1) PORT MAP( REG_WRITE , CLK , RST_n , REG_WRITE_1 );
+  EX_5 : regnbit GENERIC MAP (N => 1) PORT MAP( BRANCH , CLK , RST_n , BRANCH_1 );
+  EX_6 : regnbit GENERIC MAP (N => 1) PORT MAP( SEL_MUX_ADD_SUM , CLK , RST_n , SEL_MUX_ADD_SUM_1 );
+  EX_7 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG , CLK , RST_n , MEM_TO_REG_1 );
+
+  EX_8 : regnbit GENERIC MAP (N => 64) PORT MAP( IMM , CLK , RST_n , IMM_1 );
+  EX_9 : regnbit GENERIC MAP (N => 8) PORT MAP( INSTR(14 downto 7) , CLK , RST_n , INSTR_1 );
+
+  EX_10 :regnbit GENERIC MAP (N => 63) PORT MAP( PC_1 , CLK , RST_n , PC_2);
+  EX_11 :regnbit GENERIC MAP (N => 63) PORT MAP( NEXT_PC_1, CLK , RST_n , NEXT_PC_2 );
