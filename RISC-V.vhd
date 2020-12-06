@@ -3,10 +3,11 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
 ENTITY RISK_V IS
-PORT( CLK,RST : IN std_logic;
+PORT( CLOCK,RST : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
-      DATA :    IN std_logic_vector(31 downto 0);
+      READ_DATA :    IN std_logic_vector(31 downto 0);
       PC :      OUT std_logic_vector(63 downto 0);
+      ADDRESS, WRITE_DATA : OUT std_logic_vector(31 downto 0)
       );
 END ENTITY;
 
@@ -48,3 +49,5 @@ PORT(
 		DATA_OUT_1, DATA_OUT_2: OUT STD_LOGIC_VECTOR(63 DOWNTO 0));
 
 END COMPONENT;
+BEGIN
+  ID : regn_bit ()
