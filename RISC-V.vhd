@@ -62,18 +62,38 @@ COMPONENT regnbit IS
 		 );
 END COMPONENT;
 
+COMPONENT mux_2to1_nbit IS
+GENERIC ( N : POSITIVE :=1
+);
+PORT(
+	I0, I1: IN STD_LOGIC_VECTOR(N-1 downto 0);
+	SEL  : IN STD_LOGIC_VECTOR;
+	O    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+		 );
+END COMPONENT;
+
 --SIGNAL FROM id TO ex
 SIGNAL PC_SGN , PC_SGN_4 : std_logic_vector(63 downto 0);
 
 --SIGNAL FROM add+4 TO id
-SIGNAL NEXT_PC : std_logic_vector(63 downto 0);
+SIGNAL NEXT_ADD : std_logic_vector(63 downto 0);
 
 BEGIN
+--SIGNAL FROM MUX_1 TO PC
+SIGNAL ADD : std_logic_vector(63 downto 0);
 
+--SIGNAL FROM MEM TO MUX_1
+SIGNAL JUMP_ADD :std_logic_vector(63 downto 0);
+--SIGNAL FROM WB TO MUX_1
+SIGNAL SEL_ADD:std_logic;
+
+BEGIN
+  MUX_1 : mux_2to1_nbit GENERIC MAP(N => 64) PORT MAP(NEXT_ADD,JUMP_ADD,SEL_ADD,ADD)
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
+  PC_REG : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> ADD , CLK => CLK , RST_n => RST_n , Q => PC);
 
   ID1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN);
 
-
-
   ID2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => PC_SGN_4);
+
+  
