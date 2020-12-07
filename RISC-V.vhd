@@ -5,7 +5,7 @@ USE ieee.std_logic_arith.all;
 ENTITY RISC_V IS
 PORT( CLK,RST_n : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
-      READ_DATA :    IN std_logic_vector(31 downto 0);
+      READ_DATA :    IN std_logic_vector(63 downto 0);
       PC :      BUFFER std_logic_vector(63 downto 0);
       ADDRESS, WRITE_DATA_OUT : OUT std_logic_vector(31 downto 0)
       MEM_WRITE_OUT,MEM_READ_OUT : OUT std_logic
@@ -69,6 +69,15 @@ PORT(
 	I0, I1: IN STD_LOGIC_VECTOR(N-1 downto 0);
 	SEL  : IN STD_LOGIC_VECTOR;
 	O    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+		 );
+END COMPONENT;
+
+COMPONENT mux_4to1_nbit IS
+GENERIC ( N : POSITIVE :=1
+);
+PORT( I0, I1, I2, I3: IN STD_LOGIC_VECTOR(N-1 downto 0);
+			SEL  : IN STD_LOGIC_VECTOR(1 downto 0);
+			O    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
 		 );
 END COMPONENT;
 
@@ -149,7 +158,8 @@ SIGNAL ZERO std_logic;
 
 --FROM MEM TO WB
 SIGNAL REG_WRITE_2 : std_logic;
-SIGNAL IMM_2 : std_logic_vector (63 downto 0);
+SIGNAL IMM_2,OUT_ADD_SUM_1, : std_logic_vector (63 downto 0);
+SIGNAL MEM_TO_REG_2 : std_logic_vector (1 downto 0);
 
 --FROM MEM TO AND_BRANCH
 SIGNAL ZERO_1,BRANCH_2: std_logic;
@@ -158,10 +168,16 @@ SIGNAL ZERO_1,BRANCH_2: std_logic;
 SIGNAL WRITE_REG : std_logic_vector (4 downto 0);
 SIGNAL REG_WRITE_3 : std_logic;
 
---FROM MEM TO MUX_FIN
-SIGNAL ADDRESS_MUX,IMM_MUX: std_logic_vector(63 downto 0);
+--FROM WB TO MUX_FIN
+SIGNAL ADDRESS_MUX,IMM_MUX,OUT_ADD_SUM_MUX: std_logic_vector(63 downto 0);
+SIGNAL MEM_TO_REG_2:std_logic_vector(1 downto 0);
+
+
 --FROM MEM TO REG_FILES
 SIGNAL INSTR_3 : std_logic_vector(4 downto 0);
+
+--FROM MUX TO REG_FILES
+SIGNAL OUT_MUX_FIN :std_logic_vector (63 downto 0);
 
 
 BEGIN
@@ -172,7 +188,7 @@ BEGIN
   ID_1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_1);
   ID_2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => NEXT_PC_1);
 
-  REG_FILES : RF_32_64b PORT MAP (CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), ADDR_WR => INSTR_3,DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2 )
+  REG_FILES : RF_32_64b PORT MAP (DATA_IN => OUT_MUX_FIN,CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), ADDR_WR => INSTR_3,DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2 )
 
   IMMED_GEN : imm_gen PORT MAP (INSTR,IMM);
 
@@ -222,13 +238,15 @@ BEGIN
   MEM_7 : regnbit GENERIC MAP (N => 64) PORT MAP ( READ_DATA2, CLK, RST_n, WRITE_DATA_OUT);
   MEM_8 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_1(4 downto 0) , CLK , RST_n , INSTR_2 );
   MEM_9 : regnbit GENERIC MAP (N => 64) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
-
-  --branch
+  MEM_10 : regnbit GENERIC MAP (N => 64) PORT MAP ( OUT_ADD_SUM, CLK, RST_n, OUT_ADD_SUM_1);
+  MEM_11 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG_1 , CLK , RST_n , MEM_TO_REG_2 );
+  --AND_BRANCH
   SEL_ADD <= ZERO_1 AND BRANCH_2;
 
   WB_1 : regnbit GENERIC MAP (N => 1) PORT MAP( REG_WRITE_2, CLK , RST_n , REG_WRITE_3 );
-  WB_2 : regnbit GENERIC MAP (N => 64) PORT MAP( ADDRESS, CLK , RST_n, ADDRESS_MUX);
-  WB_3 : regnbit GENERIC MAP (N => 64) PORT MAP( IMM_2, CLK , RST_n, IMM_MUX);
+  WB_2 : regnbit GENERIC MAP (N => 64) PORT MAP( ADDRESS, CLK , RST_n, ADDRESS_MUX);-- USCITA ALU
+  WB_3 : regnbit GENERIC MAP (N => 64) PORT MAP( IMM_2, CLK , RST_n, IMM_MUX);-- IMMEDIATE
   WB_4 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_2, CLK , RST_n, INSTR_3);
+  WB_5 : regnbit GENERIC MAP (N => 64) PORT MAP( OUT_ADD_SUM_1, CLK , RST_n, OUT_ADD_SUM_MUX);-- OUT_ADD_SUM
 
-  
+  MUX_FIN: mux_4to1_nbit GENERIC MAP (N => 64) PORT MAP( OUT_ADD_SUM_MUX, READ_DATA,ADDRESS_MUX,IMM_MUX,MEM_TO_REG_2,OUT_MUX_FIN);
