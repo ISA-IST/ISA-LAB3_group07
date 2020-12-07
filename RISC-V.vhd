@@ -7,7 +7,7 @@ PORT( CLK,RST_n : IN std_logic;
       INSTR :   IN std_logic_vector(31 downto 0);
       READ_DATA :    IN std_logic_vector(31 downto 0);
       PC :      BUFFER std_logic_vector(63 downto 0);
-      ADDRESS, WRITE_DATA : OUT std_logic_vector(31 downto 0)
+      ADDRESS, WRITE_DATA_OUT : OUT std_logic_vector(31 downto 0)
       MEM_WRITE_OUT,MEM_READ_OUT : OUT std_logic
       );
 END ENTITY;
@@ -148,14 +148,21 @@ SIGNAL OUT_ALU:std_logic_vector(63 downto 0);
 SIGNAL ZERO std_logic;
 
 --FROM MEM TO WB
-SIGNAL REG_WRITE_2,BRANCH_2,MEM_WRITE_2,MEM_READ_2 : std_logic;
+SIGNAL REG_WRITE_2 : std_logic;
+SIGNAL IMM_2 : std_logic_vector (63 downto 0);
 
 --FROM MEM TO AND_BRANCH
-SIGNAL ZERO_1: std_logic;
+SIGNAL ZERO_1,BRANCH_2: std_logic;
 
 -- FROM WB TO REG_FILES
 SIGNAL WRITE_REG : std_logic_vector (4 downto 0);
 SIGNAL REG_WRITE_3 : std_logic;
+
+--FROM MEM TO MUX_FIN
+SIGNAL ADDRESS_MUX,IMM_MUX: std_logic_vector(63 downto 0);
+--FROM MEM TO REG_FILES
+SIGNAL INSTR_3 : std_logic_vector(4 downto 0);
+
 
 BEGIN
   MUX_1 : mux_2to1_nbit GENERIC MAP(N => 64) PORT MAP(NEXT_ADD,JUMP_ADD,SEL_ADD,OUT_MUX_1)
@@ -165,7 +172,7 @@ BEGIN
   ID_1 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> PC , CLK => CLK , RST_n => RST_n , Q => PC_1);
   ID_2 : regnbit GENERIC MAP(N => 64) PORT MAP(  D=> NEXT_PC , CLK => CLK , RST_n => RST_n , Q => NEXT_PC_1);
 
-  REG_FILES : RF_32_64b PORT MAP (CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2 )
+  REG_FILES : RF_32_64b PORT MAP (CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), ADDR_WR => INSTR_3,DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2 )
 
   IMMED_GEN : imm_gen PORT MAP (INSTR,IMM);
 
@@ -212,5 +219,16 @@ BEGIN
 
   MEM_5 : regnbit GENERIC MAP (N => 1) PORT MAP( ZERO, CLK , RST_n , ZERO_1 );
   MEM_6 : regnbit GENERIC MAP (N => 64) PORT MAP( OUT_ALU, CLK , RST_n , ADDRESS );
-  MEM_7 : regnbit GENERIC MAP (N => 64) PORT MAP ( READ_DATA2, CLK, RST_n, WRITE_DATA);
-  MEM_8 : regnbit GENERIC MAP (N => 8) PORT MAP( INSTR_1(4 downto 0) , CLK , RST_n , INSTR_2 );
+  MEM_7 : regnbit GENERIC MAP (N => 64) PORT MAP ( READ_DATA2, CLK, RST_n, WRITE_DATA_OUT);
+  MEM_8 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_1(4 downto 0) , CLK , RST_n , INSTR_2 );
+  MEM_9 : regnbit GENERIC MAP (N => 64) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
+
+  --branch
+  SEL_ADD <= ZERO_1 AND BRANCH_2;
+
+  WB_1 : regnbit GENERIC MAP (N => 1) PORT MAP( REG_WRITE_2, CLK , RST_n , REG_WRITE_3 );
+  WB_2 : regnbit GENERIC MAP (N => 64) PORT MAP( ADDRESS, CLK , RST_n, ADDRESS_MUX);
+  WB_3 : regnbit GENERIC MAP (N => 64) PORT MAP( IMM_2, CLK , RST_n, IMM_MUX);
+  WB_4 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_2, CLK , RST_n, INSTR_3);
+
+  
