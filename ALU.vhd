@@ -21,31 +21,45 @@ BEGIN
 
     begin
     INT_B := to_integer(unsigned(DATA_B(4 downto 0)));
-   	error := 0;
+
+    ZERO  <= '0';
     case CTRL is
       --AND
       when "001" =>  DATA_OUT <= DATA_A and DATA_B;
-
+                    if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" then
+                          ZERO <= '1';
+                    end if;
       --ADD
       when "000" =>  OUT_signed := signed(DATA_A) + signed(DATA_B);
                     DATA_OUT <= std_logic_vector(OUT_signed);
-
+                    if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" then
+                          ZERO <= '1';
+                    end if;
       -- SUB
-      when "011" =>  OUT_signed := signed(DATA_A) - signed(DATA_B);
-                    DATA_OUT <= std_logic_vector(OUT_signed);
+      when "011" =>  --OUT_signed := signed(DATA_A) - signed(DATA_B);
+                     --DATA_OUT <= std_logic_vector(OUT_signed);
 
+                    if signed(DATA_A) > signed(DATA_B) THEN
+                      DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000";
+
+                    elsif signed(DATA_A) = signed(DATA_B) then
+                        DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000";
+                        ZERO <= '1';
+                    else DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000001";
+                    end if;
       -- XOR
-      when "100" =>  DATA_OUT <= DATA_A xor DATA_B;
-
+      when "100" => DATA_OUT <= DATA_A xor DATA_B;
+                    if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" then
+                          ZERO <= '1';
+                    end if;
       -- BARREL SHIFTER
       when "010" => DATA_OUT <= std_logic_vector(shift_right(unsigned(DATA_A), INT_B));
-
+                    if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" then
+                          ZERO <= '1';
+                    end if;
+      -- error
       when others => DATA_OUT <= (OTHERS => '0');
-                      ZERO <= '0';
-					  error := 1;
+
     end case;
-	if DATA_OUT = "0000000000000000000000000000000000000000000000000000000000000000" AND error = 0 then
-                      ZERO <= '1';
-    end if;
   end process;
 END ARCHITECTURE;
