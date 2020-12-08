@@ -14,5 +14,5 @@ beq: non servono modifiche
 lw:
 srai: aggiungiamo uno B.sfihter e vediamo come collegare questa uscita a RG--> il mux finale diventa da 4, quanti register davanti?
 andi,xor:la gestisce la ALU
-alt: compare rs1 e rs2 e a seconda del risultato va a scrivere, gestito dalla ALU
+slt: compare rs1 e rs2 e a seconda del risultato va a scrivere 1 se rs1<rs2, 0 altrimenti nel REG_FILES(rd)
 jal: serve un collegamento da PC+4 a RF, può servire un mux prima del registro IF/ID
