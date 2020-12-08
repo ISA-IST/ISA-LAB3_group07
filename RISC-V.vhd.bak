@@ -9,7 +9,7 @@ PORT(
   DM_data :    IN std_logic_vector(63 downto 0);
   PC :      BUFFER std_logic_vector(63 downto 0);
   DM_addr: BUFFER std_logic_vector(63 downto 0);
-  WRITE_DATA_OUT : OUT std_logic_vector(63 downto 0);
+  WRITE_DATA_OUT : OUT std_logic_vector(31 downto 0);
   MEM_WRITE_OUT, MEM_READ_OUT : OUT std_logic
 );
 END ENTITY;
@@ -124,7 +124,7 @@ SIGNAL READ_DATA1, READ_DATA2 : std_logic_vector (63 downto 0);
 SIGNAL IMM : std_logic_vector (63 downto 0);
 
 --FROM CONTROL TO EX
-SIGNAL REG_WRITE, ALU_SRC, SEL_MUX_JAL_AUIPC, MEM_WRITE, MEM_READ, BRANCH , SEL_MUX_ADD_SUM: std_logic;
+SIGNAL REG_WRITE, ALU_SRC,SEL_MUX_JAL_AUIPC, MEM_WRITE, MEM_READ, BRANCH , SEL_MUX_ADD_SUM: std_logic;
 SIGNAL MEM_TO_REG, ALU_OP :  STD_LOGIC_VECTOR(1 DOWNTO 0);
 --SIGNAL ALU_CTRL: std_logic_vector(2 downto 0); ERRORE
 

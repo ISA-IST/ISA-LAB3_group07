@@ -3,12 +3,14 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 ENTITY regnbit IS
-	GENERIC ( N : POSITIVE := 2
-				);
-	PORT( D    : IN STD_LOGIC_VECTOR(N-1 downto 0);
-		  CLK, RST_n: IN STD_LOGIC;
-		  Q    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
-		 );
+	GENERIC ( 
+		N : POSITIVE := 2
+	);
+	PORT( 
+		D    : IN STD_LOGIC_VECTOR(N-1 downto 0);
+		CLK, RST_n: IN STD_LOGIC;
+		Q    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+	);
 END regnbit;
 
 ARCHITECTURE behaviour OF regnbit IS
@@ -20,7 +22,7 @@ BEGIN
 			Q <= (OTHERS=>'0');
 		ELSIF(CLK'EVENT AND CLK='1') THEN
 
-				Q <= D;
+			Q <= D;
 
 		END IF;
 	END PROCESS;
