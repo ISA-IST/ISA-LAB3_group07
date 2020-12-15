@@ -38,14 +38,14 @@ begin  -- beh
         writeline(res_pp, line_out);
        
         -- writing controls
-		write(line_ctrl,ALU_SRC1,right,8);
-      write(line_ctrl,SEL_MUX_JAL_AUIPC,right,8);
-		write(line_ctrl,REG_WRITE,right,8);
-		write(line_ctrl,MEM_WRITE,right,8);
-		write(line_ctrl,MEM_READ,right,8);
-		write(line_ctrl,BRANCH,right,8);
-		write(line_ctrl,SEL_MUX_ADD_SUM,right,8);
-		write(line_ctrl,MEM_TO_REG,right,8);
+		write(res_ctrl,ALU_SRC1,right,6);
+        write(line_ctrl,SEL_MUX_JAL_AUIPC,right,6);
+		write(line_ctrl,REG_WRITE,right,6);
+		write(line_ctrl,MEM_WRITE,right,6);
+		write(line_ctrl,MEM_READ,right,6);
+		write(line_ctrl,BRANCH,right,6);
+		write(line_ctrl,SEL_MUX_ADD_SUM,right,6);
+		write(line_ctrl,MEM_TO_REG,right,6);
 		writeline(res_ctrl,line_ctrl);
 
 

@@ -1,0 +1,23 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY ff IS
+PORT( 
+	D, CLK, RST_n: IN STD_LOGIC;
+	Q : OUT STD_LOGIC
+);
+END ff;
+
+ARCHITECTURE behaviour OF ff IS
+BEGIN
+
+PROCESS(RST_n, CLK)
+BEGIN
+	IF(RST_n='0') THEN
+		Q <= '0';
+	ELSIF (CLK'EVENT AND CLK='1') THEN
+		Q <= D;
+	END IF;
+END PROCESS;
+
+END behaviour;

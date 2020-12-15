@@ -20,7 +20,7 @@ module tb_alu ();
    wire [1:0] ALU_OP;
 
    wire [31:0] DATA_OUT;
-   wire [2:0] CTRL;
+   //wire [2:0] CTRL;
 
 
 

@@ -1,17 +1,14 @@
-vcom -93 -work ./work ../src/FA.vhd
-vcom -93 -work ./work ../src/HA.vhd
-vcom -93 -work ./work ../src/mux_4to1_nbit.vhd
-vcom -93 -work ./work ../src/MBE_encoder.vhd
-vcom -93 -work ./work ../src/dadda_tree.vhd
-vcom -93 -work ./work ../src/MBE_mult.vhd
+vcom -93 -work ./work ../src/ALU.vhd
+vcom -93 -work ./work ../src/alu_control.vhd
+vcom -93 -work ./work ../src/control.vhd
 
-vcom -93 -work ./work ./tb/clk_gen.vhd
-vcom -93 -work ./work ./tb/data_sink.vhd
-vcom -93 -work ./work ./tb/data_maker.vhd
+vcom -93 -work ./work ./clk_gen.vhd
+vcom -93 -work ./work ./data_sink.vhd
+vcom -93 -work ./work ./data_maker.vhd
 
-vlog -work ./work ./tb/tb_MBE_mult.v
+vlog -work ./work ./tb_alu.v
 
-vsim work.tb_MBE_mult
+vsim work.tb_alu
 
 add wave -r *
 run 150 ns

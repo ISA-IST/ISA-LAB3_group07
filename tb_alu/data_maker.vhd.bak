@@ -27,7 +27,7 @@ begin  -- beh
 
   variable ptr : line;
   variable ptr_ctrl : line;
-  variable ptr_funct3 : line;
+  variable ptr_funct3 : line
   
   variable opc : std_logic_vector(6 downto 0);
   variable funct3_v : std_logic_vector(2 downto 0);
