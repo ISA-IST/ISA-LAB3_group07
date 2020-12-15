@@ -37,19 +37,23 @@ CTRL_GEN : PROCESS(OPCODE)
 
 					 	WHEN "0110111"  =>       --LUI
 							MEM_TO_REG <= "10";
+							REG_WRITE <= '1';
 
 						WHEN "0010111"  =>       --ALUIPC
 							SEL_MUX_ADD_SUM <= '1';
 							MEM_TO_REG <= "11";
 							SEL_MUX_JAL_AUIPC <= '1';
+							REG_WRITE <= '1';
 
 						WHEN "1101111"  =>       --JAL
 							MEM_TO_REG <= "11";
+							REG_WRITE <= '1';
 
 						WHEN "1100011"  =>       --BEQ
 							ALU_OP <= "01";
 							BRANCH <= '1';
 							SEL_MUX_JAL_AUIPC <= '1';
+							
 
 						WHEN "0000011"  =>       --LW
 							REG_WRITE <= '1';
@@ -63,10 +67,12 @@ CTRL_GEN : PROCESS(OPCODE)
 							MEM_TO_REG <= "01";
 							ALU_SRC1 <= '1'; -- ATTENZIONE!!
 							ALU_OP <= "11";
+							REG_WRITE <= '1'; --(INSERTED LATER)
 
 						WHEN "0110011"  =>         --ADD, XOR, SLT
 							MEM_TO_REG <= "01";
 							ALU_OP <= "10";
+							REG_WRITE <= '1';
 
 					 	WHEN OTHERS =>            --DEFAULT
 
