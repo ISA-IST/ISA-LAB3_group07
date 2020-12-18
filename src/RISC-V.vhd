@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 ENTITY RISC_V IS
-PORT( 
+PORT(
   CLK, RST_n : IN std_logic;
   INSTR :   IN std_logic_vector(31 downto 0);
   DM_data :    IN std_logic_vector(31 downto 0);
@@ -57,10 +57,10 @@ PORT(
 END COMPONENT;
 
 COMPONENT regnbit IS
-GENERIC ( 
+GENERIC (
 	N : POSITIVE := 2
 );
-PORT( 
+PORT(
 	D    : IN STD_LOGIC_VECTOR(N-1 downto 0);
 	CLK, RST_n : IN STD_LOGIC;
 	Q    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
@@ -68,15 +68,15 @@ PORT(
 END COMPONENT;
 
 COMPONENT ff IS
-PORT( 
+PORT(
 	D, CLK, RST_n: IN STD_LOGIC;
 	Q : OUT STD_LOGIC
 );
 END COMPONENT;
 
 COMPONENT mux_2to1_nbit IS
-GENERIC ( 
-	N : POSITIVE :=1 
+GENERIC (
+	N : POSITIVE :=1
 );
 PORT(
 	I0, I1: IN STD_LOGIC_VECTOR(N-1 downto 0);
@@ -86,10 +86,10 @@ PORT(
 END COMPONENT;
 
 COMPONENT mux_4to1_nbit IS
-GENERIC ( 
+GENERIC (
 	N : POSITIVE :=1
 );
-PORT( 
+PORT(
 	I0, I1, I2, I3: IN STD_LOGIC_VECTOR(N-1 downto 0);
 	SEL  : IN STD_LOGIC_VECTOR(1 downto 0);
 	O    : OUT STD_LOGIC_VECTOR(N-1 downto 0)
@@ -105,7 +105,9 @@ SIGNAL NEXT_PC : std_logic_vector(31 downto 0);
 
 
 -- FROM MUX_1 TO PC
-SIGNAL OUT_MUX_PC : std_logic_vector(31 downto 0);
+SIGNAL OUT_MUX_PC1, OUT_MUX_PC2 : std_logic_vector(31 downto 0);
+
+SIGNAL FIRST_ADDRESS : std_logic_vector(31 downto 0);
 
 -- FROM MEM TO MUX_1
 SIGNAL JUMP_ADD :std_logic_vector(31 downto 0);
@@ -197,11 +199,15 @@ SIGNAL OUT_MUX_FIN :std_logic_vector (31 downto 0);
 
 BEGIN
 
-  MUX_PC : mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC, JUMP_ADD, SEL_ADD, OUT_MUX_PC);
-  
+  MUX_PC : mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC, JUMP_ADD, SEL_ADD, OUT_MUX_PC1);
+
+  FIRST_ADDRESS <="00000000010000000000000000000000";-- 0x00400000;
+
+  MUX_RESET: mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(FIRST_ADDRESS, OUT_MUX_PC1, RST_n, OUT_MUX_PC2); -- starting mux
+
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
-  
-  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC, CLK => CLK, RST_n => RST_n, Q => PC);
+
+  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => ''1', Q => PC); -- the PC is never reset
 
   ID_1 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> PC, CLK => CLK, RST_n => RST_n, Q => PC_1);
   ID_2 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> NEXT_PC, CLK => CLK, RST_n => RST_n, Q => NEXT_PC_1);
@@ -238,7 +244,7 @@ BEGIN
 
   --ADD_SUM
   OUT_ADD_SUM <= std_logic_vector(unsigned(OUT_MUX_ADD_SUM) + unsigned(PC_2));
-  
+
   MUX_ALU : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP (READ_DATA2, IMM_1, ALU_SRC_1, DATA_B);
 
   MUX_JAL_AUIPC: mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC_2, OUT_ADD_SUM, SEL_MUX_JAL_AUIPC_1, OUT_MUX_JAL_AUIPC);
@@ -259,7 +265,7 @@ BEGIN
   MEM_9 : regnbit GENERIC MAP (N => 32) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
   MEM_10 : regnbit GENERIC MAP (N => 32) PORT MAP ( OUT_ADD_SUM, CLK, RST_n, OUT_ADD_SUM_1);
   MEM_11 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG_1 , CLK , RST_n , MEM_TO_REG_2 );
-  
+
   --AND_BRANCH
   SEL_ADD <= ZERO_1 AND BRANCH_2;
 
