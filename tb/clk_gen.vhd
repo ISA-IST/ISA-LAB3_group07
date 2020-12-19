@@ -27,6 +27,7 @@ begin  -- beh
     wait for Ts/2;
   end process;
 
+	CLK <= CLK_i;  
 
   process
   begin  -- process

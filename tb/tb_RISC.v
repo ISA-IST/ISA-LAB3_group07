@@ -1,14 +1,14 @@
 //`timescale 1ns
 
-module tb_alu ();
+module tb_RISC ();
 
    wire CLK_i;
    wire RST_n;
    wire [31:0] INSTR_i;
    wire [31:0] DM_data_i;
    wire [31:0] PC_i;
-   wire [31:0] DM_addr;
-   wire WRITE_DATA_OUT_i;
+   wire [31:0] DM_addr_i;
+   wire [31:0] WRITE_DATA_OUT_i;
    wire MEM_WRITE_OUT_i;
    wire MEM_READ_OUT_i;
 

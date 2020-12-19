@@ -47,7 +47,7 @@ PORT(
 );
 END COMPONENT;
 
-COMPONENT RF_32_64b IS
+COMPONENT RF_32_32b IS
 PORT(
 	DATA_IN: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	CLK, WR: IN STD_LOGIC;
@@ -114,6 +114,9 @@ SIGNAL JUMP_ADD :std_logic_vector(31 downto 0);
 -- FROM WB TO MUX_1
 SIGNAL SEL_ADD: std_logic;
 
+-- EXTRA SIGNALS TO FIX Cannot associate port "q" of mode OUT with port "pc" of mode BUFFER.
+SIGNAL PC_s: std_logic_vector(31 downto 0);
+SIGNAL DM_ADDR_s: std_logic_vector(31 downto 0);
 
 
 -- FROM MUX_FIN TO REG_FILES
@@ -207,12 +210,14 @@ BEGIN
 
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
 
-  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => ''1', Q => PC); -- the PC is never reset
-
+  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', Q => PC_s); -- the PC is never reset
+   
+   PC <= PC_s;
+   
   ID_1 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> PC, CLK => CLK, RST_n => RST_n, Q => PC_1);
   ID_2 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> NEXT_PC, CLK => CLK, RST_n => RST_n, Q => NEXT_PC_1);
 
-  REG_FILES : RF_32_64b PORT MAP (DATA_IN => OUT_MUX_FIN, CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), ADDR_WR => INSTR_3, DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2);
+  REG_FILES : RF_32_32b PORT MAP (DATA_IN => OUT_MUX_FIN, CLK => CLK, WR => REG_WRITE_3, ADDR_RD_1 => INSTR(19 downto 15), ADDR_RD_2 => INSTR(24 downto 20), ADDR_WR => INSTR_3, DATA_OUT_1 => READ_DATA1, DATA_OUT_2 => READ_DATA2);
 
   IMMED_GEN : imm_gen PORT MAP (INSTR, IMM);
 
@@ -259,7 +264,10 @@ BEGIN
   MEM_4 : ff PORT MAP( MEM_READ_1, CLK , RST_n , MEM_READ_OUT );
 
   MEM_5 : ff PORT MAP( ZERO, CLK , RST_n , ZERO_1 );
-  MEM_6 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ALU, CLK , RST_n , DM_addr );
+  MEM_6 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ALU, CLK , RST_n , DM_addr_s );
+  
+  DM_addr <= DM_addr_s;
+  
   MEM_7 : regnbit GENERIC MAP (N => 32) PORT MAP ( READ_DATA2, CLK, RST_n, WRITE_DATA_OUT);
   MEM_8 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_1(4 downto 0), CLK, RST_n, INSTR_2 );
   MEM_9 : regnbit GENERIC MAP (N => 32) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
