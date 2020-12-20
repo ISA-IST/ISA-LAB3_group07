@@ -1,0 +1,64 @@
+# Loading project tb_imm
+# reading /home/mattereteo/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+file mkdir /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/tb_RISC-V
+# Loading project tb_risc-V
+# Compile of clk_gen.vhd was successful.
+# Compile of tb_RISC.v was successful.
+# Compile of ALU.vhd was successful.
+# Compile of alu_control.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of data_memory.vhd failed with 77 errors.
+# Compile of ff.vhd was successful.
+# Compile of imm_gen.vhd was successful.
+# Compile of instruction_memory.vhd failed with 210 errors.
+# Compile of mux_2to1_nbit.vhd was successful.
+# Compile of mux_4to1_nbit.vhd was successful.
+# Compile of regnbit.vhd was successful.
+# Compile of RF_32_64b.vhd was successful.
+# Compile of RISC-V.vhd failed with 2 errors.
+# 14 compiles, 3 failed with 289 errors.
+# Compile of clk_gen.vhd was successful.
+# Compile of tb_RISC.v was successful.
+# Compile of ALU.vhd was successful.
+# Compile of alu_control.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of data_memory.vhd failed with 77 errors.
+# Compile of ff.vhd was successful.
+# Compile of imm_gen.vhd was successful.
+# Compile of instruction_memory.vhd failed with 210 errors.
+# Compile of mux_2to1_nbit.vhd was successful.
+# Compile of mux_4to1_nbit.vhd was successful.
+# Compile of regnbit.vhd was successful.
+# Compile of RF_32_64b.vhd was successful.
+# Compile of RISC-V.vhd failed with 2 errors.
+# 14 compiles, 3 failed with 289 errors.
+# Compile of clk_gen.vhd was successful.
+# Compile of tb_RISC.v was successful.
+# Compile of ALU.vhd was successful.
+# Compile of alu_control.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of data_memory.vhd failed with 77 errors.
+# Compile of ff.vhd was successful.
+# Compile of imm_gen.vhd was successful.
+# Compile of instruction_memory.vhd failed with 210 errors.
+# Compile of mux_2to1_nbit.vhd was successful.
+# Compile of mux_4to1_nbit.vhd was successful.
+# Compile of regnbit.vhd was successful.
+# Compile of RF_32_64b.vhd was successful.
+# Compile of RISC-V.vhd was successful.
+# 14 compiles, 2 failed with 287 errors.
+# Compile of clk_gen.vhd was successful.
+# Compile of tb_RISC.v was successful.
+# Compile of ALU.vhd was successful.
+# Compile of alu_control.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of data_memory.vhd failed with 49 errors.
+# Compile of ff.vhd was successful.
+# Compile of imm_gen.vhd was successful.
+# Compile of instruction_memory.vhd failed with 210 errors.
+# Compile of mux_2to1_nbit.vhd was successful.
+# Compile of mux_4to1_nbit.vhd was successful.
+# Compile of regnbit.vhd was successful.
+# Compile of RF_32_64b.vhd was successful.
+# Compile of RISC-V.vhd was successful.
+# 14 compiles, 2 failed with 259 errors.
