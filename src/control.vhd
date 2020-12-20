@@ -5,7 +5,7 @@ ENTITY control IS
 PORT (
 	OPCODE : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 	
-	ALU_SRC1, SEL_MUX_JAL_AUIPC, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH ,SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
+	ALU_SRC1, SEL_MUX_JAL_AUIPC, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
 	MEM_TO_REG : OUT STD_LOGIC_VECTOR(1 DOWNTO 0); --"FINAL MUX",
 	ALU_OP     : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 
@@ -22,7 +22,8 @@ CTRL_GEN : PROCESS(OPCODE)
 
            BEGIN
 						 --DEFAULT ASSIGNMENTS
-					BRANCH      <= '0';
+					BRANCH_cond      <= '0';
+					BRANCH_uncond <= '1';
 					MEM_WRITE   <= '0';
 					REG_WRITE   <= '0';
 					MEM_READ    <= '0';
@@ -48,10 +49,11 @@ CTRL_GEN : PROCESS(OPCODE)
 						WHEN "1101111"  =>       --JAL
 							MEM_TO_REG <= "11";
 							REG_WRITE <= '1';
+							BRANCH_uncond <= '1';
 
 						WHEN "1100011"  =>       --BEQ
 							ALU_OP <= "01";
-							BRANCH <= '1';
+							BRANCH_cond <= '1';
 							SEL_MUX_JAL_AUIPC <= '1';
 							
 
