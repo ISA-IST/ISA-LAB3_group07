@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/tb
 T_opt
-V3FZ:P794z?dFV2Q7IkfzP3
+VTjY;BV5J0EaWzNTUeO^@G1
 06 7 4 ./work tb_RISC fast 0
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
@@ -110,7 +110,7 @@ OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
 Edata_memory
-w1608376137
+w1608455648
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 31
@@ -131,7 +131,7 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 l21
 L15
-V3W0QlfdS@7^jYjFC<K=e70
+V8Mn_>B=QK7G9lTDa^_82]1
 OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
@@ -185,7 +185,7 @@ OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
 Einstruction_memory
-w1608375672
+w1608460997
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 31
@@ -206,7 +206,7 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 l19
 L13
-VZQ0_h>o;3X4JO9HgZ<@<z1
+VlAPHZJFQ:Lz77ETJJ`fI00
 OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
@@ -315,7 +315,7 @@ OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
 Erisc_v
-w1608370161
+w1608456912
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 31
@@ -345,7 +345,7 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 l203
 L17
-Vg8D`DjLgzCD::SC[TGgFo2
+VJLG_]@E@a40eK7Oo3niHC2
 OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1

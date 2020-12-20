@@ -6,15 +6,15 @@ D 15 ./work.alu(beh) SU76PP9TIc<k^R5N`_a[l3 7 1
 D 23 ./work.alu_control(beh) QGTR41N[EK[_icff4Y7FE0 6 1
 D 19 ./work.clk_gen(beh) jWNTbC5:Lz>Dj4JTA79CM2 10 1
 D 19 ./work.control(beh) ZSeNSdRBG?HZa5BT8HBjj1 4 1
-D 29 ./work.data_memory(structure) 3W0QlfdS@7^jYjFC<K=e70 13 1
+D 29 ./work.data_memory(structure) 8Mn_>B=QK7G9lTDa^_82]1 13 1
 D 20 ./work.ff(behaviour) IDf>:eJZhj=eMkK=i15VQ3 5 1
 D 19 ./work.imm_gen(beh) 4aNVKHQO6@G>K6odfL`^32 3 1
-D 36 ./work.instruction_memory(structure) ZQ0_h>o;3X4JO9HgZ<@<z1 12 1
+D 36 ./work.instruction_memory(structure) lAPHZJFQ:Lz77ETJJ`fI00 12 1
 D 31 ./work.mux_2to1_nbit(behaviour) ZQbmS;BWj]egG<<BlzgEj0 0 1
 D 31 ./work.mux_4to1_nbit(behaviour) gZja^AlT_e;R9X:EdbKH11 8 1
 D 25 ./work.regnbit(behaviour) bNbF[2kW3ZnPe6UgK`]MN0 1 1
 D 27 ./work.rf_32_32b(structure) G5kS7HcmjLBE`7kXSMFJN2 2 1
-D 18 ./work.risc_v(beh) g8D`DjLgzCD::SC[TGgFo2 11 1
+D 18 ./work.risc_v(beh) JLG_]@E@a40eK7Oo3niHC2 11 1
 D 14 ./work.tb_RISC JV<QkGTSCD>d<<RBIQ`TO0 9 0
 2 4 fast 0 a6`zaeKMeV10b6J_h=[a60 12 9 1
 2 0  1 01zce2kPWVPGA`Y`SnGgk1 11 8 1
