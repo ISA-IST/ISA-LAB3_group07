@@ -163,8 +163,8 @@ SIGNAL OUT_MUX_ADD_SUM :std_logic_vector(31 downto 0);
 --FROM ADD_SUM TO MEM
 SIGNAL OUT_ADD_SUM: std_logic_vector(31 downto 0);
 
---FROM MUX_JAL_AUIPC TO MEM
---SIGNAL OUT_MUX_JAL_AUIPC: std_logic_vector(31 downto 0);
+--FROM MUX_JAL_AUIPC TO WB
+SIGNAL OUT_MUX_JAL_AUIPC: std_logic_vector(31 downto 0);
 
 --FROM MUX_ALU TO ALU
 SIGNAL DATA_B: std_logic_vector(31 downto 0);
@@ -207,7 +207,7 @@ SIGNAL OUT_MUX_FIN :std_logic_vector (31 downto 0);
 
 BEGIN
 
-  MUX_PC : mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC, OUT_MUX_JAL_AUIPC, SEL_ADD, OUT_MUX_PC1);
+  MUX_PC : mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC, OUT_ADD_SUM_1, SEL_ADD, OUT_MUX_PC1);
 
   FIRST_ADDRESS <="00000000010000000000000000000000";-- 0x00400000;
 
@@ -216,9 +216,9 @@ BEGIN
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
 
   PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', Q => PC_s); -- the PC is never reset
-   
+
   PC <= PC_s;
-   
+
   ID_1 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> PC, CLK => CLK, RST_n => RST_n, Q => PC_1);
   ID_2 : regnbit GENERIC MAP(N => 32) PORT MAP(D=> NEXT_PC, CLK => CLK, RST_n => RST_n, Q => NEXT_PC_1);
 
@@ -272,22 +272,22 @@ BEGIN
 
   MEM_6 : ff PORT MAP( ZERO, CLK , RST_n , ZERO_1 );
   MEM_7 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ALU, CLK , RST_n , DM_addr_s );
-  
+
   DM_addr <= DM_addr_s;
-  
+
   MEM_8 : regnbit GENERIC MAP (N => 32) PORT MAP ( READ_DATA2, CLK, RST_n, WRITE_DATA_OUT);
   MEM_9 : regnbit GENERIC MAP (N => 5) PORT MAP( INSTR_1(4 downto 0), CLK, RST_n, INSTR_2 );
   MEM_10 : regnbit GENERIC MAP (N => 32) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
 --  MEM_11 : regnbit GENERIC MAP (N => 32) PORT MAP ( OUT_MUX_JAL_AUIPC, CLK, RST_n, OUT_MUX_JAL_AUIPC_1);
   MEM_12 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG_1 , CLK , RST_n , MEM_TO_REG_2 );
-  
+
   MEM_13 : ff PORT MAP( SEL_MUX_JAL_AUIPC_1, CLK, RST_n, SEL_MUX_JAL_AUIPC_2 );
   MEM_14 :regnbit GENERIC MAP (N => 32) PORT MAP( NEXT_PC_2, CLK, RST_n, NEXT_PC_3 );
   MEM_15 :regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ADD_SUM, CLK, RST_n, OUT_ADD_SUM_1 );
 
   --AND_BRANCH
   SEL_ADD <= (ZERO_1 AND BRANCH_cond_2) OR BRANCH_uncond_2;
-  
+
   -- MUX JAL-AUIPC
   MUX_JAL_AUIPC: mux_2to1_nbit GENERIC MAP(N => 32) PORT MAP(NEXT_PC_3, OUT_ADD_SUM_1, SEL_MUX_JAL_AUIPC_2, OUT_MUX_JAL_AUIPC);
 

@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 ENTITY control IS
 PORT (
 	OPCODE : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-	
+
 	ALU_SRC1, SEL_MUX_JAL_AUIPC, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
 	MEM_TO_REG : OUT STD_LOGIC_VECTOR(1 DOWNTO 0); --"FINAL MUX",
 	ALU_OP     : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
@@ -17,21 +17,21 @@ END control;
 ARCHITECTURE BEH OF control IS
 
 BEGIN
-  
+
 CTRL_GEN : PROCESS(OPCODE)
 
            BEGIN
 						 --DEFAULT ASSIGNMENTS
-					BRANCH_cond      <= '0';
-					BRANCH_uncond <= '1';
-					MEM_WRITE   <= '0';
-					REG_WRITE   <= '0';
-					MEM_READ    <= '0';
-					ALU_SRC1    <= '0'; --TAKE FROM READ2
-          SEL_MUX_ADD_SUM <= '0'; --ALWAYS ON BEQ
-					MEM_TO_REG      <= "00";
+					BRANCH_cond     	<= '0';
+					BRANCH_uncond 		<= '0';
+					MEM_WRITE   			<= '0';
+					REG_WRITE   			<= '0';
+					MEM_READ    			<= '0';
+					ALU_SRC1    			<= '0'; --TAKE FROM READ2
+          SEL_MUX_ADD_SUM 	<= '0'; --ALWAYS ON BEQ
+					MEM_TO_REG      	<= "00";
 					SEL_MUX_JAL_AUIPC <= '0'; --ALWAYS ON JAL
-					ALU_OP <= "00"; --ALWAYS ON ADD OPERATION
+					ALU_OP 						<= "00"; --ALWAYS ON ADD OPERATION
 
 
 					 CASE(OPCODE) is
@@ -55,7 +55,7 @@ CTRL_GEN : PROCESS(OPCODE)
 							ALU_OP <= "01";
 							BRANCH_cond <= '1';
 							SEL_MUX_JAL_AUIPC <= '1';
-							
+
 
 						WHEN "0000011"  =>       --LW
 							REG_WRITE <= '1';
