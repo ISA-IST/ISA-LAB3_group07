@@ -18,5 +18,7 @@ vlog -work ./work ./tb_RISC.v
 
 vsim work.tb_RISC
 
-add wave -r *
-run 600 ns
+#add wave -r *
+do wave_RISC.do
+
+run 3 us

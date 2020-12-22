@@ -120,7 +120,7 @@ SIGNAL DM_ADDR_s: std_logic_vector(31 downto 0);
 
 
 -- FROM MUX_FIN TO REG_FILES
-SIGNAL WRITE_DATA : std_logic_vector(31 downto 0);
+--SIGNAL WRITE_DATA : std_logic_vector(31 downto 0);
 
 --FROM REG_FILES TO MUX_ALU E ALU E MEM
 SIGNAL READ_DATA1, READ_DATA2 : std_logic_vector (31 downto 0);
@@ -190,7 +190,7 @@ SIGNAL MEM_TO_REG_2 : std_logic_vector (1 downto 0);
 SIGNAL ZERO_1, BRANCH_cond_2, BRANCH_uncond_2: std_logic;
 
 -- FROM WB TO REG_FILES
-SIGNAL WRITE_REG : std_logic_vector (4 downto 0);
+--SIGNAL WRITE_REG : std_logic_vector (4 downto 0);
 SIGNAL REG_WRITE_3 : std_logic;
 
 --FROM WB TO MUX_FIN

@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/tb
 T_opt
-V@l41nQVZaKO2ZBd1Ab0Li2
+VRJA4?OM:;3?Qg_Rb2?^5m1
 06 7 4 ./work tb_RISC fast 0
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
@@ -116,7 +116,7 @@ M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Edata_memory
-w1608571270
+w1608630142
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 8../src/data_memory.vhd
@@ -134,7 +134,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work data_memory C_CB4[LZG92[_TRj9bWlX1
 l21
 L15
-VUzDkfei:F@Y]SmL7LoML<2
+VMDjCZJ6]Db>Eb1hCiG?d@0
 OE;C;6.2g;35
 31
 M2 ieee std_logic_1164
@@ -191,7 +191,7 @@ M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Einstruction_memory
-w1608565896
+w1608630078
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 8../src/instruction_memory.vhd
@@ -209,7 +209,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work instruction_memory Kj04MW2MUi0h``3f:BEnW3
 l19
 L13
-VY^iPHC@N?gEofWjAIL]QX0
+V4OR<:8gl3<@@<C;^_^2X]1
 OE;C;6.2g;35
 31
 M2 ieee std_logic_1164
@@ -321,7 +321,7 @@ M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Erisc_v
-w1608565896
+w1608630249
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 8../src/RISC-V.vhd
@@ -339,7 +339,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work risc_v hY>>_LQHZgT96lDT3^Gol3
 l208
 L17
-VBk1>k:4KYNk4G9XQ3G2DC0
+Vb?^Kc_FgBQd``emz;dGnA3
 OE;C;6.2g;35
 31
 M2 ieee std_logic_1164
