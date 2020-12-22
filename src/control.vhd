@@ -61,9 +61,11 @@ CTRL_GEN : PROCESS(OPCODE)
 							REG_WRITE <= '1';
 							MEM_READ  <= '1';
 							MEM_TO_REG <= "00";
+							ALU_SRC1 <= '1';
 
 						WHEN"0100011"  =>       --SW
 							MEM_WRITE <= '1';
+							ALU_SRC1 <= '1';
 
 						WHEN "0010011"  =>       --ADDI, ANDI, SRAI
 							MEM_TO_REG <= "01";

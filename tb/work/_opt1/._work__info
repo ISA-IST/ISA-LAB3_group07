@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/tb
 T_opt
-V@l41nQVZaKO2ZBd1Ab0Li2
+VY<[I_[2`GiRb;aH;nezZ13
 06 7 4 ./work tb_RISC fast 0
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
@@ -31,13 +31,13 @@ Abeh
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work alu A]^kPSfAj:4i5cH32a^Wm0
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l15
 L14
 VSU76PP9TIc<k^R5N`_a[l3
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Ealu_control
@@ -55,12 +55,12 @@ tExplicit 1
 Abeh
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work alu_control RnEH83m6^Q[lPUReReTEf1
-31
-M1 ieee std_logic_1164
 l14
 L12
 VQGTR41N[EK[_icff4Y7FE0
 OE;C;6.2g;35
+31
+M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Eclk_gen
@@ -68,13 +68,13 @@ w1608375115
 DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-31
 8./clk_gen.vhd
 F./clk_gen.vhd
 l0
 L6
 Va3DK]<1TfUanIW6SGC:KY0
 OE;C;6.2g;35
+31
 o-93 -work ./work
 tExplicit 1
 Abeh
@@ -82,41 +82,41 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work clk_gen a3DK]<1TfUanIW6SGC:KY0
-31
-M3 ieee std_logic_1164
-M2 ieee std_logic_arith
-M1 ieee std_logic_unsigned
 l18
 L12
 VjWNTbC5:Lz>Dj4JTA79CM2
 OE;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
 o-93 -work ./work
 tExplicit 1
 Econtrol
-w1608623618
+w1608565896
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-31
 8../src/control.vhd
 F../src/control.vhd
 l0
 L4
 V1_54Xz9mEYWFCHS9BO@[23
 OE;C;6.2g;35
+31
 o-93 -work ./work
 tExplicit 1
 Abeh
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work control 1_54Xz9mEYWFCHS9BO@[23
-31
-M1 ieee std_logic_1164
 l19
 L17
-V3KO8BAQonTR;cQ5P=AXWa1
+VT1FP1a1[`ZRig:>1ELHgZ0
 OE;C;6.2g;35
+31
+M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Edata_memory
-w1608571270
+w1608455648
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 31
@@ -137,7 +137,7 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 l21
 L15
-VUzDkfei:F@Y]SmL7LoML<2
+V8Mn_>B=QK7G9lTDa^_82]1
 OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
@@ -156,12 +156,12 @@ tExplicit 1
 Abehaviour
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work ff 4jFN@?k:41koECM5S@CT@3
-31
-M1 ieee std_logic_1164
 l12
 L11
 VIDf>:eJZhj=eMkK=i15VQ3
 OE;C;6.2g;35
+31
+M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Eimm_gen
@@ -181,39 +181,39 @@ Abeh
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work imm_gen 2XOKFGi_DZYk[gAh9lTDF0
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l16
 L12
 V4aNVKHQO6@G>K6odfL`^32
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Einstruction_memory
 w1608565896
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-31
 8../src/instruction_memory.vhd
 F../src/instruction_memory.vhd
 l0
 L5
 VKj04MW2MUi0h``3f:BEnW3
 OE;C;6.2g;35
+31
 o-93 -work ./work
 tExplicit 1
 Astructure
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work instruction_memory Kj04MW2MUi0h``3f:BEnW3
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l19
 L13
 VY^iPHC@N?gEofWjAIL]QX0
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Emux_2to1_nbit
@@ -233,13 +233,13 @@ Abehaviour
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work mux_2to1_nbit h_lB0h^A?Hk>KLhWc9a7m0
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l16
 L15
 VZQbmS;BWj]egG<<BlzgEj0
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Emux_4to1_nbit
@@ -259,13 +259,13 @@ Abehaviour
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work mux_4to1_nbit d]o>_Ki8eZDN[0?G^32ca2
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l15
 L14
 VgZja^AlT_e;R9X:EdbKH11
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Eregnbit
@@ -285,13 +285,13 @@ Abehaviour
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work regnbit PD;L1fT5<AM@W;ZVd=gPV3
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l17
 L16
 VbNbF[2kW3ZnPe6UgK`]MN0
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Erf_32_32b
@@ -311,48 +311,39 @@ Astructure
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work rf_32_32b 1Qo2M]:7O^5TM`3XTUEcR2
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l19
 L14
 VA4^X5N1iJnJ^:T8T1>VAL2
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Erisc_v
 w1608565896
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-31
 8../src/RISC-V.vhd
 F../src/RISC-V.vhd
 l0
 L5
 VhY>>_LQHZgT96lDT3^Gol3
 OE;C;6.2g;35
+31
 o-93 -work ./work
 tExplicit 1
 Abeh
-DE work mux_4to1_nbit d]o>_Ki8eZDN[0?G^32ca2
-DE work alu A]^kPSfAj:4i5cH32a^Wm0
-DE work alu_control RnEH83m6^Q[lPUReReTEf1
-DE work ff 4jFN@?k:41koECM5S@CT@3
-DE work control 1_54Xz9mEYWFCHS9BO@[23
-DE work imm_gen 2XOKFGi_DZYk[gAh9lTDF0
-DE work rf_32_32b 1Qo2M]:7O^5TM`3XTUEcR2
-DE work regnbit PD;L1fT5<AM@W;ZVd=gPV3
-DE work mux_2to1_nbit h_lB0h^A?Hk>KLhWc9a7m0
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work risc_v hY>>_LQHZgT96lDT3^Gol3
-31
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 l208
 L17
 VBk1>k:4KYNk4G9XQ3G2DC0
 OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 vtb_alu
