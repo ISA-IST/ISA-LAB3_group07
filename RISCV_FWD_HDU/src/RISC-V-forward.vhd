@@ -100,9 +100,9 @@ END COMPONENT;
 
 COMPONENT forwarding_unit IS
   PORT(
-        RS_1, RS_2 : IN std_logic_vector(31 downto 0);
-        RD_EX_MEM, RD_MEM_WB : IN std_logic_vector(31 downto 0);
-        REG_WRITE_EX_MEM, REG_WRITE_MEM_WB ; IN std_logic;
+        RS_1, RS_2 : IN std_logic_vector(4 downto 0);
+        RD_EX_MEM, RD_MEM_WB : IN std_logic_vector(4 downto 0);
+        REG_WRITE_EX_MEM, REG_WRITE_MEM_WB : IN std_logic;
         FORW_A1, FORW_A2, FORW_B1, FORW_B2 : OUT std_logic
   );
 END COMPONENT;
@@ -227,6 +227,8 @@ SIGNAL RD_3 : std_logic_vector(4 downto 0);
 --FROM MUX TO REG_FILES
 SIGNAL OUT_MUX_FIN :std_logic_vector (31 downto 0);
 
+--FROM MUX_FORWa TO MUX_FORWb
+SIGNAL OUT_FORW_A1,OUT_FORW_A2,OUT_FORW_B1,OUT_FORW_B2 : std_logic_vector (31 downto 0);
 
 BEGIN
 
@@ -249,7 +251,7 @@ BEGIN
 
   IMMED_GEN : imm_gen PORT MAP (INSTR, IMM);
 
-  CONTR : control PORT MAP (INSTR(6 downto 0), ALU_SRC, SEL_MUX_MEM, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG, ALU_OP);
+  CONTR : control PORT MAP (INSTR(6 downto 0), ALU_SRC, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG, ALU_OP, SEL_MUX_MEM);
 
   --EX_1 : regnbit GENERIC MAP (N => 3) PORT MAP( ALU_CTRL , CLK , RST_n , ALU_CTRL_1 );
 
@@ -285,11 +287,11 @@ BEGIN
   MUX_ALU : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP (READ_DATA2, IMM_1, ALU_SRC_1, DATA_B);
 
   -- adding mux for FORWARDING UNIT
-  MUX_FORW_A1 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(OUT_MUX_FIN , OUT_MUX_MEM , SEL_FORW_A1 , OUT_FORW_A1 )
-  MUX_FORW_B1 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(OUT_MUX_FIN , OUT_MUX_MEM , SEL_FORW_B1 , OUT_FORW_B1 )
+  MUX_FORW_A1 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(OUT_MUX_FIN , OUT_MUX_MEM , SEL_FORW_A1 , OUT_FORW_A1 );
+  MUX_FORW_B1 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(OUT_MUX_FIN , OUT_MUX_MEM , SEL_FORW_B1 , OUT_FORW_B1 );
 
-  MUX_FORW_A2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(READ_DATA1 , OUT_FORW_A1 , SEL_FORW_A2 , OUT_FORW_A2 )
-  MUX_FORW_B2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(DATA_B , OUT_FORW_B1 , SEL_FORW_B2 , OUT_FORW_B2 )
+  MUX_FORW_A2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(READ_DATA1 , OUT_FORW_A1 , SEL_FORW_A2 , OUT_FORW_A2 );
+  MUX_FORW_B2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(DATA_B , OUT_FORW_B1 , SEL_FORW_B2 , OUT_FORW_B2 );
 
 
   ctrl_alu: alu_control PORT MAP(funct3, ALU_OP_1, ALU_CTRL);
