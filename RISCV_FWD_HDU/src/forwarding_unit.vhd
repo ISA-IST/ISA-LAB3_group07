@@ -17,32 +17,35 @@ architecture beh of forwarding_unit is
 
 
 begin
-  process
+  process(REG_WRITE_EX_MEM, REG_WRITE_MEM_WB, RS_2, RS_1, RD_EX_MEM, RD_MEM_WB)
     begin
       FORW_A2 <= '0'; -- CONTROL IS KING
       FORW_B2 <= '0';
 
-    if (RS1 = EX_MEM_RD) then 
+  if (REG_WRITE_EX_MEM = '1') then
+    if (RS1 = RD_EX_MEM) then
       FORW_A1 <= '1';
       FORW_A2 <= '1';
     end if;
-
-    if (RS2 = EX_MEM_RD) then
+    if (RS2 = RD_EX_MEM) then
       FORW_B1 <= '1';
       FORW_B2 <= '1';
     end if;
+  end if ;
 
-    if (RS1 = MEM_WB_RD) then
+ if (REG_WRITE_MEM_WB = '1') then
+    if (RS1 = RD_MEM_WB) then
       FORW_A1 <= '0';
       FORW_A2 <= '1';
     end if;
 
-    if (RS2 = MEM_WB_RD) then
+    if (RS2 = RD_MEM_WB) then
       FORW_B1 <= '0';
       FORW_B2 <= '1';
     end if;
+  end if;
 
-end process
+end process;
 
 
 end beh;
