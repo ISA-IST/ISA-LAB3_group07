@@ -1,0 +1,239 @@
+# Loading project Risc-V
+# reading /home/mattereteo/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+file mkdir /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm
+# Loading project tb_imm
+compile -all
+# wrong # args: should be "compile w cmd ?arg ...?"
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of tb_imm.v failed with 1 errors.
+# Compile of tb_imm.v failed with 1 errors.
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v was successful.
+# 5 compiles, 0 failed with no errors.
+run 200 ns
+# No Design Loaded!
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 15:42:54 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 150 ns
+run 150 ns
+quit sim
+# unknown switch: sim
+quit -sim
+# End time: 15:54:07 on Dec 15,2020, Elapsed time: 0:11:13
+# Errors: 0, Warnings: 11
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 15:54:38 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+quit -sim
+# End time: 16:03:31 on Dec 15,2020, Elapsed time: 0:08:53
+# Errors: 0, Warnings: 1
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 16:03:37 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+quit -sim
+# End time: 16:37:19 on Dec 15,2020, Elapsed time: 0:33:42
+# Errors: 0, Warnings: 1
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 16:37:23 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+quit -sim
+# End time: 16:38:07 on Dec 15,2020, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 1
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 16:38:10 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+quit -sim
+# End time: 16:38:19 on Dec 15,2020, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 1
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 16:38:34 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+quit -sim
+# End time: 16:48:24 on Dec 15,2020, Elapsed time: 0:09:50
+# Errors: 0, Warnings: 2
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 16:50:05 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.tb_imm
+# End time: 16:55:45 on Dec 15,2020, Elapsed time: 0:05:40
+# Errors: 0, Warnings: 3
+# vsim work.tb_imm 
+# Start time: 16:55:45 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns
+quit -sim
+# End time: 17:05:34 on Dec 15,2020, Elapsed time: 0:09:49
+# Errors: 0, Warnings: 1
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 17:05:37 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+quit -sim
+# End time: 17:07:06 on Dec 15,2020, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 1
+# Compile of imm_gen.vhd was successful.
+# Compile of clk_gen.vhd was successful.
+# Compile of data_maker.vhd was successful.
+# Compile of data_sink.vhd was successful.
+# Compile of tb_imm.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.tb_imm
+# vsim work.tb_imm 
+# Start time: 17:07:22 on Dec 15,2020
+# Loading work.tb_imm
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_maker(beh)
+# Loading work.imm_gen(beh)
+# Loading work.data_sink(beh)
+run 400 ns

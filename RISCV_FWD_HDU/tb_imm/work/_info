@@ -1,0 +1,221 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_alu
+Eclk_gen
+Z0 w1608042156
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 29
+Z5 d/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm
+Z6 8/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/clk_gen.vhd
+Z7 F/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/clk_gen.vhd
+l0
+L6 1
+V0hmd@0XEnQKISXfN<CeVV1
+!s100 >j_>D0=Nk;?E5Lk^X_GoY0
+Z8 OV;C;2020.1;71
+32
+Z9 !s110 1608048437
+!i10b 1
+Z10 !s108 1608048437.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/clk_gen.vhd|
+Z12 !s107 /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/clk_gen.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 7 clk_gen 0 22 0hmd@0XEnQKISXfN<CeVV1
+!i122 29
+l20
+L14 29
+V7[A3MQ5ei6aEG81QB6T[<2
+!s100 F3:4QNkRhRW<LF_4UVHND1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Edata_maker
+Z15 w1608042729
+Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z17 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R1
+R2
+R3
+R4
+!i122 30
+R5
+Z18 8/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_maker.vhd
+Z19 F/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_maker.vhd
+l0
+Z20 L11 1
+VzDbC5T8Y36dIN6]2_Uf=P0
+!s100 h7jU[gm1<[I92K2AoTNN>2
+R8
+32
+R9
+!i10b 1
+R10
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_maker.vhd|
+Z22 !s107 /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_maker.vhd|
+!i113 1
+R13
+R14
+Abeh
+R16
+R17
+R1
+R2
+R3
+R4
+DEx4 work 10 data_maker 0 22 zDbC5T8Y36dIN6]2_Uf=P0
+!i122 30
+l19
+L17 22
+VfT^6SHH]HnAMo5C9H<MbN2
+!s100 Jz=2SL;KKEmgGKikE?FVJ2
+R8
+32
+R9
+!i10b 1
+R10
+R21
+R22
+!i113 1
+R13
+R14
+Edata_sink
+Z23 w1608042128
+R17
+R2
+R1
+R16
+R3
+R4
+!i122 31
+R5
+Z24 8/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_sink.vhd
+Z25 F/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_sink.vhd
+l0
+R20
+V8_2LZhMgm?EddOUmaRN`U3
+!s100 1QD1aFICg0M[<1P1Dco3I1
+R8
+32
+R9
+!i10b 1
+R10
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_sink.vhd|
+Z27 !s107 /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/data_sink.vhd|
+!i113 1
+R13
+R14
+Abeh
+R17
+R2
+R1
+R16
+R3
+R4
+DEx4 work 9 data_sink 0 22 8_2LZhMgm?EddOUmaRN`U3
+!i122 31
+l21
+L19 19
+VY_CVZ_WW4V>ekUjJ]:HBR2
+!s100 UQcJ_D:;:_GUiJC3]4CTL1
+R8
+32
+R9
+!i10b 1
+R10
+R26
+R27
+!i113 1
+R13
+R14
+Eimm_gen
+Z28 w1608048430
+R16
+R3
+R4
+!i122 28
+R5
+Z29 8/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/src/imm_gen.vhd
+Z30 F/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/src/imm_gen.vhd
+l0
+L5 1
+VKBXmibXNiJl0OPmKJk;@=3
+!s100 Nl^B?0_>dlG2]dS=mkBja3
+R8
+32
+R9
+!i10b 1
+R10
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/src/imm_gen.vhd|
+Z32 !s107 /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/src/imm_gen.vhd|
+!i113 1
+R13
+R14
+Abeh
+R16
+R3
+R4
+DEx4 work 7 imm_gen 0 22 KBXmibXNiJl0OPmKJk;@=3
+!i122 28
+l16
+L12 53
+V::i8CS]:?LVG?4[4jAnCW0
+!s100 SQ9HzNIRlR1cf;^VAET6K2
+R8
+32
+R9
+!i10b 1
+R10
+R31
+R32
+!i113 1
+R13
+R14
+vtb_imm
+R9
+!i10b 1
+!s100 OWSlbhgY4k2aHMHJAU?O^3
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IFL]C0cfQLBT<@Ano`i_lR1
+VDg1SIo80bB@j0V0VzS_@n1
+R5
+w1608044644
+8/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/tb_imm.v
+F/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/tb_imm.v
+!i122 32
+L0 3 24
+OV;L;2020.1;71
+r1
+!s85 0
+31
+R10
+!s107 /home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/tb_imm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/mattereteo/Documenti/Politecnico/MAGISTRALE/ISA/LAB/LAB3/ISA-LAB3_group07/tb_imm/tb_imm.v|
+!i113 1
+o-work work
+tCvgOpt 0

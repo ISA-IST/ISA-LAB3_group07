@@ -1,0 +1,395 @@
+m255
+13
+cModel Technology
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/tb
+T_opt
+VkB0Ia_0AA9zOVEi_6HEaj1
+06 7 4 ./work tb_RISC fast 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+T_opt1
+VTm2DaYVkPWF:ZOVZoQn7U2
+06 11 9 ./work data_memory structure 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+Ealu
+w1607854237
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/ALU.vhd
+F../src/ALU.vhd
+l0
+L5
+VA]^kPSfAj:4i5cH32a^Wm0
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alu A]^kPSfAj:4i5cH32a^Wm0
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l15
+L14
+VSU76PP9TIc<k^R5N`_a[l3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Ealu_control
+w1607795706
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/alu_control.vhd
+F../src/alu_control.vhd
+l0
+L4
+VRnEH83m6^Q[lPUReReTEf1
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alu_control RnEH83m6^Q[lPUReReTEf1
+31
+M1 ieee std_logic_1164
+l14
+L12
+VQGTR41N[EK[_icff4Y7FE0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Eclk_gen
+w1608375115
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8./clk_gen.vhd
+F./clk_gen.vhd
+l0
+L6
+Va3DK]<1TfUanIW6SGC:KY0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clk_gen a3DK]<1TfUanIW6SGC:KY0
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+l18
+L12
+VjWNTbC5:Lz>Dj4JTA79CM2
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Econtrol
+w1608623618
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/control.vhd
+F../src/control.vhd
+l0
+L4
+V1_54Xz9mEYWFCHS9BO@[23
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work control 1_54Xz9mEYWFCHS9BO@[23
+31
+M1 ieee std_logic_1164
+l19
+L17
+V3KO8BAQonTR;cQ5P=AXWa1
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Edata_memory
+w1608729226
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/data_memory.vhd
+F../src/data_memory.vhd
+l0
+L5
+VC_CB4[LZG92[_TRj9bWlX1
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Astructure
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_memory C_CB4[LZG92[_TRj9bWlX1
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l21
+L15
+Vjzc[4Kl4aoYBjPBz?jJLP0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Eff
+w1607795706
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/ff.vhd
+F../src/ff.vhd
+l0
+L4
+V4jFN@?k:41koECM5S@CT@3
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work ff 4jFN@?k:41koECM5S@CT@3
+31
+M1 ieee std_logic_1164
+l12
+L11
+VIDf>:eJZhj=eMkK=i15VQ3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Eimm_gen
+w1608368012
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/imm_gen.vhd
+F../src/imm_gen.vhd
+l0
+L5
+V2XOKFGi_DZYk[gAh9lTDF0
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work imm_gen 2XOKFGi_DZYk[gAh9lTDF0
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l16
+L12
+V4aNVKHQO6@G>K6odfL`^32
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Einstruction_memory
+w1608729528
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/instruction_memory.vhd
+F../src/instruction_memory.vhd
+l0
+L5
+VKj04MW2MUi0h``3f:BEnW3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Astructure
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work instruction_memory Kj04MW2MUi0h``3f:BEnW3
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l19
+L13
+V=QEI@oL=F^PV0YLfGf7H40
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Emux_2to1_nbit
+w1607795707
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/mux_2to1_nbit.vhd
+F../src/mux_2to1_nbit.vhd
+l0
+L5
+Vh_lB0h^A?Hk>KLhWc9a7m0
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work mux_2to1_nbit h_lB0h^A?Hk>KLhWc9a7m0
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l16
+L15
+VZQbmS;BWj]egG<<BlzgEj0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Emux_4to1_nbit
+w1607795707
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/mux_4to1_nbit.vhd
+F../src/mux_4to1_nbit.vhd
+l0
+L5
+Vd]o>_Ki8eZDN[0?G^32ca2
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work mux_4to1_nbit d]o>_Ki8eZDN[0?G^32ca2
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l15
+L14
+VgZja^AlT_e;R9X:EdbKH11
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Eregnbit
+w1607795707
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/regnbit.vhd
+F../src/regnbit.vhd
+l0
+L5
+VPD;L1fT5<AM@W;ZVd=gPV3
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work regnbit PD;L1fT5<AM@W;ZVd=gPV3
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l17
+L16
+VbNbF[2kW3ZnPe6UgK`]MN0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Erf_32_32b
+w1608566192
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/RF_32_32b.vhd
+F../src/RF_32_32b.vhd
+l0
+L5
+V1Qo2M]:7O^5TM`3XTUEcR2
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Astructure
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work rf_32_32b 1Qo2M]:7O^5TM`3XTUEcR2
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l19
+L14
+VA4^X5N1iJnJ^:T8T1>VAL2
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Erisc_v
+w1608630249
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/original_arch/tb
+8../src/RISC-V.vhd
+F../src/RISC-V.vhd
+l0
+L5
+VhY>>_LQHZgT96lDT3^Gol3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DE work mux_4to1_nbit d]o>_Ki8eZDN[0?G^32ca2
+DE work alu A]^kPSfAj:4i5cH32a^Wm0
+DE work alu_control RnEH83m6^Q[lPUReReTEf1
+DE work ff 4jFN@?k:41koECM5S@CT@3
+DE work control 1_54Xz9mEYWFCHS9BO@[23
+DE work imm_gen 2XOKFGi_DZYk[gAh9lTDF0
+DE work rf_32_32b 1Qo2M]:7O^5TM`3XTUEcR2
+DE work regnbit PD;L1fT5<AM@W;ZVd=gPV3
+DE work mux_2to1_nbit h_lB0h^A?Hk>KLhWc9a7m0
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work risc_v hY>>_LQHZgT96lDT3^Gol3
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l208
+L17
+Vb?^Kc_FgBQd``emz;dGnA3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+vtb_alu
+Il?=b4EgFICWO0bbPl@Nf]0
+VS_Y`c29E2zA:f=1J@M@hG1
+w1608368012
+8./tb_RISC.v
+F./tb_RISC.v
+L0 3
+VS_Y`c29E2zA:f=1J@M@hG1
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+vtb_RISC
+IJV<QkGTSCD>d<<RBIQ`TO0
+V0Ue:i_odc3ThWBbTj60kG0
+w1608370324
+8./tb_RISC.v
+F./tb_RISC.v
+L0 3
+V0Ue:i_odc3ThWBbTj60kG0
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+ntb_@r@i@s@c
