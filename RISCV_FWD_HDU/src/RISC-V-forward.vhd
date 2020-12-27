@@ -26,9 +26,10 @@ END COMPONENT;
 COMPONENT control IS
 PORT (
 	OPCODE : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ALU_SRC1, SEL_MUX_JAL_AUIPC, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
-	MEM_TO_REG : OUT STD_LOGIC_VECTOR(1 DOWNTO 0); --"FINAL MUX",
-	ALU_OP     : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+	ALU_SRC1, REG_WRITE, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
+	MEM_TO_REG : OUT STD_LOGIC; --"FINAL MUX",
+	ALU_OP     : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SEL_MUX_MEM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 );
 END COMPONENT;
 
@@ -96,7 +97,8 @@ PORT(
 );
 END COMPONENT;
 
-ENTITY forwarding_unit IS
+
+COMPONENT forwarding_unit IS
   PORT(
         RS_1, RS_2 : IN std_logic_vector(31 downto 0);
         RD_EX_MEM, RD_MEM_WB : IN std_logic_vector(31 downto 0);
@@ -138,8 +140,8 @@ SIGNAL READ_DATA1, READ_DATA2 : std_logic_vector (31 downto 0);
 SIGNAL IMM : std_logic_vector (31 downto 0);
 
 --FROM CONTROL TO EX
-SIGNAL REG_WRITE, ALU_SRC, SEL_MUX_MEM, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG: std_logic;
-SIGNAL ALU_OP :  STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL REG_WRITE, ALU_SRC, MEM_WRITE, MEM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG: std_logic;
+SIGNAL ALU_OP,SEL_MUX_MEM :  STD_LOGIC_VECTOR(1 DOWNTO 0);
 --SIGNAL ALU_CTRL: std_logic_vector(2 downto 0); ERRORE
 
 -- FROM EX TO alu_control
@@ -148,7 +150,7 @@ SIGNAL ALU_OP :  STD_LOGIC_VECTOR(1 DOWNTO 0);
 -- FROM EX TO MUX_ALU
 SIGNAL ALU_SRC_1 : std_logic;
 -- FROM EX TO MEM
-SIGNAL SEL_MUX_MEM_1 : std_logic;
+SIGNAL SEL_MUX_MEM_1 : std_logic_vector(1 downto 0);
 SIGNAL NEXT_PC_2 : std_logic_vector(31 downto 0);
 -- FROM EX TO MEM
 SIGNAL MEM_WRITE_1, MEM_READ_1, REG_WRITE_1, BRANCH_cond_1, BRANCH_uncond_1 : std_logic;
@@ -195,7 +197,7 @@ SIGNAL OUT_ALU:std_logic_vector(31 downto 0);
 SIGNAL ZERO : std_logic;
 
 --FROM MEM TO MUX_MEM
-SIGNAL SEL_MUX_MEM_2 : std_logic;
+SIGNAL SEL_MUX_MEM_2 : std_logic_vector(1 downto 0);
 SIGNAL NEXT_PC_3 : std_logic_vector(31 downto 0);
 SIGNAL OUT_ADD_SUM_1: std_logic_vector (31 downto 0);
 
@@ -252,7 +254,7 @@ BEGIN
   --EX_1 : regnbit GENERIC MAP (N => 3) PORT MAP( ALU_CTRL , CLK , RST_n , ALU_CTRL_1 );
 
   EX_2 : ff PORT MAP( ALU_SRC, CLK, RST_n, ALU_SRC_1 );
-  EX_3 : ff PORT MAP( SEL_MUX_MEM, CLK, RST_n, SEL_MUX_MEM_1 );
+  EX_3 : regnbit GENERIC MAP (N => 2) PORT MAP( SEL_MUX_MEM, CLK, RST_n, SEL_MUX_MEM_1 );
   EX_4 : ff PORT MAP( REG_WRITE, CLK, RST_n, REG_WRITE_1 );
   EX_5 : ff PORT MAP( MEM_WRITE, CLK, RST_n, MEM_WRITE_1 );
   EX_6 : ff PORT MAP( MEM_READ, CLK, RST_n, MEM_READ_1 );
@@ -260,7 +262,7 @@ BEGIN
   EX_8 : ff PORT MAP( BRANCH_uncond, CLK, RST_n, BRANCH_uncond_1 );
   EX_9 : ff PORT MAP( SEL_MUX_ADD_SUM, CLK, RST_n, SEL_MUX_ADD_SUM_1 );
 
-  EX_10 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG, CLK, RST_n, MEM_TO_REG_1 );
+  EX_10 : ff PORT MAP( MEM_TO_REG, CLK, RST_n, MEM_TO_REG_1 );
   EX_1 : regnbit GENERIC MAP (N => 2) PORT MAP( ALU_OP, CLK, RST_n, ALU_OP_1 );
 
   EX_11 : regnbit GENERIC MAP (N => 32) PORT MAP( IMM, CLK, RST_n, IMM_1 );
@@ -288,7 +290,7 @@ BEGIN
 
   MUX_FORW_A2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(READ_DATA1 , OUT_FORW_A1 , SEL_FORW_A2 , OUT_FORW_A2 )
   MUX_FORW_B2 : mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP(DATA_B , OUT_FORW_B1 , SEL_FORW_B2 , OUT_FORW_B2 )
-  
+
 
   ctrl_alu: alu_control PORT MAP(funct3, ALU_OP_1, ALU_CTRL);
 
@@ -309,12 +311,12 @@ BEGIN
   MEM_9 : regnbit GENERIC MAP (N => 5) PORT MAP( RD_1, CLK, RST_n, RD_2 );
   MEM_10 : regnbit GENERIC MAP (N => 32) PORT MAP ( IMM_1, CLK, RST_n, IMM_2);
 --  MEM_11 : regnbit GENERIC MAP (N => 32) PORT MAP ( OUT_MUX_JAL_AUIPC, CLK, RST_n, OUT_MUX_JAL_AUIPC_1);
-  MEM_12 : regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG_1 , CLK , RST_n , MEM_TO_REG_2 );
+  MEM_12 : ff PORT MAP( MEM_TO_REG_1 , CLK , RST_n , MEM_TO_REG_2 );
 
-  MEM_13 : ff PORT MAP( SEL_MUX_MEM_1, CLK, RST_n, SEL_MUX_MEM_2 );
-  MEM_14 :regnbit GENERIC MAP (N => 32) PORT MAP( NEXT_PC_2, CLK, RST_n, NEXT_PC_3 );
-  MEM_15 :regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ADD_SUM, CLK, RST_n, OUT_ADD_SUM_1 );
-  
+  MEM_13 : regnbit GENERIC MAP(N => 2) PORT MAP( SEL_MUX_MEM_1, CLK, RST_n, SEL_MUX_MEM_2 );
+  MEM_14 : regnbit GENERIC MAP (N => 32) PORT MAP( NEXT_PC_2, CLK, RST_n, NEXT_PC_3 );
+  MEM_15 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ADD_SUM, CLK, RST_n, OUT_ADD_SUM_1 );
+
  -- MEM_16 : regnbit GENERIC MAP (N => 5) PORT MAP( RS1_1, CLK, RST_n, RS1_2 );
  -- MEM_17 : regnbit GENERIC MAP (N => 5) PORT MAP( RS2_1, CLK, RST_n, RS2_2 );
 
@@ -329,12 +331,12 @@ BEGIN
   --WB_3 : regnbit GENERIC MAP (N => 32) PORT MAP( IMM_2, CLK, RST_n, IMM_MUX);-- IMMEDIATE
   WB_4 : regnbit GENERIC MAP (N => 5) PORT MAP( RD_2, CLK, RST_n, RD_3);
   WB_5 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_MUX_MEM, CLK, RST_n, OUT_MUX_MEM_1);-- OUT_MUX_MEM
-  WB_6: regnbit GENERIC MAP (N => 2) PORT MAP( MEM_TO_REG_2 , CLK , RST_n , MEM_TO_REG_3 );
+  WB_6 : ff PORT MAP( MEM_TO_REG_2 , CLK , RST_n , MEM_TO_REG_3 );
 
   MUX_FIN: mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP( DM_data, OUT_MUX_MEM_1, MEM_TO_REG_3, OUT_MUX_FIN);
-  
+
   -- forwarding UNIT
-  forw_unit: forwarding_unit PORT MAP (RS_1 => RS1, RS_2 => RS2, RD_EX_MEM => RD_2, RD_MEM_WB => RD_3, REG_WRITE_EX_MEM => REG_WRITE_2, 
+  forw_unit: forwarding_unit PORT MAP (RS_1 => RS1, RS_2 => RS2, RD_EX_MEM => RD_2, RD_MEM_WB => RD_3, REG_WRITE_EX_MEM => REG_WRITE_2,
 									REG_WRITE_MEM_WB => REG_WRITE_3, FORW_A1 => SEL_FORW_A1, FORW_A2 => SEL_FORW_A2, FORW_B1 => SEL_FORW_B1,
 									FORW_B2 => SEL_FORW_B2);
 

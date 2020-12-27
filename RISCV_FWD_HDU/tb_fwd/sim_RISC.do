@@ -10,7 +10,7 @@ vcom -93 -work ./work ../src/control.vhd
 vcom -93 -work ./work ../src/alu_control.vhd
 vcom -93 -work ./work ../src/imm_gen.vhd
 vcom -93 -work ./work ../src/RF_32_32b.vhd
-vcom -93 -work ./work ../src/RISC-V.vhd
+vcom -93 -work ./work ../src/RISC-V-forward.vhd
 
 vcom -93 -work ./work ./clk_gen.vhd
 

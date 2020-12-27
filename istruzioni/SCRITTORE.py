@@ -1,8 +1,8 @@
 
-file_r = open("code_nop.txt","r")
-file_w = open("im_nop.txt","w")
+file_r = open("code_nop_fwd.txt","r")
+file_w = open("im_nop_fwd.txt","w")
 
-idx = 4194304 
+idx = 4194304
 line = file_r.readlines()
 
 for i in line:
@@ -15,5 +15,3 @@ for i in line:
 
 file_r.close()
 file_w.close()
-    
-    
