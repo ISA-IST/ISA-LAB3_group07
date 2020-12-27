@@ -21,8 +21,10 @@ begin
     begin
       FORW_A2 <= '0'; -- CONTROL IS KING
       FORW_B2 <= '0';
+      FORW_A1 <= '0';
+      FORW_B1 <= '0'; 
 
-  if (REG_WRITE_EX_MEM = '1') then
+  if (REG_WRITE_EX_MEM = '1' and RD_EX_MEM != "00000") then
     if (RS1 = RD_EX_MEM) then
       FORW_A1 <= '1';
       FORW_A2 <= '1';
@@ -33,7 +35,7 @@ begin
     end if;
   end if ;
 
- if (REG_WRITE_MEM_WB = '1') then
+ if (REG_WRITE_MEM_WB = '1' and RD_MEM_WB != "00000") then
     if (RS1 = RD_MEM_WB) then
       FORW_A1 <= '0';
       FORW_A2 <= '1';
