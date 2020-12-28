@@ -24,7 +24,7 @@ begin
 			ENABLE_PC_ID <= '0';
 			SEL_MUX_HDU <= '1';      
 		  end if;
-	  ELSIF (OPCODE = "0010011" OR OPCODE = "0000011") then 
+	  ELSE IF (OPCODE = "0010011" OR OPCODE = "0000011") then 
 		  if(DM_READ_EX = '1' and RS1_ID = RD_EX) then
 			ENABLE_PC_ID <= '0';
 			SEL_MUX_HDU <= '1';      

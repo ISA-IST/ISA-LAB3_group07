@@ -1,6 +1,6 @@
 
-file_r = open("code_nop_fwd.txt","r")
-file_w = open("im_nop_fwd.txt","w")
+file_r = open("code_fwd.txt","r")
+file_w = open("im_fwd.txt","w")
 
 idx = 4194304
 line = file_r.readlines()

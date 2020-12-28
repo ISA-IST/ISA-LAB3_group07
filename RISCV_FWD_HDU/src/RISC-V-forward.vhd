@@ -244,6 +244,8 @@ SIGNAL ENABLE_PC_ID: std_logic;
 SIGNAL OUT_CU: std_logic_vector(11 downto 0);
 SIGNAL CTRL_hazard: std_logic_vector(11 downto 0);
 SIGNAL SEL_MUX_HDU: std_logic;
+SIGNAL ENABLE_PC : std_logic; -- TO JUMP
+
 
 BEGIN
 
@@ -255,7 +257,9 @@ BEGIN
 
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
 
-  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', ENABLE => ENABLE_PC_ID, Q => PC_s); -- the PC is never reset
+  ENABLE_PC <= ENABLE_PC_ID OR SEL_ADD;
+
+  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', ENABLE => ENABLE_PC , Q => PC_s); -- the PC is never reset
 
   PC <= PC_s;
 
@@ -269,9 +273,9 @@ BEGIN
   CONTR : control PORT MAP (INSTR(6 downto 0), ALU_SRC, REG_WRITE, DM_WRITE, DM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG, ALU_OP, SEL_MUX_MEM);
 
   OUT_CU <= ALU_SRC & REG_WRITE & DM_WRITE & DM_READ & BRANCH_cond & BRANCH_uncond & SEL_MUX_ADD_SUM & MEM_TO_REG & ALU_OP & SEL_MUX_MEM;
-  
+
   -- HAZARD DETECTION UNIT
-  HD_unit: HDU PORT MAP(RS1_ID => INSTR(19 downto 15), RS2_ID => INSTR(24 downto 20), RD_EX => RD_1, DM_READ_EX => DM_READ_1, ENABLE_PC_ID => ENABLE_PC_ID, SEL_MUX_HDU => SEL_MUX_HDU, OPCODE => INSTR(6 downto 0));  
+  HD_unit: HDU PORT MAP(RS1_ID => INSTR(19 downto 15), RS2_ID => INSTR(24 downto 20), RD_EX => RD_1, DM_READ_EX => DM_READ_1, ENABLE_PC_ID => ENABLE_PC_ID, SEL_MUX_HDU => SEL_MUX_HDU, OPCODE => INSTR(6 downto 0));
   IM_READ_OUT <= ENABLE_PC_ID;
   MUX_HDU: mux_2to1_nbit GENERIC MAP (N=>12) PORT MAP(I0 => OUT_CU, I1 => (OTHERS => '0'), SEL => SEL_MUX_HDU, O => CTRL_hazard);
 
@@ -284,7 +288,7 @@ BEGIN
   EX_6 : ff PORT MAP( CTRL_hazard(8), CLK, RST_n, '1', DM_READ_1 );
   EX_7 : ff PORT MAP( CTRL_hazard(7), CLK, RST_n, '1', BRANCH_cond_1 );
   EX_8 : ff PORT MAP( CTRL_hazard(6), CLK, RST_n, '1', BRANCH_uncond_1 );
-  EX_9 : ff PORT MAP( CTRL_hazard(5), CLK, RST_n, '1'  SEL_MUX_ADD_SUM_1 );
+  EX_9 : ff PORT MAP( CTRL_hazard(5), CLK, RST_n, '1' , SEL_MUX_ADD_SUM_1 );
 
   EX_10 : ff PORT MAP( CTRL_hazard(4), CLK, RST_n, '1', MEM_TO_REG_1 );
   EX_1 : regnbit GENERIC MAP (N => 2) PORT MAP( CTRL_hazard(3 downto 2), CLK, RST_n, '1', ALU_OP_1 );

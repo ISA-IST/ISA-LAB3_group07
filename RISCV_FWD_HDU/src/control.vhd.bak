@@ -22,9 +22,9 @@ CTRL_GEN : PROCESS(OPCODE)
 						 --DEFAULT ASSIGNMENTS
 					BRANCH_cond     	<= '0';
 					BRANCH_uncond 		<= '0';
-					DM_WRITE   			<= '0';
+					MEM_WRITE   			<= '0';
 					REG_WRITE   			<= '0';
-					DM_READ    			<= '0';
+					MEM_READ    			<= '0';
 					ALU_SRC1    			<= '0'; --TAKE FROM READ2
           SEL_MUX_ADD_SUM 	<= '0'; --ALWAYS ON BEQ
 					MEM_TO_REG      	<= '1'; -- COVERS THE JAL, AUIPC, ALU, LUI
@@ -57,12 +57,12 @@ CTRL_GEN : PROCESS(OPCODE)
 
 						WHEN "0000011"  =>       --LW
 							REG_WRITE <= '1';
-							DM_READ  <= '1';
+							MEM_READ  <= '1';
 							MEM_TO_REG <= '0';
 							ALU_SRC1 <= '1';
 
 						WHEN"0100011"  =>       --SW
-							DM_WRITE <= '1';
+							MEM_WRITE <= '1';
 							ALU_SRC1 <= '1';
 
 						WHEN "0010011"  =>       --ADDI, ANDI, SRAI
