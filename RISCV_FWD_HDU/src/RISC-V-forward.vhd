@@ -107,6 +107,15 @@ COMPONENT forwarding_unit IS
   );
 END COMPONENT;
 
+COMPONENT HDU IS
+  PORT(
+  RS1_ID, RS2_ID, RD_EX: IN std_logic_vector(4 downto 0);
+  DM_READ_EX: IN std_logic;
+  OPCODE: IN std_logic_vector(6 downto 0);
+  ENABLE_PC_ID, SEL_MUX_HDU : OUT std_logic
+  );
+END COMPONENT;
+
 
 -- FROM id TO ex
 SIGNAL PC_1, NEXT_PC_1 : std_logic_vector(31 downto 0);
@@ -261,6 +270,9 @@ BEGIN
 
   OUT_CU <= ALU_SRC & REG_WRITE & DM_WRITE & DM_READ & BRANCH_cond & BRANCH_uncond & SEL_MUX_ADD_SUM & MEM_TO_REG & ALU_OP & SEL_MUX_MEM;
   
+  -- HAZARD DETECTION UNIT
+  HD_unit: HDU PORT MAP(RS1_ID => INSTR(19 downto 15), RS2_ID => INSTR(24 downto 20), RD_EX => RD_1, DM_READ_EX => DM_READ_1, ENABLE_PC_ID => ENABLE_PC_ID, SEL_MUX_HDU => SEL_MUX_HDU, OPCODE => INSTR(6 downto 0));  
+  IM_READ_OUT <= ENABLE_PC_ID;
   MUX_HDU: mux_2to1_nbit GENERIC MAP (N=>12) PORT MAP(I0 => OUT_CU, I1 => (OTHERS => '0'), SEL => SEL_MUX_HDU, O => CTRL_hazard);
 
   --EX_1 : regnbit GENERIC MAP (N => 3) PORT MAP( ALU_CTRL , CLK , RST_n , ALU_CTRL_1 );
