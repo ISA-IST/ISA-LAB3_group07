@@ -7,19 +7,19 @@ PORT (
   DATA_IN : IN STD_LOGIC_VECTOR (31 downto 0);
   DATA_OUT : OUT STD_LOGIC_VECTOR (31 downto 0);
   ENABLE : IN STD_LOGIC
+
 );
 END Absolute_value;
 
 ARCHITECTURE beh OF Absolute_value IS
 BEGIN
 
-  process(DATA_IN)
+  process(DATA_IN, ENABLE)
   begin
-    if (RST_n = '1') then
-      if(ENABLE = '1') then
+    if(ENABLE = '1') then
         DATA_OUT <= abs(DATA_IN);
-      end if;
-    else DATA_OUT <= (OTHERS => '0');
+    else
+        DATA_OUT <= (OTHERS => '0');
     end if;
-  end process;
+ end process;
 END ARCHITECTURE;
