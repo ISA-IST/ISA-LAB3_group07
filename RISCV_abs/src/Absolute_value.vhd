@@ -11,6 +11,7 @@ PORT (
 END Absolute_value;
 
 ARCHITECTURE beh OF Absolute_value IS
+
 BEGIN
 
   process(DATA_IN, ENABLE)
@@ -21,4 +22,5 @@ BEGIN
         DATA_OUT <= (OTHERS => '0');
     end if;
  end process;
+
 END ARCHITECTURE;
