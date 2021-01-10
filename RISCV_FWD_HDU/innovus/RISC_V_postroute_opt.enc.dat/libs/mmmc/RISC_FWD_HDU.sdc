@@ -1,0 +1,1 @@
+/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU/netlist/RISC_FWD_HDU.sdc

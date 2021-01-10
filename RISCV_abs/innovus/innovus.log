@@ -1,0 +1,176 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	
+Date:		Sat Jan  2 10:08:08 2021
+Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+OS:		CentOS Linux release 7.6.1810 (Core) 
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+#% Begin Load MMMC data ... (date=01/02 10:17:42, mem=414.1M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:18:44, mem=414.2M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:18:45, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:18:46, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:00, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:07, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:30, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:31, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:38, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:52, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:52, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:19:53, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:20:07, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:20:32, mem=414.3M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:12, mem=414.5M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:18, mem=414.5M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:56, mem=414.7M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:57, mem=414.7M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:57, mem=414.7M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:21:58, mem=414.7M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:02, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:02, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:05, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:06, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:06, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:07, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:07, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:08, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:08, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:09, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:10, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:10, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:11, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:11, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:12, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:12, mem=414.7M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:22:36, mem=414.7M)
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> save_global Default.globals
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:23:00, mem=415.1M)
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell filter
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:24:28, mem=417.3M)
+<CMD> init_design
+% Begin Load MMMC data ... (date=01/02 10:24:31, mem=417.3M)
+
+*** Memory Usage v#1 (Current mem = 498.461M, initial mem = 179.684M) ***
+*** Message Summary: 0 warning(s), 20 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:40.3, real=0:16:45, mem=498.5M) ---

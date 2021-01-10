@@ -25,12 +25,13 @@ set_output_delay  0.5 -max -clock MY_CLK [all_outputs]
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 set_load $OLOAD [all_outputs]
 
-ungroup -all -flatten
-compile -exact_map 
+
+compile -exact_map
 
 check_design > check_design.txt
 report_timing > ./timing/timing_RISC_FWD_HDU.txt
 report_area > ./area/area_RISC_FWD_HDU.txt
+ungroup -all -flatten
 
 change_names -hierarchy -rules verilog
 write_sdf ../netlist/RISC_FWD_HDU.sdf

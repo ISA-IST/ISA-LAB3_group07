@@ -1,0 +1,310 @@
+[01/02 10:08:08      0s] 
+[01/02 10:08:08      0s] Cadence Innovus(TM) Implementation System.
+[01/02 10:08:08      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/02 10:08:08      0s] 
+[01/02 10:08:08      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[01/02 10:08:08      0s] Options:	
+[01/02 10:08:08      0s] Date:		Sat Jan  2 10:08:08 2021
+[01/02 10:08:08      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+[01/02 10:08:08      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[01/02 10:08:08      0s] 
+[01/02 10:08:08      0s] License:
+[01/02 10:08:09      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[01/02 10:08:09      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[01/02 10:13:55     22s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[01/02 10:13:55     22s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[01/02 10:13:55     22s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[01/02 10:13:55     22s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[01/02 10:13:55     22s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[01/02 10:13:55     22s] @(#)CDS: CPE v17.11-s095
+[01/02 10:13:55     22s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[01/02 10:13:55     22s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[01/02 10:13:55     22s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[01/02 10:13:55     22s] @(#)CDS: RCDB 11.10
+[01/02 10:13:55     22s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
+[01/02 10:13:55     22s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_24654_localhost.localdomain_isa07_mc5aWT.
+
+[01/02 10:13:56     22s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[01/02 10:14:18     23s] 
+[01/02 10:14:18     23s] **INFO:  MMMC transition support version v31-84 
+[01/02 10:14:18     23s] 
+[01/02 10:14:18     23s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[01/02 10:14:18     23s] <CMD> suppressMessage ENCEXT-2799
+[01/02 10:14:25     23s] <CMD> getDrawView
+[01/02 10:14:25     23s] <CMD> loadWorkspace -name Physical
+[01/02 10:14:26     23s] <CMD> win
+[01/02 10:17:14     27s] <CMD> set init_design_netlisttype verilog
+[01/02 10:17:14     27s] <CMD> set init_design_settop 1
+[01/02 10:17:14     27s] <CMD> set init_top_cell filter
+[01/02 10:17:14     27s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:17:14     27s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:17:14     27s] <CMD> set init_gnd_net VSS
+[01/02 10:17:14     27s] <CMD> set init_pwr_net VDD
+[01/02 10:17:42     28s] <CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:17:42     28s] <CMD> init_design
+[01/02 10:17:42     28s] #% Begin Load MMMC data ... (date=01/02 10:17:42, mem=414.1M)
+[01/02 10:17:43     28s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:18:44     30s] <CMD> init_design
+[01/02 10:18:44     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:18:45     30s] % Begin Load MMMC data ... (date=01/02 10:18:44, mem=414.2M)
+[01/02 10:18:45     30s] Extraction setup Delayed 
+[01/02 10:18:45     30s] Extraction setup Delayed 
+[01/02 10:18:45     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:18:45     30s] <CMD> init_design
+[01/02 10:18:45     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:18:46     30s] % Begin Load MMMC data ... (date=01/02 10:18:45, mem=414.3M)
+[01/02 10:18:46     30s] Extraction setup Delayed 
+[01/02 10:18:46     30s] Extraction setup Delayed 
+[01/02 10:18:46     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:18:46     30s] <CMD> init_design
+[01/02 10:18:46     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:18:47     30s] % Begin Load MMMC data ... (date=01/02 10:18:46, mem=414.3M)
+[01/02 10:18:47     30s] Extraction setup Delayed 
+[01/02 10:18:47     30s] Extraction setup Delayed 
+[01/02 10:18:47     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:19:00     30s] <CMD> init_design
+[01/02 10:19:00     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:01     30s] % Begin Load MMMC data ... (date=01/02 10:19:00, mem=414.3M)
+[01/02 10:19:01     30s] Extraction setup Delayed 
+[01/02 10:19:01     30s] Extraction setup Delayed 
+[01/02 10:19:01     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_mmmc_file mmm_design.tcl
+[01/02 10:19:07     30s] <CMD> init_design
+[01/02 10:19:07     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:07     30s] % Begin Load MMMC data ... (date=01/02 10:19:07, mem=414.3M)
+[01/02 10:19:07     30s] Extraction setup Delayed 
+[01/02 10:19:07     30s] Extraction setup Delayed 
+[01/02 10:19:07     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+[01/02 10:19:28     31s] <CMD> set init_design_settop 1
+[01/02 10:19:28     31s] <CMD> set init_top_cell filter
+[01/02 10:19:28     31s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:19:28     31s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:19:28     31s] <CMD> set init_gnd_net VSS
+[01/02 10:19:28     31s] <CMD> set init_pwr_net VDD
+[01/02 10:19:30     31s] <CMD> init_design
+[01/02 10:19:30     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:30     31s] % Begin Load MMMC data ... (date=01/02 10:19:30, mem=414.3M)
+[01/02 10:19:30     31s] Extraction setup Delayed 
+[01/02 10:19:30     31s] Extraction setup Delayed 
+[01/02 10:19:30     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:19:31     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:31     31s] % Begin Load MMMC data ... (date=01/02 10:19:31, mem=414.3M)
+[01/02 10:19:31     31s] Extraction setup Delayed 
+[01/02 10:19:31     31s] Extraction setup Delayed 
+[01/02 10:19:31     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:19:38     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:39     31s] % Begin Load MMMC data ... (date=01/02 10:19:38, mem=414.3M)
+[01/02 10:19:39     31s] Extraction setup Delayed 
+[01/02 10:19:39     31s] Extraction setup Delayed 
+[01/02 10:19:39     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:19:51     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:52     31s] % Begin Load MMMC data ... (date=01/02 10:19:52, mem=414.3M)
+[01/02 10:19:52     31s] Extraction setup Delayed 
+[01/02 10:19:52     31s] Extraction setup Delayed 
+[01/02 10:19:52     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:19:52     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:52     31s] % Begin Load MMMC data ... (date=01/02 10:19:52, mem=414.3M)
+[01/02 10:19:53     31s] Extraction setup Delayed 
+[01/02 10:19:53     31s] Extraction setup Delayed 
+[01/02 10:19:53     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:19:53     31s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:19:53     31s] % Begin Load MMMC data ... (date=01/02 10:19:53, mem=414.3M)
+[01/02 10:19:53     31s] Extraction setup Delayed 
+[01/02 10:19:53     31s] Extraction setup Delayed 
+[01/02 10:19:53     31s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:20:07     32s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:20:07     32s] % Begin Load MMMC data ... (date=01/02 10:20:07, mem=414.3M)
+[01/02 10:20:07     32s] Extraction setup Delayed 
+[01/02 10:20:07     32s] Extraction setup Delayed 
+[01/02 10:20:07     32s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:20:31     32s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:20:32     32s] % Begin Load MMMC data ... (date=01/02 10:20:32, mem=414.3M)
+[01/02 10:20:32     32s] Extraction setup Delayed 
+[01/02 10:20:32     32s] Extraction setup Delayed 
+[01/02 10:20:32     32s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+[01/02 10:21:09     33s] <CMD> set init_design_settop 1
+[01/02 10:21:09     33s] <CMD> set init_top_cell filter
+[01/02 10:21:09     33s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:21:09     33s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:21:09     33s] <CMD> set init_gnd_net VSS
+[01/02 10:21:09     33s] <CMD> set init_pwr_net VDD
+[01/02 10:21:12     33s] <CMD> init_design
+[01/02 10:21:12     33s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:12     33s] % Begin Load MMMC data ... (date=01/02 10:21:12, mem=414.5M)
+[01/02 10:21:12     33s] Extraction setup Delayed 
+[01/02 10:21:12     33s] Extraction setup Delayed 
+[01/02 10:21:12     33s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:21:18     34s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:19     34s] % Begin Load MMMC data ... (date=01/02 10:21:18, mem=414.5M)
+[01/02 10:21:19     34s] Extraction setup Delayed 
+[01/02 10:21:19     34s] Extraction setup Delayed 
+[01/02 10:21:19     34s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> set init_design_netlisttype verilog
+[01/02 10:21:32     34s] <CMD> set init_design_settop 1
+[01/02 10:21:32     34s] <CMD> set init_top_cell filter
+[01/02 10:21:32     34s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:21:32     34s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:21:32     34s] <CMD> set init_gnd_net VSS
+[01/02 10:21:32     34s] <CMD> set init_pwr_net VDD
+[01/02 10:21:56     35s] <CMD> init_design
+[01/02 10:21:56     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:56     35s] % Begin Load MMMC data ... (date=01/02 10:21:56, mem=414.7M)
+[01/02 10:21:56     35s] Extraction setup Delayed 
+[01/02 10:21:56     35s] Extraction setup Delayed 
+[01/02 10:21:56     35s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:21:57     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:57     35s] % Begin Load MMMC data ... (date=01/02 10:21:57, mem=414.7M)
+[01/02 10:21:57     35s] Extraction setup Delayed 
+[01/02 10:21:57     35s] Extraction setup Delayed 
+[01/02 10:21:57     35s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:21:57     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:58     35s] % Begin Load MMMC data ... (date=01/02 10:21:57, mem=414.7M)
+[01/02 10:21:58     35s] Extraction setup Delayed 
+[01/02 10:21:58     35s] Extraction setup Delayed 
+[01/02 10:21:58     35s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:21:58     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:21:59     35s] % Begin Load MMMC data ... (date=01/02 10:21:58, mem=414.7M)
+[01/02 10:21:59     35s] Extraction setup Delayed 
+[01/02 10:21:59     35s] Extraction setup Delayed 
+[01/02 10:21:59     35s] **ERROR: (TCLCMD-989):	cannot open SDC file '../netlist/myfir.sdc' for mode 'SDC_layout'
+<CMD> init_design
+[01/02 10:22:02     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:02     35s] % Begin Load MMMC data ... (date=01/02 10:22:02, mem=414.7M)
+[01/02 10:22:02     35s] Extraction setup Delayed 
+[01/02 10:22:02     35s] Extraction setup Delayed 
+[01/02 10:22:02     35s] <CMD> init_design
+[01/02 10:22:02     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:03     35s] % Begin Load MMMC data ... (date=01/02 10:22:02, mem=414.7M)
+[01/02 10:22:03     35s] Extraction setup Delayed 
+[01/02 10:22:03     35s] Extraction setup Delayed 
+[01/02 10:22:05     35s] <CMD> init_design
+[01/02 10:22:05     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:05     35s] % Begin Load MMMC data ... (date=01/02 10:22:05, mem=414.7M)
+[01/02 10:22:06     35s] Extraction setup Delayed 
+[01/02 10:22:06     35s] Extraction setup Delayed 
+[01/02 10:22:06     35s] <CMD> init_design
+[01/02 10:22:06     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:06     35s] % Begin Load MMMC data ... (date=01/02 10:22:06, mem=414.7M)
+[01/02 10:22:06     35s] Extraction setup Delayed 
+[01/02 10:22:06     35s] Extraction setup Delayed 
+[01/02 10:22:06     35s] <CMD> init_design
+[01/02 10:22:06     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:07     35s] % Begin Load MMMC data ... (date=01/02 10:22:06, mem=414.7M)
+[01/02 10:22:07     35s] Extraction setup Delayed 
+[01/02 10:22:07     35s] Extraction setup Delayed 
+[01/02 10:22:07     35s] <CMD> init_design
+[01/02 10:22:07     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:07     35s] % Begin Load MMMC data ... (date=01/02 10:22:07, mem=414.7M)
+[01/02 10:22:07     35s] Extraction setup Delayed 
+[01/02 10:22:07     35s] Extraction setup Delayed 
+[01/02 10:22:07     35s] <CMD> init_design
+[01/02 10:22:07     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:08     35s] % Begin Load MMMC data ... (date=01/02 10:22:07, mem=414.7M)
+[01/02 10:22:08     35s] Extraction setup Delayed 
+[01/02 10:22:08     35s] Extraction setup Delayed 
+[01/02 10:22:08     35s] <CMD> init_design
+[01/02 10:22:08     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:08     35s] % Begin Load MMMC data ... (date=01/02 10:22:08, mem=414.7M)
+[01/02 10:22:08     35s] Extraction setup Delayed 
+[01/02 10:22:08     35s] Extraction setup Delayed 
+[01/02 10:22:08     35s] <CMD> init_design
+[01/02 10:22:08     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:09     35s] % Begin Load MMMC data ... (date=01/02 10:22:08, mem=414.7M)
+[01/02 10:22:09     35s] Extraction setup Delayed 
+[01/02 10:22:09     35s] Extraction setup Delayed 
+[01/02 10:22:09     35s] <CMD> init_design
+[01/02 10:22:09     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:09     35s] % Begin Load MMMC data ... (date=01/02 10:22:09, mem=414.7M)
+[01/02 10:22:09     35s] Extraction setup Delayed 
+[01/02 10:22:09     35s] Extraction setup Delayed 
+[01/02 10:22:10     35s] <CMD> init_design
+[01/02 10:22:10     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:10     35s] % Begin Load MMMC data ... (date=01/02 10:22:10, mem=414.7M)
+[01/02 10:22:10     35s] Extraction setup Delayed 
+[01/02 10:22:10     35s] Extraction setup Delayed 
+[01/02 10:22:10     35s] <CMD> init_design
+[01/02 10:22:10     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:11     35s] % Begin Load MMMC data ... (date=01/02 10:22:10, mem=414.7M)
+[01/02 10:22:11     35s] Extraction setup Delayed 
+[01/02 10:22:11     35s] Extraction setup Delayed 
+[01/02 10:22:11     35s] <CMD> init_design
+[01/02 10:22:11     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:11     35s] % Begin Load MMMC data ... (date=01/02 10:22:11, mem=414.7M)
+[01/02 10:22:11     35s] Extraction setup Delayed 
+[01/02 10:22:11     35s] Extraction setup Delayed 
+[01/02 10:22:11     35s] <CMD> init_design
+[01/02 10:22:11     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:12     35s] % Begin Load MMMC data ... (date=01/02 10:22:11, mem=414.7M)
+[01/02 10:22:12     35s] Extraction setup Delayed 
+[01/02 10:22:12     35s] Extraction setup Delayed 
+[01/02 10:22:12     35s] <CMD> init_design
+[01/02 10:22:12     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:12     35s] % Begin Load MMMC data ... (date=01/02 10:22:12, mem=414.7M)
+[01/02 10:22:12     35s] Extraction setup Delayed 
+[01/02 10:22:12     35s] Extraction setup Delayed 
+[01/02 10:22:12     35s] <CMD> init_design
+[01/02 10:22:12     35s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:12     36s] % Begin Load MMMC data ... (date=01/02 10:22:12, mem=414.7M)
+[01/02 10:22:13     36s] Extraction setup Delayed 
+[01/02 10:22:13     36s] Extraction setup Delayed 
+[01/02 10:22:36     36s] <CMD> init_design
+[01/02 10:22:36     36s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:22:36     36s] % Begin Load MMMC data ... (date=01/02 10:22:36, mem=414.7M)
+[01/02 10:22:36     36s] Extraction setup Delayed 
+[01/02 10:22:36     36s] Extraction setup Delayed 
+[01/02 10:22:44     36s] <CMD> set init_design_netlisttype verilog
+[01/02 10:22:44     36s] <CMD> set init_design_settop 1
+[01/02 10:22:44     36s] <CMD> set init_top_cell filter
+[01/02 10:22:44     36s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:22:44     36s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:22:44     36s] <CMD> set init_gnd_net VSS
+[01/02 10:22:44     36s] <CMD> set init_pwr_net VDD
+[01/02 10:22:57     37s] <CMD> save_global Default.globals
+[01/02 10:23:00     37s] <CMD> init_design
+[01/02 10:23:00     37s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:23:01     37s] % Begin Load MMMC data ... (date=01/02 10:23:00, mem=415.1M)
+[01/02 10:23:01     37s] Extraction setup Delayed 
+[01/02 10:23:01     37s] Extraction setup Delayed 
+[01/02 10:24:25     39s] <CMD> set init_design_netlisttype verilog
+[01/02 10:24:25     39s] <CMD> set init_design_settop 1
+[01/02 10:24:25     39s] <CMD> set init_top_cell filter
+[01/02 10:24:25     39s] <CMD> set init_verilog ../netlist/myfir.v
+[01/02 10:24:25     39s] <CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[01/02 10:24:25     39s] <CMD> set init_gnd_net VSS
+[01/02 10:24:25     39s] <CMD> set init_pwr_net VDD
+[01/02 10:24:28     39s] <CMD> init_design
+[01/02 10:24:28     39s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:24:29     39s] % Begin Load MMMC data ... (date=01/02 10:24:28, mem=417.3M)
+[01/02 10:24:29     39s] Extraction setup Delayed 
+[01/02 10:24:29     39s] Extraction setup Delayed 
+[01/02 10:24:31     39s] <CMD> init_design
+[01/02 10:24:31     39s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[01/02 10:24:32     39s] % Begin Load MMMC data ... (date=01/02 10:24:31, mem=417.3M)
+[01/02 10:24:32     39s] Extraction setup Delayed 
+[01/02 10:24:32     39s] Extraction setup Delayed 
+[01/02 10:24:53     40s] 
+[01/02 10:24:53     40s] *** Memory Usage v#1 (Current mem = 498.461M, initial mem = 179.684M) ***
+[01/02 10:24:53     40s] 
+[01/02 10:24:53     40s] *** Summary of all messages that are not suppressed in this session:
+[01/02 10:24:53     40s] Severity  ID               Count  Summary                                  
+[01/02 10:24:53     40s] ERROR     TCLCMD-989          20  cannot open SDC file '%s' for mode '%s'  
+[01/02 10:24:53     40s] *** Message Summary: 0 warning(s), 20 error(s)
+[01/02 10:24:53     40s] 
+[01/02 10:24:53     40s] --- Ending "Innovus" (totcpu=0:00:40.3, real=0:16:45, mem=498.5M) ---

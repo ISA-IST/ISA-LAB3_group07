@@ -27,7 +27,7 @@ END COMPONENT;
 COMPONENT control IS
 PORT (
 	OPCODE : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ALU_SRC1, REG_WRITE, DM_WRITE, DM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM  : OUT STD_LOGIC;
+	ALU_SRC1, REG_WRITE, DM_WRITE, DM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, EN_ABS, SEL_ALU_ABS : OUT STD_LOGIC;
 	MEM_TO_REG : OUT STD_LOGIC; --"FINAL MUX",
 	ALU_OP     : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SEL_MUX_MEM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
@@ -114,6 +114,14 @@ COMPONENT HDU IS
   OPCODE: IN std_logic_vector(6 downto 0);
   ENABLE_PC_ID, SEL_MUX_HDU : OUT std_logic
   );
+END COMPONENT;
+
+COMPONENT Absolute_value IS
+PORT (
+  DATA_IN : IN STD_LOGIC_VECTOR (31 downto 0);
+  DATA_OUT : OUT STD_LOGIC_VECTOR (31 downto 0);
+  ENABLE : IN STD_LOGIC
+);
 END COMPONENT;
 
 
@@ -241,9 +249,18 @@ SIGNAL OUT_FORW_A1,OUT_FORW_A2,OUT_FORW_B1,OUT_FORW_B2 : std_logic_vector (31 do
 
 -- HDU
 SIGNAL ENABLE_PC_ID: std_logic;
-SIGNAL OUT_CU: std_logic_vector(11 downto 0);
-SIGNAL CTRL_hazard: std_logic_vector(11 downto 0);
+SIGNAL OUT_CU: std_logic_vector(13 downto 0);
+SIGNAL CTRL_hazard: std_logic_vector(13 downto 0);
 SIGNAL SEL_MUX_HDU: std_logic;
+SIGNAL ENABLE_PC : std_logic; -- TO JUMP
+
+-- abs value
+SIGNAL OUT_ABS: STD_LOGIC_VECTOR(31 downto 0);
+SIGNAL EN_ABS: STD_LOGIC;
+SIGNAL SEL_ALU_ABS: STD_LOGIC;
+SIGNAL EN_ABS_1: STD_LOGIC;
+SIGNAL SEL_ALU_ABS_1: STD_LOGIC;
+SIGNAL OUT_ALU_ABS: STD_LOGIC_VECTOR(31 downto 0);
 
 BEGIN
 
@@ -255,7 +272,9 @@ BEGIN
 
   NEXT_PC <= std_logic_vector(unsigned(PC) + 4);
 
-  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', ENABLE => ENABLE_PC_ID, Q => PC_s); -- the PC is never reset
+  ENABLE_PC <= ENABLE_PC_ID OR SEL_ADD;
+
+  PC_REG : regnbit GENERIC MAP(N => 32) PORT MAP(D=> OUT_MUX_PC2, CLK => CLK, RST_n => '1', ENABLE => ENABLE_PC , Q => PC_s); -- the PC is never reset
 
   PC <= PC_s;
 
@@ -266,14 +285,14 @@ BEGIN
 
   IMMED_GEN : imm_gen PORT MAP (INSTR, IMM);
 
-  CONTR : control PORT MAP (INSTR(6 downto 0), ALU_SRC, REG_WRITE, DM_WRITE, DM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, MEM_TO_REG, ALU_OP, SEL_MUX_MEM);
+  CONTR : control PORT MAP (INSTR(6 downto 0), ALU_SRC, REG_WRITE, DM_WRITE, DM_READ, BRANCH_cond, BRANCH_uncond, SEL_MUX_ADD_SUM, EN_ABS, SEL_ALU_ABS, MEM_TO_REG, ALU_OP, SEL_MUX_MEM);
 
-  OUT_CU <= ALU_SRC & REG_WRITE & DM_WRITE & DM_READ & BRANCH_cond & BRANCH_uncond & SEL_MUX_ADD_SUM & MEM_TO_REG & ALU_OP & SEL_MUX_MEM;
-  
+  OUT_CU <= ALU_SRC & REG_WRITE & DM_WRITE & DM_READ & BRANCH_cond & BRANCH_uncond & SEL_MUX_ADD_SUM & MEM_TO_REG & ALU_OP & SEL_MUX_MEM & EN_ABS & SEL_ALU_ABS;
+
   -- HAZARD DETECTION UNIT
-  HD_unit: HDU PORT MAP(RS1_ID => INSTR(19 downto 15), RS2_ID => INSTR(24 downto 20), RD_EX => RD_1, DM_READ_EX => DM_READ_1, ENABLE_PC_ID => ENABLE_PC_ID, SEL_MUX_HDU => SEL_MUX_HDU, OPCODE => INSTR(6 downto 0));  
+  HD_unit: HDU PORT MAP(RS1_ID => INSTR(19 downto 15), RS2_ID => INSTR(24 downto 20), RD_EX => RD_1, DM_READ_EX => DM_READ_1, ENABLE_PC_ID => ENABLE_PC_ID, SEL_MUX_HDU => SEL_MUX_HDU, OPCODE => INSTR(6 downto 0));
   IM_READ_OUT <= ENABLE_PC_ID;
-  MUX_HDU: mux_2to1_nbit GENERIC MAP (N=>12) PORT MAP(I0 => OUT_CU, I1 => (OTHERS => '0'), SEL => SEL_MUX_HDU, O => CTRL_hazard);
+  MUX_HDU: mux_2to1_nbit GENERIC MAP (N=>14) PORT MAP(I0 => OUT_CU, I1 => (OTHERS => '0'), SEL => SEL_MUX_HDU, O => CTRL_hazard);
 
   --EX_1 : regnbit GENERIC MAP (N => 3) PORT MAP( ALU_CTRL , CLK , RST_n , ALU_CTRL_1 );
 
@@ -284,7 +303,7 @@ BEGIN
   EX_6 : ff PORT MAP( CTRL_hazard(8), CLK, RST_n, '1', DM_READ_1 );
   EX_7 : ff PORT MAP( CTRL_hazard(7), CLK, RST_n, '1', BRANCH_cond_1 );
   EX_8 : ff PORT MAP( CTRL_hazard(6), CLK, RST_n, '1', BRANCH_uncond_1 );
-  EX_9 : ff PORT MAP( CTRL_hazard(5), CLK, RST_n, '1'  SEL_MUX_ADD_SUM_1 );
+  EX_9 : ff PORT MAP( CTRL_hazard(5), CLK, RST_n, '1' , SEL_MUX_ADD_SUM_1 );
 
   EX_10 : ff PORT MAP( CTRL_hazard(4), CLK, RST_n, '1', MEM_TO_REG_1 );
   EX_1 : regnbit GENERIC MAP (N => 2) PORT MAP( CTRL_hazard(3 downto 2), CLK, RST_n, '1', ALU_OP_1 );
@@ -297,6 +316,9 @@ BEGIN
 
   EX_16 :regnbit GENERIC MAP (N => 32) PORT MAP( PC_1, CLK, RST_n, '1', PC_2);
   EX_17 :regnbit GENERIC MAP (N => 32) PORT MAP( NEXT_PC_1, CLK, RST_n, '1', NEXT_PC_2 );
+  
+  EX_18 : ff PORT MAP( CTRL_hazard(12), CLK, RST_n, '1' , EN_ABS_1 );
+  EX_19 : ff PORT MAP( CTRL_hazard(13), CLK, RST_n, '1' , SEL_ALU_ABS_1 );
 
 
 
@@ -319,6 +341,11 @@ BEGIN
   ctrl_alu: alu_control PORT MAP(funct3, ALU_OP_1, ALU_CTRL);
 
   ALU_unit: alu PORT MAP (OUT_FORW_A2, OUT_FORW_B2, ALU_CTRL, OUT_ALU, ZERO);
+  
+  ABS_unit: Absolute_value PORT MAP (DATA_IN => OUT_FORW_A2, DATA_OUT => OUT_ABS, ENABLE => EN_ABS_1);
+  
+  -- mux between two funct unit outputs: alu and abs
+  MUX_ALU_ABS: mux_2to1_nbit GENERIC MAP (N => 32) PORT MAP (I0 => OUT_ALU, I1 => OUT_ABS, SEL => SEL_ALU_ABS_1, O => OUT_ALU_ABS);
 
   MEM_1 : ff PORT MAP( REG_WRITE_1 , CLK , RST_n , '1', REG_WRITE_2 );
   MEM_2 : ff PORT MAP( DM_WRITE_1 , CLK , RST_n , '1', DM_WRITE_OUT );
@@ -327,7 +354,7 @@ BEGIN
   MEM_5 : ff PORT MAP( DM_READ_1, CLK , RST_n , '1', DM_READ_OUT );
 
   MEM_6 : ff PORT MAP( ZERO, CLK , RST_n , '1', ZERO_1 );
-  MEM_7 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ALU, CLK , RST_n , '1', DM_addr_s );
+  MEM_7 : regnbit GENERIC MAP (N => 32) PORT MAP( OUT_ALU_ABS, CLK , RST_n , '1', DM_addr_s );
 
   DM_addr <= DM_addr_s;
 

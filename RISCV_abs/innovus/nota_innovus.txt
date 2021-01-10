@@ -1,0 +1,5 @@
+ho modificato le righe 4 e 18 di design.globals 
+tenere conto che i file contenuti nella cartella netlist sono stati ottenuti con una sintesi a 10 ns.
+ the_punisher.cmd contiene le istruzioni che seguono la fase preliminare di Importing Design, i comandi sono presi da innovus.cmd1. Si ferma al NanoRouting dopodichè chi scrive non è più riuscito a continuare a causa dell'impossibilità di inserire il comando setAnalysisMode ....
+
+RISCV_ABS2 è la versione più recente, l'altro è un salvataggio intermedio.
