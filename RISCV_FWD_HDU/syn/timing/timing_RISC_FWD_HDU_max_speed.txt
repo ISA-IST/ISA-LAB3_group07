@@ -1,0 +1,124 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISC_V' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISC_V
+Version: O-2018.06-SP4
+Date   : Thu Jan 14 15:59:03 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: EX_11/Q_reg[0]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: MEM_15/Q_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISC_V             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_11/Q_reg[0]/CK (DFFR_X1)                             0.00 #     0.00 r
+  EX_11/Q_reg[0]/Q (DFFR_X1)                              0.09       0.09 f
+  EX_11/Q[0] (regnbit_N32_8)                              0.00       0.09 f
+  MUX_ADD_SUM/I1[0] (mux_2to1_nbit_N32_6)                 0.00       0.09 f
+  MUX_ADD_SUM/U74/ZN (AOI22_X1)                           0.05       0.15 r
+  MUX_ADD_SUM/U73/ZN (INV_X1)                             0.03       0.18 f
+  MUX_ADD_SUM/O[0] (mux_2to1_nbit_N32_6)                  0.00       0.18 f
+  add_311/A[0] (RISC_V_DW01_add_0)                        0.00       0.18 f
+  add_311/U164/ZN (AND2_X1)                               0.04       0.21 f
+  add_311/U201/ZN (NAND2_X1)                              0.03       0.25 r
+  add_311/U31/ZN (NAND3_X1)                               0.04       0.28 f
+  add_311/U53/ZN (NAND2_X1)                               0.04       0.32 r
+  add_311/U29/ZN (NAND3_X1)                               0.04       0.36 f
+  add_311/U13/ZN (NAND2_X1)                               0.04       0.40 r
+  add_311/U42/ZN (NAND3_X1)                               0.03       0.43 f
+  add_311/U86/ZN (NAND2_X1)                               0.03       0.46 r
+  add_311/U89/ZN (NAND3_X1)                               0.04       0.50 f
+  add_311/U4/ZN (NAND2_X1)                                0.04       0.54 r
+  add_311/U6/ZN (NAND3_X1)                                0.04       0.58 f
+  add_311/U94/ZN (NAND2_X1)                               0.04       0.62 r
+  add_311/U96/ZN (NAND3_X1)                               0.04       0.66 f
+  add_311/U169/ZN (NAND2_X1)                              0.03       0.69 r
+  add_311/U171/ZN (NAND3_X1)                              0.04       0.73 f
+  add_311/U126/ZN (NAND2_X1)                              0.04       0.77 r
+  add_311/U129/ZN (NAND3_X1)                              0.04       0.80 f
+  add_311/U144/ZN (NAND2_X1)                              0.04       0.84 r
+  add_311/U62/ZN (NAND3_X1)                               0.04       0.88 f
+  add_311/U11/ZN (NAND2_X1)                               0.04       0.92 r
+  add_311/U12/ZN (NAND3_X1)                               0.03       0.95 f
+  add_311/U155/ZN (NAND2_X1)                              0.03       0.99 r
+  add_311/U105/ZN (NAND3_X1)                              0.04       1.02 f
+  add_311/U189/ZN (NAND2_X1)                              0.04       1.06 r
+  add_311/U192/ZN (NAND3_X1)                              0.04       1.10 f
+  add_311/U15/ZN (NAND2_X1)                               0.04       1.14 r
+  add_311/U47/ZN (NAND3_X1)                               0.03       1.17 f
+  add_311/U120/ZN (NAND2_X1)                              0.03       1.20 r
+  add_311/U123/ZN (NAND3_X1)                              0.04       1.24 f
+  add_311/U138/ZN (NAND2_X1)                              0.04       1.27 r
+  add_311/U132/ZN (NAND3_X1)                              0.04       1.32 f
+  add_311/U14/ZN (NAND2_X1)                               0.04       1.35 r
+  add_311/U34/ZN (NAND3_X1)                               0.03       1.39 f
+  add_311/U99/ZN (NAND2_X1)                               0.03       1.42 r
+  add_311/U33/ZN (NAND3_X1)                               0.04       1.46 f
+  add_311/U180/ZN (NAND2_X1)                              0.04       1.49 r
+  add_311/U61/ZN (NAND3_X1)                               0.04       1.53 f
+  add_311/U43/ZN (NAND2_X1)                               0.04       1.57 r
+  add_311/U46/ZN (NAND3_X1)                               0.03       1.60 f
+  add_311/U219/ZN (NAND2_X1)                              0.03       1.64 r
+  add_311/U130/ZN (NAND3_X1)                              0.04       1.67 f
+  add_311/U149/ZN (NAND2_X1)                              0.04       1.71 r
+  add_311/U152/ZN (NAND3_X1)                              0.04       1.74 f
+  add_311/U244/ZN (NAND2_X1)                              0.04       1.78 r
+  add_311/U246/ZN (NAND3_X1)                              0.04       1.82 f
+  add_311/U66/ZN (NAND2_X1)                               0.04       1.85 r
+  add_311/U68/ZN (NAND3_X1)                               0.04       1.90 f
+  add_311/U17/ZN (NAND2_X1)                               0.03       1.93 r
+  add_311/U41/ZN (NAND3_X1)                               0.04       1.97 f
+  add_311/U207/ZN (NAND2_X1)                              0.03       2.00 r
+  add_311/U113/ZN (NAND3_X1)                              0.04       2.04 f
+  add_311/U255/ZN (NAND2_X1)                              0.04       2.07 r
+  add_311/U72/ZN (NAND3_X1)                               0.04       2.11 f
+  add_311/U231/ZN (NAND2_X1)                              0.04       2.15 r
+  add_311/U234/ZN (NAND3_X1)                              0.04       2.19 f
+  add_311/U9/ZN (NAND2_X1)                                0.04       2.23 r
+  add_311/U10/ZN (NAND3_X1)                               0.03       2.26 f
+  add_311/U214/ZN (NAND2_X1)                              0.03       2.29 r
+  add_311/U216/ZN (NAND3_X1)                              0.04       2.33 f
+  add_311/U261/ZN (NAND2_X1)                              0.03       2.36 r
+  add_311/U263/ZN (NAND3_X1)                              0.03       2.39 f
+  add_311/U235/ZN (XNOR2_X1)                              0.05       2.44 f
+  add_311/SUM[31] (RISC_V_DW01_add_0)                     0.00       2.44 f
+  MEM_15/D[31] (regnbit_N32_1)                            0.00       2.44 f
+  MEM_15/U69/ZN (NAND2_X1)                                0.03       2.47 r
+  MEM_15/U68/ZN (NAND2_X1)                                0.02       2.50 f
+  MEM_15/Q_reg[31]/D (DFFR_X1)                            0.01       2.50 f
+  data arrival time                                                  2.50
+
+  clock MY_CLK (rise edge)                                2.62       2.62
+  clock network delay (ideal)                             0.00       2.62
+  clock uncertainty                                      -0.07       2.55
+  MEM_15/Q_reg[31]/CK (DFFR_X1)                           0.00       2.55 r
+  library setup time                                     -0.04       2.51
+  data required time                                                 2.51
+  --------------------------------------------------------------------------
+  data required time                                                 2.51
+  data arrival time                                                 -2.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

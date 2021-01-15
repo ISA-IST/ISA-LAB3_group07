@@ -1,0 +1,114 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISC_V' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISC_V
+Version: O-2018.06-SP4
+Date   : Thu Jan 14 15:44:34 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DM_data[1] (input port clocked by MY_CLK)
+  Endpoint: MEM_7/Q_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISC_V             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  DM_data[1] (in)                                         0.00       0.50 f
+  MUX_FIN/I0[1] (mux_2to1_nbit_N32_0)                     0.00       0.50 f
+  MUX_FIN/U9/ZN (NAND2_X1)                                0.02       0.52 r
+  MUX_FIN/U11/ZN (NAND2_X1)                               0.03       0.55 f
+  MUX_FIN/O[1] (mux_2to1_nbit_N32_0)                      0.00       0.55 f
+  MUX_FORW_B1/I0[1] (mux_2to1_nbit_N32_4)                 0.00       0.55 f
+  MUX_FORW_B1/U71/Z (MUX2_X1)                             0.07       0.62 f
+  MUX_FORW_B1/O[1] (mux_2to1_nbit_N32_4)                  0.00       0.62 f
+  MUX_FORW_B2/I1[1] (mux_2to1_nbit_N32_2)                 0.00       0.62 f
+  MUX_FORW_B2/U2/Z (MUX2_X2)                              0.07       0.69 f
+  MUX_FORW_B2/O[1] (mux_2to1_nbit_N32_2)                  0.00       0.69 f
+  ALU_unit/DATA_B[1] (ALU)                                0.00       0.69 f
+  ALU_unit/add_35/B[1] (ALU_DW01_add_1)                   0.00       0.69 f
+  ALU_unit/add_35/U359/ZN (NAND2_X1)                      0.04       0.73 r
+  ALU_unit/add_35/U224/ZN (OAI21_X1)                      0.04       0.77 f
+  ALU_unit/add_35/U223/ZN (AOI21_X1)                      0.04       0.81 r
+  ALU_unit/add_35/U217/ZN (OAI21_X1)                      0.03       0.84 f
+  ALU_unit/add_35/U216/ZN (AOI21_X1)                      0.04       0.88 r
+  ALU_unit/add_35/U210/ZN (OAI21_X1)                      0.03       0.91 f
+  ALU_unit/add_35/U209/ZN (AOI21_X1)                      0.04       0.96 r
+  ALU_unit/add_35/U205/ZN (OAI21_X1)                      0.03       0.99 f
+  ALU_unit/add_35/U204/ZN (AOI21_X1)                      0.04       1.03 r
+  ALU_unit/add_35/U208/ZN (OAI21_X1)                      0.03       1.06 f
+  ALU_unit/add_35/U249/ZN (AOI21_X1)                      0.04       1.10 r
+  ALU_unit/add_35/U243/ZN (OAI21_X1)                      0.03       1.14 f
+  ALU_unit/add_35/U242/ZN (AOI21_X1)                      0.04       1.18 r
+  ALU_unit/add_35/U236/ZN (OAI21_X1)                      0.03       1.21 f
+  ALU_unit/add_35/U235/ZN (AOI21_X1)                      0.04       1.25 r
+  ALU_unit/add_35/U231/ZN (OAI21_X1)                      0.03       1.29 f
+  ALU_unit/add_35/U230/ZN (AOI21_X1)                      0.04       1.33 r
+  ALU_unit/add_35/U234/ZN (OAI21_X1)                      0.03       1.36 f
+  ALU_unit/add_35/U280/ZN (AOI21_X1)                      0.04       1.40 r
+  ALU_unit/add_35/U275/ZN (OAI21_X1)                      0.03       1.44 f
+  ALU_unit/add_35/U274/ZN (AOI21_X1)                      0.04       1.48 r
+  ALU_unit/add_35/U270/ZN (INV_X1)                        0.03       1.51 f
+  ALU_unit/add_35/U271/ZN (NAND2_X1)                      0.03       1.54 r
+  ALU_unit/add_35/U264/ZN (NAND3_X1)                      0.04       1.57 f
+  ALU_unit/add_35/U263/ZN (AOI21_X1)                      0.04       1.61 r
+  ALU_unit/add_35/U260/ZN (INV_X1)                        0.03       1.64 f
+  ALU_unit/add_35/U261/ZN (NAND2_X1)                      0.03       1.67 r
+  ALU_unit/add_35/U258/ZN (NAND3_X1)                      0.04       1.71 f
+  ALU_unit/add_35/U9/CO (FA_X1)                           0.10       1.80 f
+  ALU_unit/add_35/U199/ZN (NAND2_X1)                      0.03       1.84 r
+  ALU_unit/add_35/U201/ZN (NAND3_X1)                      0.04       1.88 f
+  ALU_unit/add_35/U7/CO (FA_X1)                           0.10       1.97 f
+  ALU_unit/add_35/U180/ZN (NAND2_X1)                      0.04       2.01 r
+  ALU_unit/add_35/U172/ZN (NAND3_X1)                      0.04       2.05 f
+  ALU_unit/add_35/U301/ZN (NAND2_X1)                      0.04       2.09 r
+  ALU_unit/add_35/U299/ZN (NAND3_X1)                      0.04       2.12 f
+  ALU_unit/add_35/U296/ZN (NAND2_X1)                      0.04       2.16 r
+  ALU_unit/add_35/U293/ZN (NAND3_X1)                      0.04       2.20 f
+  ALU_unit/add_35/U294/ZN (NAND2_X1)                      0.03       2.22 r
+  ALU_unit/add_35/U290/ZN (NAND3_X1)                      0.03       2.26 f
+  ALU_unit/add_35/U289/ZN (XNOR2_X1)                      0.05       2.31 f
+  ALU_unit/add_35/SUM[31] (ALU_DW01_add_1)                0.00       2.31 f
+  ALU_unit/U10/ZN (INV_X1)                                0.03       2.34 r
+  ALU_unit/U8/ZN (OAI222_X1)                              0.04       2.38 f
+  ALU_unit/DATA_OUT[31] (ALU)                             0.00       2.38 f
+  MUX_ALU_ABS/I0[31] (mux_2to1_nbit_N32_1)                0.00       2.38 f
+  MUX_ALU_ABS/U1/Z (MUX2_X1)                              0.07       2.45 f
+  MUX_ALU_ABS/O[31] (mux_2to1_nbit_N32_1)                 0.00       2.45 f
+  MEM_7/D[31] (regnbit_N32_5)                             0.00       2.45 f
+  MEM_7/U3/ZN (NAND2_X1)                                  0.03       2.48 r
+  MEM_7/U2/ZN (NAND2_X1)                                  0.02       2.50 f
+  MEM_7/Q_reg[31]/D (DFFR_X1)                             0.01       2.51 f
+  data arrival time                                                  2.51
+
+  clock MY_CLK (rise edge)                                2.62       2.62
+  clock network delay (ideal)                             0.00       2.62
+  clock uncertainty                                      -0.07       2.55
+  MEM_7/Q_reg[31]/CK (DFFR_X1)                            0.00       2.55 r
+  library setup time                                     -0.04       2.51
+  data required time                                                 2.51
+  --------------------------------------------------------------------------
+  data required time                                                 2.51
+  data arrival time                                                 -2.51
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+1
