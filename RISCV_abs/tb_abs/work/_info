@@ -392,6 +392,19 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
+vRISC_V
+IazWR;0eaZ8Kbgh]f[RWSd3
+VU5hJ0koo:426a;ic<oTz62
+w1609875227
+8../innovus/RISCV_ABS_innovus.v
+F../innovus/RISCV_ABS_innovus.v
+L0 15
+VU5hJ0koo:426a;ic<oTz62
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+n@r@i@s@c_@v
 Erisc_v
 w1609323934
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
@@ -418,19 +431,6 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
-vRISC_V
-IazWR;0eaZ8Kbgh]f[RWSd3
-VU5hJ0koo:426a;ic<oTz62
-w1609875227
-8../innovus/RISCV_ABS_innovus.v
-F../innovus/RISCV_ABS_innovus.v
-L0 15
-VU5hJ0koo:426a;ic<oTz62
-OE;L;6.2g;35
-r1
-31
-o-work ./work
-n@r@i@s@c_@v
 vtb_RISC
 I7e7b4A_>`O]43<En3lPA]2
 V0Ue:i_odc3ThWBbTj60kG0
