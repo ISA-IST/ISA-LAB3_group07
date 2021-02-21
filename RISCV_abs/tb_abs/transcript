@@ -8,9 +8,59 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-do sim_RIS_netlist_innovus.do
-# Cannot open macro file: sim_RIS_netlist_innovus.do
-do sim_RISC_netlist_innovus.do
+# Loading project tb
+pwd 
+# /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU/tb_fwd_hdu
+cd ../
+# reading /software/mentor/modelsim_6.2g/linux/../modelsim.ini
+pwd
+# /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU
+cd ../RISC_ABS
+# couldn't change working directory to "../RISC_ABS": no such file or directory
+cd ../
+ls
+# data
+# instruction.txt
+# istruzioni
+# original_arch
+# RISCV_abs
+# RISCV_FWD_HDU
+# synt_RISC_forward.scr
+# synt_RISC_original.scr
+# transcript
+cd RISC_abs
+# couldn't change working directory to "RISC_abs": no such file or directory
+cd RISCV_abs
+ls
+# ARCH
+# ENTI
+# file_sparsi
+# innovus
+# netlist
+# src
+# syn
+# tb_abs
+# vcd
+cd tb_abs
+ls
+# clk_gen.vhd
+# data_memory.vhd
+# data_memory.vhd.bak
+# instruction_memory.vhd
+# instruction_memory.vhd.bak
+# sim_RISC.do
+# sim_RISC_netlist.do
+# sim_RISC_netlist_innovus.do
+# sim_RISC_netlist_innovus_v2.do
+# tb_RISC.v
+# transcript
+# vsim.wlf
+# wave_abs.do
+# wave_fwd.do
+# wave_innovus.do
+# wave_RISC.do
+# work
+do sim_RISC_netlist_innovus_v2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
@@ -651,3 +701,1389 @@ do sim_RISC_netlist_innovus.do
 #    Time: 35 ns  Iteration: 2  Instance: /tb_RISC/DM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1175 ns  Iteration: 2  Instance: /tb_RISC/DM
+restart
+# Closing VCD file "../vcd/RISCV_ABS_innovus_v2.vcd"
+# Loading work.tb_RISC(fast)
+# Loading work.RISC_V(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X4(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI33_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DLH_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading instances from ../innovus/RISCV_ABS_innovus.sdf
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(31370): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/ALU_unit_add_35_U1_31
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(33998): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/add_329_U1_31
+# Loading timing data from ../innovus/RISCV_ABS_innovus.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Region: /tb_RISC  File: ./tb_RISC.v
+do sim_RISC_netlist_innovus_v2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity data_memory
+# -- Compiling architecture structure of data_memory
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity instruction_memory
+# -- Compiling architecture structure of instruction_memory
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module RISC_V
+# 
+# Top level modules:
+# 	RISC_V
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module tb_RISC
+# 
+# Top level modules:
+# 	tb_RISC
+# vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_RISC/RV=../innovus/RISCV_ABS_innovus.sdf work.tb_RISC 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_RISC(fast)
+# Loading work.RISC_V(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X4(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI33_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DLH_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading instances from ../innovus/RISCV_ABS_innovus.sdf
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(31370): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/ALU_unit_add_35_U1_31
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(33998): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/add_329_U1_31
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.instruction_memory(structure)
+# Loading work.data_memory(structure)
+# Loading timing data from ../innovus/RISCV_ABS_innovus.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Region: /tb_RISC  File: ./tb_RISC.v
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/rf'.
+# Executing ONERROR command at macro ./wave_abs.do line 3
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/instr'.
+# Executing ONERROR command at macro ./wave_abs.do line 16
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write'.
+# Executing ONERROR command at macro ./wave_abs.do line 17
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_src'.
+# Executing ONERROR command at macro ./wave_abs.do line 18
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond'.
+# Executing ONERROR command at macro ./wave_abs.do line 19
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond'.
+# Executing ONERROR command at macro ./wave_abs.do line 20
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 21
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg'.
+# Executing ONERROR command at macro ./wave_abs.do line 22
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 23
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_src_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 24
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm'.
+# Executing ONERROR command at macro ./wave_abs.do line 25
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 26
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 27
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/rs1'.
+# Executing ONERROR command at macro ./wave_abs.do line 29
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/rs2'.
+# Executing ONERROR command at macro ./wave_abs.do line 30
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/read_data1'.
+# Executing ONERROR command at macro ./wave_abs.do line 31
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/read_data2'.
+# Executing ONERROR command at macro ./wave_abs.do line 32
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 33
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 34
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 35
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 36
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 37
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_add_sum_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 38
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 39
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_1_shift'.
+# Executing ONERROR command at macro ./wave_abs.do line 40
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 41
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_op_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 42
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 43
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 44
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 45
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/data_b'.
+# Executing ONERROR command at macro ./wave_abs.do line 46
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_alu'.
+# Executing ONERROR command at macro ./wave_abs.do line 47
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/zero'.
+# Executing ONERROR command at macro ./wave_abs.do line 48
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 50
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_add_sum_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 51
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 52
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 53
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 54
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/zero_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 55
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 56
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 57
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 59
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 60
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_fin'.
+# Executing ONERROR command at macro ./wave_abs.do line 61
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_data'.
+# Executing ONERROR command at macro ./wave_abs.do line 62
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 64
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_addr'.
+# Executing ONERROR command at macro ./wave_abs.do line 65
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/write_data_out'.
+# Executing ONERROR command at macro ./wave_abs.do line 66
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 67
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_pc1'.
+# Executing ONERROR command at macro ./wave_abs.do line 68
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_pc2'.
+# Executing ONERROR command at macro ./wave_abs.do line 69
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/first_address'.
+# Executing ONERROR command at macro ./wave_abs.do line 70
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_add'.
+# Executing ONERROR command at macro ./wave_abs.do line 71
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_s'.
+# Executing ONERROR command at macro ./wave_abs.do line 72
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_addr_s'.
+# Executing ONERROR command at macro ./wave_abs.do line 73
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 75
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rs_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 76
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rd_ex_mem'.
+# Executing ONERROR command at macro ./wave_abs.do line 77
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rd_mem_wb'.
+# Executing ONERROR command at macro ./wave_abs.do line 78
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/reg_write_ex_mem'.
+# Executing ONERROR command at macro ./wave_abs.do line 79
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/reg_write_mem_wb'.
+# Executing ONERROR command at macro ./wave_abs.do line 80
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_a1'.
+# Executing ONERROR command at macro ./wave_abs.do line 81
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_a2'.
+# Executing ONERROR command at macro ./wave_abs.do line 82
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_b1'.
+# Executing ONERROR command at macro ./wave_abs.do line 83
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_b2'.
+# Executing ONERROR command at macro ./wave_abs.do line 84
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_a1'.
+# Executing ONERROR command at macro ./wave_abs.do line 85
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_a2'.
+# Executing ONERROR command at macro ./wave_abs.do line 86
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_b1'.
+# Executing ONERROR command at macro ./wave_abs.do line 87
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_b2'.
+# Executing ONERROR command at macro ./wave_abs.do line 88
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/enable_pc_id'.
+# Executing ONERROR command at macro ./wave_abs.do line 90
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_cu'.
+# Executing ONERROR command at macro ./wave_abs.do line 91
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_hazard'.
+# Executing ONERROR command at macro ./wave_abs.do line 92
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_hdu'.
+# Executing ONERROR command at macro ./wave_abs.do line 93
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/enable_pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 94
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 96
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/en_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 97
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_alu_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 98
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/en_abs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 99
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_alu_abs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 100
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_alu_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 101
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 103
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 104
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 105
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 106
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 107
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 108
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 109
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 110
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 111
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 112
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 113
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 114
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 115
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 116
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 117
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 118
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 119
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 120
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 121
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 122
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_in'.
+# Executing ONERROR command at macro ./wave_abs.do line 123
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 124
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/wr'.
+# Executing ONERROR command at macro ./wave_abs.do line 125
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_rd_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 126
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_rd_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 127
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_wr'.
+# Executing ONERROR command at macro ./wave_abs.do line 128
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_out_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 129
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_out_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 130
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/immed_gen/instr'.
+# Executing ONERROR command at macro ./wave_abs.do line 131
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/immed_gen/imm'.
+# Executing ONERROR command at macro ./wave_abs.do line 132
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/opcode'.
+# Executing ONERROR command at macro ./wave_abs.do line 133
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/alu_src1'.
+# Executing ONERROR command at macro ./wave_abs.do line 134
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/reg_write'.
+# Executing ONERROR command at macro ./wave_abs.do line 135
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/branch_cond'.
+# Executing ONERROR command at macro ./wave_abs.do line 136
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/branch_uncond'.
+# Executing ONERROR command at macro ./wave_abs.do line 137
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/sel_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 138
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/mem_to_reg'.
+# Executing ONERROR command at macro ./wave_abs.do line 139
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 140
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 141
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 142
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 143
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 144
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 145
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 146
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 147
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 148
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 149
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 150
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 151
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 152
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 153
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 154
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 155
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 156
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 157
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 158
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 159
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 160
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 161
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 162
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 163
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 164
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 165
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 166
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 167
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 168
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 169
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 170
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 171
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 172
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 173
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 174
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 175
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 176
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 177
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 178
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 179
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 180
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 181
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 182
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 183
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 184
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 185
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 186
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 187
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 188
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 189
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 190
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 191
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 192
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 193
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 194
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 195
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 196
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 197
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 198
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 199
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 200
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 201
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 202
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 203
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 204
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/func3'.
+# Executing ONERROR command at macro ./wave_abs.do line 205
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 206
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/alu_ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 207
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_a'.
+# Executing ONERROR command at macro ./wave_abs.do line 208
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_b'.
+# Executing ONERROR command at macro ./wave_abs.do line 209
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 210
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_out'.
+# Executing ONERROR command at macro ./wave_abs.do line 211
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/zero'.
+# Executing ONERROR command at macro ./wave_abs.do line 212
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 213
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 214
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 215
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 216
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 217
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 218
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 219
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 220
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 221
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 222
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 223
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 224
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 225
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 226
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 227
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 228
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 229
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 230
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 231
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 232
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 233
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 234
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 235
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 236
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 237
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 238
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 239
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 240
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 241
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 242
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 243
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 244
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 245
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 246
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 247
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 248
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 249
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 250
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 251
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 252
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 253
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 254
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 255
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 256
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 257
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 258
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 259
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 260
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 261
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 262
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 263
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 264
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 265
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 266
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 267
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 268
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 269
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 270
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 271
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 272
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 273
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 274
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 275
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 276
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 277
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 278
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 279
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 280
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 281
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 282
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 283
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 284
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 285
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 286
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 287
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 288
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 301
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 302
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i2'.
+# Executing ONERROR command at macro ./wave_abs.do line 303
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i3'.
+# Executing ONERROR command at macro ./wave_abs.do line 304
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 305
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 306
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_RISC/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_RISC/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 2  Instance: /tb_RISC/DM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1025 ns  Iteration: 2  Instance: /tb_RISC/DM
+restart
+# Closing VCD file "../vcd/RISCV_ABS_innovus_v2.vcd"
+# Loading work.tb_RISC(fast)
+# Loading work.RISC_V(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X4(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI33_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DLH_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading instances from ../innovus/RISCV_ABS_innovus.sdf
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(31370): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/ALU_unit_add_35_U1_31
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(33998): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/add_329_U1_31
+# Loading timing data from ../innovus/RISCV_ABS_innovus.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Region: /tb_RISC  File: ./tb_RISC.v
+do sim_RISC_netlist_innovus_v2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity data_memory
+# -- Compiling architecture structure of data_memory
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity instruction_memory
+# -- Compiling architecture structure of instruction_memory
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module RISC_V
+# 
+# Top level modules:
+# 	RISC_V
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module tb_RISC
+# 
+# Top level modules:
+# 	tb_RISC
+# vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_RISC/RV=../innovus/RISCV_ABS_innovus.sdf work.tb_RISC 
+# Loading work.tb_RISC(fast)
+# Loading work.RISC_V(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X4(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI33_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DLH_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading instances from ../innovus/RISCV_ABS_innovus.sdf
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(31370): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/ALU_unit_add_35_U1_31
+# ** Warning: (vsim-3017) ../innovus/RISCV_ABS_innovus.v(33998): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_RISC/RV/add_329_U1_31
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.instruction_memory(structure)
+# Loading work.data_memory(structure)
+# Loading timing data from ../innovus/RISCV_ABS_innovus.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Region: /tb_RISC  File: ./tb_RISC.v
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/rf'.
+# Executing ONERROR command at macro ./wave_abs.do line 3
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/instr'.
+# Executing ONERROR command at macro ./wave_abs.do line 16
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write'.
+# Executing ONERROR command at macro ./wave_abs.do line 17
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_src'.
+# Executing ONERROR command at macro ./wave_abs.do line 18
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond'.
+# Executing ONERROR command at macro ./wave_abs.do line 19
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond'.
+# Executing ONERROR command at macro ./wave_abs.do line 20
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 21
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg'.
+# Executing ONERROR command at macro ./wave_abs.do line 22
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 23
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_src_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 24
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm'.
+# Executing ONERROR command at macro ./wave_abs.do line 25
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 26
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 27
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/rs1'.
+# Executing ONERROR command at macro ./wave_abs.do line 29
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/rs2'.
+# Executing ONERROR command at macro ./wave_abs.do line 30
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/read_data1'.
+# Executing ONERROR command at macro ./wave_abs.do line 31
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/read_data2'.
+# Executing ONERROR command at macro ./wave_abs.do line 32
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 33
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 34
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 35
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 36
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 37
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_add_sum_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 38
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 39
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_1_shift'.
+# Executing ONERROR command at macro ./wave_abs.do line 40
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 41
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_op_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 42
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 43
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 44
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 45
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/data_b'.
+# Executing ONERROR command at macro ./wave_abs.do line 46
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_alu'.
+# Executing ONERROR command at macro ./wave_abs.do line 47
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/zero'.
+# Executing ONERROR command at macro ./wave_abs.do line 48
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 50
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_add_sum_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 51
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 52
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/imm_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 53
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 54
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/zero_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 55
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_cond_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 56
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/branch_uncond_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 57
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_write_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 59
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_to_reg_3'.
+# Executing ONERROR command at macro ./wave_abs.do line 60
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_fin'.
+# Executing ONERROR command at macro ./wave_abs.do line 61
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_data'.
+# Executing ONERROR command at macro ./wave_abs.do line 62
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 64
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_addr'.
+# Executing ONERROR command at macro ./wave_abs.do line 65
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/write_data_out'.
+# Executing ONERROR command at macro ./wave_abs.do line 66
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/next_pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 67
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_pc1'.
+# Executing ONERROR command at macro ./wave_abs.do line 68
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_mux_pc2'.
+# Executing ONERROR command at macro ./wave_abs.do line 69
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/first_address'.
+# Executing ONERROR command at macro ./wave_abs.do line 70
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_add'.
+# Executing ONERROR command at macro ./wave_abs.do line 71
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_s'.
+# Executing ONERROR command at macro ./wave_abs.do line 72
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/dm_addr_s'.
+# Executing ONERROR command at macro ./wave_abs.do line 73
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 75
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rs_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 76
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rd_ex_mem'.
+# Executing ONERROR command at macro ./wave_abs.do line 77
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/rd_mem_wb'.
+# Executing ONERROR command at macro ./wave_abs.do line 78
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/reg_write_ex_mem'.
+# Executing ONERROR command at macro ./wave_abs.do line 79
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/reg_write_mem_wb'.
+# Executing ONERROR command at macro ./wave_abs.do line 80
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_a1'.
+# Executing ONERROR command at macro ./wave_abs.do line 81
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_a2'.
+# Executing ONERROR command at macro ./wave_abs.do line 82
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_b1'.
+# Executing ONERROR command at macro ./wave_abs.do line 83
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/forw_unit/forw_b2'.
+# Executing ONERROR command at macro ./wave_abs.do line 84
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_a1'.
+# Executing ONERROR command at macro ./wave_abs.do line 85
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_a2'.
+# Executing ONERROR command at macro ./wave_abs.do line 86
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_b1'.
+# Executing ONERROR command at macro ./wave_abs.do line 87
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_forw_b2'.
+# Executing ONERROR command at macro ./wave_abs.do line 88
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/enable_pc_id'.
+# Executing ONERROR command at macro ./wave_abs.do line 90
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_cu'.
+# Executing ONERROR command at macro ./wave_abs.do line 91
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_hazard'.
+# Executing ONERROR command at macro ./wave_abs.do line 92
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_mux_hdu'.
+# Executing ONERROR command at macro ./wave_abs.do line 93
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/enable_pc'.
+# Executing ONERROR command at macro ./wave_abs.do line 94
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 96
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/en_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 97
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_alu_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 98
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/en_abs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 99
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/sel_alu_abs_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 100
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/out_alu_abs'.
+# Executing ONERROR command at macro ./wave_abs.do line 101
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 103
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 104
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 105
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_pc/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 106
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 107
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 108
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 109
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_reset/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 110
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 111
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 112
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 113
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/pc_reg/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 114
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 115
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 116
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 117
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 118
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 119
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 120
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 121
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/id_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 122
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_in'.
+# Executing ONERROR command at macro ./wave_abs.do line 123
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 124
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/wr'.
+# Executing ONERROR command at macro ./wave_abs.do line 125
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_rd_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 126
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_rd_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 127
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/addr_wr'.
+# Executing ONERROR command at macro ./wave_abs.do line 128
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_out_1'.
+# Executing ONERROR command at macro ./wave_abs.do line 129
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/reg_files/data_out_2'.
+# Executing ONERROR command at macro ./wave_abs.do line 130
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/immed_gen/instr'.
+# Executing ONERROR command at macro ./wave_abs.do line 131
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/immed_gen/imm'.
+# Executing ONERROR command at macro ./wave_abs.do line 132
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/opcode'.
+# Executing ONERROR command at macro ./wave_abs.do line 133
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/alu_src1'.
+# Executing ONERROR command at macro ./wave_abs.do line 134
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/reg_write'.
+# Executing ONERROR command at macro ./wave_abs.do line 135
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/branch_cond'.
+# Executing ONERROR command at macro ./wave_abs.do line 136
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/branch_uncond'.
+# Executing ONERROR command at macro ./wave_abs.do line 137
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/sel_mux_add_sum'.
+# Executing ONERROR command at macro ./wave_abs.do line 138
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/mem_to_reg'.
+# Executing ONERROR command at macro ./wave_abs.do line 139
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/contr/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 140
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 141
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 142
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 143
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 144
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 145
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 146
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 147
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_3/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 148
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 149
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 150
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 151
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 152
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 153
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 154
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 155
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 156
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 157
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 158
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 159
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 160
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 161
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 162
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 163
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_7/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 164
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 165
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 166
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 167
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_8/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 168
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 169
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 170
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 171
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_9/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 172
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 173
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 174
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 175
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_10/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 176
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 177
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 178
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 179
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 180
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 181
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 182
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 183
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_11/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 184
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 185
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 186
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 187
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_12/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 188
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 189
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 190
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 191
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_13/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 192
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 193
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 194
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 195
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ex_14/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 196
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 197
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 198
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 199
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_add_sum/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 200
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 201
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 202
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 203
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_alu/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 204
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/func3'.
+# Executing ONERROR command at macro ./wave_abs.do line 205
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/alu_op'.
+# Executing ONERROR command at macro ./wave_abs.do line 206
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/ctrl_alu/alu_ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 207
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_a'.
+# Executing ONERROR command at macro ./wave_abs.do line 208
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_b'.
+# Executing ONERROR command at macro ./wave_abs.do line 209
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/ctrl'.
+# Executing ONERROR command at macro ./wave_abs.do line 210
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/data_out'.
+# Executing ONERROR command at macro ./wave_abs.do line 211
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/alu_unit/zero'.
+# Executing ONERROR command at macro ./wave_abs.do line 212
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 213
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 214
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 215
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 216
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 217
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 218
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 219
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_2/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 220
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 221
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 222
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 223
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_3/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 224
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 225
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 226
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 227
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 228
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 229
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 230
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 231
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 232
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 233
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 234
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 235
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 236
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 237
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 238
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 239
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_7/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 240
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 241
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 242
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 243
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_8/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 244
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 245
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 246
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 247
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_9/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 248
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 249
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 250
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 251
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_10/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 252
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 253
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 254
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 255
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_12/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 256
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 257
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 258
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 259
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_13/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 260
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 261
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 262
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 263
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_14/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 264
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 265
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 266
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 267
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mem_15/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 268
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 269
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 270
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 271
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_1/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 272
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 273
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 274
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 275
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_4/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 276
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 277
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 278
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 279
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_5/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 280
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/d'.
+# Executing ONERROR command at macro ./wave_abs.do line 281
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/clk'.
+# Executing ONERROR command at macro ./wave_abs.do line 282
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/rst_n'.
+# Executing ONERROR command at macro ./wave_abs.do line 283
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/wb_6/q'.
+# Executing ONERROR command at macro ./wave_abs.do line 284
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 285
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 286
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 287
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_fin/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 288
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i0'.
+# Executing ONERROR command at macro ./wave_abs.do line 301
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i1'.
+# Executing ONERROR command at macro ./wave_abs.do line 302
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i2'.
+# Executing ONERROR command at macro ./wave_abs.do line 303
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/i3'.
+# Executing ONERROR command at macro ./wave_abs.do line 304
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/sel'.
+# Executing ONERROR command at macro ./wave_abs.do line 305
+# ** Error: (vish-4014) No objects found matching '/tb_RISC/RV/mux_mem/o'.
+# Executing ONERROR command at macro ./wave_abs.do line 306
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_RISC/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_RISC/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 2  Instance: /tb_RISC/DM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1025 ns  Iteration: 2  Instance: /tb_RISC/DM
+exit

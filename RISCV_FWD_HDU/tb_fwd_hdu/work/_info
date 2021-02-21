@@ -3,9 +3,15 @@ m255
 cModel Technology
 d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU/tb_fwd_hdu
 T_opt
-VF@E`=T;bZ66_E0a26<j5H0
+V?aQI4@2BU<cBlJRHinL_93
 06 7 4 ./work tb_RISC fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_RISC/RV=../innovus/RISC_V.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+T_opt1
+V8ib5ISGk5iSlZM7Ee;VSj3
+06 6 3 ./work risc_v beh 1
+o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
 Ealu
@@ -392,19 +398,6 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
-vRISC_V
-IgS0iN66]hW]EYoR9[:lUd0
-VU5hJ0koo:426a;ic<oTz62
-w1609690005
-8../innovus/RISC_V.v
-F../innovus/RISC_V.v
-L0 15
-VU5hJ0koo:426a;ic<oTz62
-OE;L;6.2g;35
-r1
-31
-o-work ./work
-n@r@i@s@c_@v
 vtb_RISC
 I7e7b4A_>`O]43<En3lPA]2
 V0Ue:i_odc3ThWBbTj60kG0

@@ -1,0 +1,32 @@
+H 2141964 11 3 0 12 16 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 6 ./work
+D 15 ./work.alu(beh) SU76PP9TIc<k^R5N`_a[l3 8 1
+D 23 ./work.alu_control(beh) QGTR41N[EK[_icff4Y7FE0 7 1
+D 19 ./work.control(beh) MdHjOI2oJQ`:cZYBIX>0l3 4 1
+D 20 ./work.ff(behaviour) `Ri8FMDRMo_:3Y8J72lC@2 6 1
+D 27 ./work.forwarding_unit(beh) =hRQBYko?M=?6e0SGWIeE1 10 1
+D 15 ./work.hdu(beh) hXKYXP7]1<]=4:WdL4:bO3 5 1
+D 19 ./work.imm_gen(beh) 4aNVKHQO6@G>K6odfL`^32 3 1
+D 31 ./work.mux_2to1_nbit(behaviour) ZQbmS;BWj]egG<<BlzgEj0 0 1
+D 31 ./work.mux_4to1_nbit(behaviour) gZja^AlT_e;R9X:EdbKH11 9 1
+D 25 ./work.regnbit(behaviour) D<fiVAamk:05@oZjEzhH82 1 1
+D 27 ./work.rf_32_32b(structure) 0abdS3fb2oj23zmUXb[QU0 2 1
+D 18 ./work.risc_v(beh) FDzM]X2>XNe>jEKAV0n^93 11 1
+2 0  1 I;_;hEU253E@zD4;Doobi3 1 1 1
+2 0  2 ?e7^FbAbPDgUlM]621JBh2 8 1 1
+2 0  3 Oa^<^Jn@WJ^9[?96IA`D`3 9 1 1
+2 0  4 8BQmhgLi2;nGT2YB6kmBe0 10 1 1
+2 0  0 HULDe1CLjb@CGHbSWCPn=1 2 2 1
+2 0  0 jZmCFQ0]0kE5Un]:g9J^Z2 7 6 1
+2 0  1 Gk^VYWG@O__ZZN0AQj@WG1 15 11 1
+2 0  0 `maJN_XV;RY2ZG^=PM60Q3 12 8 1
+2 0  0 id_2heAa>;<PBlPg]9eGJ0 11 7 1
+2 0  1 01zce2kPWVPGA`Y`SnGgk1 13 9 1
+2 0  0 oPkQPO99Vcoj>Oa6JHIVU2 5 5 1
+2 0  1 ?=C63WJ2iM@egl6zeAJPz0 0 0 1
+2 0  2 G9Iz[GPlZYljB:3I[CcOc0 6 0 1
+2 0  0 GP[W[2a;NjVabTF3lg?@n2 14 10 1
+2 0  0 e7:hVW8hg4^Rlljk4YWn^1 3 3 1
+2 0  0 H@Id5]dU1;hef?jlOLLNg2 4 4 1

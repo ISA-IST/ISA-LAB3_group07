@@ -19,8 +19,8 @@ vcom -93 -work ./work ./clk_gen.vhd
 vlog -work ./work ./tb_RISC.v
 
 vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_RISC/RV=../netlist/RISC_ABS.sdf work.tb_RISC
-vcd file ../vcd/RISCV_ABS_netlist.vcd
-vcd add /tb_RISC/RV/*
+#vcd file ../vcd/RISCV_ABS_netlist.vcd # questa riga è stata commentata per fare una prova
+#vcd add /tb_RISC/RV/* # questa riga è stata commentata per fare una prova
 
 #add wave -r *
 do wave_abs.do

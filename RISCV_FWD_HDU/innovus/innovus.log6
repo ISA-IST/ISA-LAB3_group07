@@ -1,0 +1,780 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	
+Date:		Sun Feb 14 01:29:09 2021
+Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+OS:		CentOS Linux release 7.6.1810 (Core) 
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+my_rc
+Loading view definition file from /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU/innovus/RISC_V_postroute_opt.enc.dat/viewDefinition.tcl
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+*** End library_loading (cpu=0.03min, real=0.07min, mem=28.1M, fe_cpu=0.50min, fe_real=2.70min, fe_mem=533.1M) ***
+*** Netlist is unique.
+Loading preference file /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_FWD_HDU/innovus/RISC_V_postroute_opt.enc.dat/gui.pref.tcl ...
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+'set_default_switching_activity' finished successfully.
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+my_rc
+<CMD> reset_parasitics
+Performing RC Extraction ...
+<CMD> extractRC
+Extraction called for design 'RISC_V' of instances=19127 and nets=7778 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design RISC_V.
+RC Extraction called in multi-corner(1) mode.
+Process corner(s) are loaded.
+ Corner: my_rc
+extractDetailRC Option : -outfile /tmp/innovus_temp_22527_localhost.localdomain_isa07_T8kONG/RISC_V_22527_Ag98jo.rcdb.d  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 901.6M)
+Extracted 10.0021% (CPU Time= 0:00:00.3  MEM= 982.6M)
+Extracted 20.0021% (CPU Time= 0:00:00.3  MEM= 985.6M)
+Extracted 30.0021% (CPU Time= 0:00:00.4  MEM= 985.6M)
+Extracted 40.0021% (CPU Time= 0:00:00.4  MEM= 986.6M)
+Extracted 50.0021% (CPU Time= 0:00:00.5  MEM= 988.6M)
+Extracted 60.0021% (CPU Time= 0:00:00.7  MEM= 989.6M)
+Extracted 70.0021% (CPU Time= 0:00:00.8  MEM= 990.6M)
+Extracted 80.0021% (CPU Time= 0:00:00.9  MEM= 991.6M)
+Extracted 90.0021% (CPU Time= 0:00:01.1  MEM= 992.6M)
+Extracted 100% (CPU Time= 0:00:01.5  MEM= 999.6M)
+Number of Extracted Resistors     : 146584
+Number of Extracted Ground Cap.   : 153784
+Number of Extracted Coupling Cap. : 250672
+Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
+ Corner: my_rc
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 983.6M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:02.0  Real Time: 0:00:03.0  MEM: 983.555M)
+<CMD> rcOut -setload RISC_V.setload -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 983.6M)
+<CMD> rcOut -setres RISC_V.setres -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 983.6M)
+<CMD> rcOut -spf RISC_V.spf -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+Printing *|NET...
+RC Out from RCDB Completed (CPU Time= 0:00:01.4  MEM= 983.6M)
+<CMD> rcOut -spef RISC_V.spef -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+Dumping Spef file.....
+Printing D_NET...
+RC Out from RCDB Completed (CPU Time= 0:00:00.6  MEM= 983.6M)
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir tb_RISC
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> read_activity_file -format VCD -scope tb_RISC/RV -start {} -end {} -block {} ../vcd/RISC_V_v2.vcd
+'read_activity_file' finished successfully.
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> set_dynamic_power_simulation -reset
+<CMD> report_power -rail_analysis_format VS -outfile tb_RISC/RISC_V.rpt
+
+Power Net Detected:
+    Voltage	    Name
+    0.00V	    VSS
+    1.10V	    VDD
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: RISC_V
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=983.555)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+AAE_INFO: 1 threads acquired from CTE.
+Total number of fetched objects 7778
+AAE_INFO-618: Total number of nets in the design is 7778,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1221.14 CPU=0:00:05.9 REAL=0:00:11.0)
+End delay calculation (fullDC). (MEM=1125.77 CPU=0:00:06.6 REAL=0:00:12.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1123.8M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1123.8M)
+Starting SI iteration 2
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=1131.82)
+Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 7778. 
+Total number of fetched objects 7778
+AAE_INFO-618: Total number of nets in the design is 7778,  0.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1099.82 CPU=0:00:00.1 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=1099.82 CPU=0:00:00.2 REAL=0:00:01.0)
+
+Begin Power Analysis
+
+    0.00V	    VSS
+    1.10V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=918.04MB/918.04MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+MY_CLK(100MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=918.17MB/918.17MB)
+
+Parsing VCD file ../vcd/RISC_V_v2.vcd
+
+Starting Reading VCD variables
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT)
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 10%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 20%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 30%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 40%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 50%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 60%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 70%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 80%
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT): 90%
+
+Finished Reading VCD variables
+2021-Feb-14 01:36:26 (2021-Feb-14 00:36:26 GMT)
+**ERROR: (VOLTUS-1007):	** ERROR: (VOLTUS_POWR-1210): CPE was unable to complete
+during the processing of VCD.
+The Error was: 
+** ERROR: (VOLTUS_POWR-1735):  [../vcd/RISC_V_v2.vcd line 121404, col 1] syntax error
+
+.
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Free PSO.
+**WARN: (IMPCK-8086):	The command setCTSMode is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+
+
+Info (SM2C): Status of key globals:
+	 MMMC-by-default flow     : 1
+	 Default MMMC objs envvar : 0
+	 Data portability         : 0
+	 MMMC PV Emulation        : 0
+	 MMMC debug               : 0
+	 Init_Design flow         : 1
+
+
+	 CTE SM2C global          : false
+	 Reporting view filter    : false
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+my_rc
+Loading view definition file from /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_abs/innovus/RISCV_ABS2.enc.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.03min, real=0.05min, mem=8.0M, fe_cpu=61.70min, fe_real=1373.72min, fe_mem=806.6M) ***
+*** Netlist is unique.
+Loading preference file /home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_abs/innovus/RISCV_ABS2.enc.dat/gui.pref.tcl ...
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+**WARN: analysis view MyAnView not found, use default_view_setup
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+'set_default_switching_activity' finished successfully.
+<CMD> setDrawView place
+my_rc
+<CMD> reset_parasitics
+Performing RC Extraction ...
+<CMD> extractRC
+Extraction called for design 'RISC_V' of instances=19946 and nets=8006 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design RISC_V.
+RC Extraction called in multi-corner(1) mode.
+Process corner(s) are loaded.
+ Corner: my_rc
+extractDetailRC Option : -outfile /tmp/innovus_temp_22527_localhost.localdomain_isa07_T8kONG/RISC_V_22527_8DZd1X.rcdb.d  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 975.1M)
+Extracted 10.0019% (CPU Time= 0:00:00.3  MEM= 1035.2M)
+Extracted 20.0018% (CPU Time= 0:00:00.3  MEM= 1035.2M)
+Extracted 30.0017% (CPU Time= 0:00:00.4  MEM= 1036.2M)
+Extracted 40.0016% (CPU Time= 0:00:00.5  MEM= 1037.2M)
+Extracted 50.0015% (CPU Time= 0:00:00.6  MEM= 1038.2M)
+Extracted 60.0014% (CPU Time= 0:00:00.7  MEM= 1039.2M)
+Extracted 70.0013% (CPU Time= 0:00:00.8  MEM= 1041.2M)
+Extracted 80.0012% (CPU Time= 0:00:00.9  MEM= 1042.2M)
+Extracted 90.0011% (CPU Time= 0:00:01.1  MEM= 1042.2M)
+Extracted 100% (CPU Time= 0:00:01.6  MEM= 1049.2M)
+Number of Extracted Resistors     : 148517
+Number of Extracted Ground Cap.   : 155942
+Number of Extracted Coupling Cap. : 251768
+Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
+ Corner: my_rc
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1033.2M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:02.0  Real Time: 0:00:02.0  MEM: 1033.188M)
+<CMD> rcOut -setload RISC_V.setload -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 1033.2M)
+<CMD> rcOut -setres RISC_V.setres -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 1033.2M)
+<CMD> rcOut -spf RISC_V.spf -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+Printing *|NET...
+RC Out from RCDB Completed (CPU Time= 0:00:01.4  MEM= 1033.2M)
+<CMD> rcOut -spef RISC_V.spef -rc_corner my_rc
+RC Out has the following PVT Info:
+   RC:my_rc, Operating temperature 25 C
+Dumping Spef file.....
+Printing D_NET...
+RC Out from RCDB Completed (CPU Time= 0:00:00.7  MEM= 1033.2M)
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir tb_RISC
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> read_activity_file -format VCD -scope tb_RISC/RV -start {} -end {} -block {} ../vcd/RISC_V_v2.vcd
+'read_activity_file' finished successfully.
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> set_dynamic_power_simulation -reset
+<CMD> report_power -rail_analysis_format VS -outfile tb_RISC/RISC_V.rpt
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: RISC_V
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=1033.19)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+AAE_INFO: 1 threads acquired from CTE.
+Total number of fetched objects 8006
+AAE_INFO-618: Total number of nets in the design is 8006,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1358.61 CPU=0:00:06.0 REAL=0:00:08.0)
+End delay calculation (fullDC). (MEM=1261.24 CPU=0:00:06.6 REAL=0:00:09.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1261.2M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1261.2M)
+Starting SI iteration 2
+AAE_INFO: 1 threads acquired from CTE.
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=1269.29)
+Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 8006. 
+Total number of fetched objects 8006
+AAE_INFO-618: Total number of nets in the design is 8006,  0.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1237.28 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1237.28 CPU=0:00:00.2 REAL=0:00:00.0)
+
+Begin Power Analysis
+
+    0.00V	    VSS
+    1.10V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=951.89MB/951.89MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=952.14MB/952.14MB)
+
+Parsing VCD file ../vcd/RISC_V_v2.vcd
+
+Starting Reading VCD variables
+2021-Feb-15 00:24:50 (2021-Feb-14 23:24:50 GMT)
+Innovus terminated by internal (SEGV) error/signal...
+*** Stack trace:
+*** Stack trace:
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0xe53733a]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0x6b)[0xe5376fb]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x38b68f5]
+/lib64/libpthread.so.0(+0xf5d0)[0x7f02698b85d0]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN16TAPropertyObject16getPropertyValueEP10TAProperty+0x72)[0xe78af12]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN8Pmnl_Net10createDataEv+0x1d)[0x10e07dcd]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZNK12Pmnl_Netlist4gNetEPKcRP8Pmnl_Net+0x2e)[0x10df297e]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN12Pmnl_Netlist17matchDesignObjectEP12Pmattr_AnnotiRK14Pmnl_DebugFlagPKcSscRiS7_RP8Pmnl_NetRbSB_SB_Pb+0x257)[0x10fa5357]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x10f787bd]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z9VcdVarCmdP7TVcdEnv11TVcdVarTypeiP12StringBuf_stxP7TVcdRef+0xb46)[0x1110bc66]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x11113b0c]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z18VcdParseDumpFileMTP7TVcdEnvP8_IO_FILE+0x198)[0x1110d3b8]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z6VcdCmdiPPcPKcccccccdbbbbddi+0x6e7)[0x11109a07]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN10VCD_Parser5ParseEv+0x39e)[0x10f7e34e]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN9Pmnli_VCDC1EPKcS1_S1_cPdS2_jjRiRfS4_RP12Pmnl_NetlistP17Pmparser_Reporter+0x555)[0x10f76ac5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN19Pmio_PowerMeterData12fnProcessVcdEP16Pmio_VcdFileInfoiPdS2_jR17Pmparser_Reporter+0x219)[0x10e634c9]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN19Pmio_PowerMeterData16fnProcessSimDataEb16Pmio_SimDataType+0x5f5)[0x10e72ad5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN14sxclPowerMeter9fnExecuteEPKcS1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_+0x4a05)[0x10cb0be5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x10c5e8a1]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z20CPEReportNativePowerPvP10Tcl_InterpiPPc+0x8431)[0x10c95101]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0xe33fa52]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x1f9)[0x101538a9]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0xb54)[0x1013c864]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(TclInvokeStringCommand+0x80)[0x12a21610]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x47)[0x12a25eb7]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x12a27fa0]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x12aeec24]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x12a27dda]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(Tcl_EvalEx+0x16)[0x12a289a6]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(Tcl_Eval+0x15)[0x12a289c5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z10qtfTclEvalPcb+0x69)[0xce1e4d9]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN8qtfsItem10fUpdateVarEv+0x307)[0xcdc49f7]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN11QMetaObject8activateEP7QObjectPKS_iPPv+0x29a)[0x7f026e0ec4ca]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN15QAbstractButton7clickedEb+0x32)[0x7f026ee4dbe2]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN22QAbstractButtonPrivate11emitClickedEv+0x33)[0x7f026eb72f83]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN22QAbstractButtonPrivate5clickEv+0x83)[0x7f026eb73fe3]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent+0x6c)[0x7f026eb740cc]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN7QWidget5eventEP6QEvent+0xbbb)[0x7f026e7b744b]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x8c)[0x7f026e76136c]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN12QApplication6notifyEP7QObjectP6QEvent+0x3d6)[0x7f026e769e56]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent+0x6d)[0x7f026e0d1e8d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_Eb+0x153)[0x7f026e7695e3]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN9QETWidget19translateMouseEventEPK7_XEvent+0xa5d)[0x7f026e7e160d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN12QApplication15x11ProcessEventEP7_XEvent+0x78e)[0x7f026e7dfbbe]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QEventDispatcherX1113processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x24e)[0x7f026e80873e]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xaa)[0x7f026faebe5a]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE+0x2f)[0x7f026e0d002f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0x17d)[0x7f026e0d032d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN16QCoreApplication4execEv+0x89)[0x7f026e0d75a9]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0xdf)[0x7f026faee87f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x259)[0x3958069]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(Tcl_MainEx+0x177)[0x12ae2f17]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(main+0x1d6)[0x3368176]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7f02689dd3d5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x38b3369]
+========================================
+               pstack
+========================================
+Thread 13 (Thread 0x7f0265f85700 (LWP 22595)):
+#0  0x00007f0268aaff73 in select () from /lib64/libc.so.6
+#1  0x0000000012b26118 in NotifierThreadProc ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7f025f479700 (LWP 22596)):
+#0  0x00007f0268a7fe2d in nanosleep () from /lib64/libc.so.6
+#1  0x00007f0268a7fcc4 in sleep () from /lib64/libc.so.6
+#2  0x000000000e550f7a in syiPeakMem(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7f025eb77700 (LWP 22600)):
+#0  0x00007f02698b7e3d in nanosleep () from /lib64/libpthread.so.0
+#1  0x00000000049b48f6 in rdaiLicRecheck(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f025bf09700 (LWP 22617)):
+#0  0x00007f02698b8361 in sigwait () from /lib64/libpthread.so.0
+#1  0x00000000038b35fd in ctrlCHandle(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f0247271700 (LWP 22929)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f026dfa89f6 in QWaitCondition::wait(QMutex*, unsigned long) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f026ecb4dde in QFileInfoGatherer::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#3  0x00007f026dfa7f4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x0000000003b00ad9 in create_head(void*) ()
+#5  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f0246a70700 (LWP 22930)):
+#0  0x00007f0268aaff73 in select () from /lib64/libc.so.6
+#1  0x00007f026e10359b in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f026e107d73 in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#3  0x00007f026e108472 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x00007f026e0d002f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#5  0x00007f026e0d032d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#6  0x00007f026dfa539f in QThread::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#7  0x00007f026e0add93 in QInotifyFileSystemWatcherEngine::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#8  0x00007f026dfa7f4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x0000000003b00ad9 in create_head(void*) ()
+#10 0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#11 0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f02368c9700 (LWP 24036)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f024557f700 (LWP 24037)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f0244d7e700 (LWP 26316)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110da0f in VcdEventsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f0244b7d700 (LWP 26317)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110d12f in Vcd_CBsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f02336b5700 (LWP 11669)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110da0f in VcdEventsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f02334b4700 (LWP 11670)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110d12f in Vcd_CBsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f02727de200 (LWP 22527)):
+#0  0x00007f0268a7fa89 in waitpid () from /lib64/libc.so.6
+#1  0x00007f02689fdde2 in do_system () from /lib64/libc.so.6
+#2  0x00007f02689fe191 in system () from /lib64/libc.so.6
+#3  0x000000000e537389 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x000000000e5376fb in syStackTrace ()
+#5  0x00000000038b68f5 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x000000000e78af12 in TAPropertyObject::getPropertyValue(TAProperty*) ()
+#8  0x0000000010e07dcd in Pmnl_Net::createData() ()
+#9  0x0000000010df297e in Pmnl_Netlist::gNet(char const*, Pmnl_Net*&) const ()
+#10 0x0000000010fa5357 in Pmnl_Netlist::matchDesignObject(Pmattr_Annot*, int, Pmnl_DebugFlag const&, char const*, std::string, char, int&, int&, Pmnl_Net*&, bool&, bool&, bool&, bool*) ()
+#11 0x0000000010f787bd in vcdFindVCDNodeP(char const*) ()
+#12 0x000000001110bc66 in VcdVarCmd(TVcdEnv*, TVcdVarType, int, StringBuf_st*, long long, TVcdRef*) ()
+#13 0x0000000011113b0c in vcdparse() ()
+#14 0x000000001110d3b8 in VcdParseDumpFileMT(TVcdEnv*, _IO_FILE*) ()
+#15 0x0000000011109a07 in VcdCmd(int, char**, char const*, char, char, char, char, char, char, double, bool, bool, bool, bool, double, double, int) ()
+#16 0x0000000010f7e34e in VCD_Parser::Parse() ()
+#17 0x0000000010f76ac5 in Pmnli_VCD::Pmnli_VCD(char const*, char const*, char const*, char, double*, double*, unsigned int, unsigned int, int&, float&, float&, Pmnl_Netlist*&, Pmparser_Reporter*) ()
+#18 0x0000000010e634c9 in Pmio_PowerMeterData::fnProcessVcd(Pmio_VcdFileInfo*, int, double*, double*, unsigned int, Pmparser_Reporter&) ()
+#19 0x0000000010e72ad5 in Pmio_PowerMeterData::fnProcessSimData(bool, Pmio_SimDataType) ()
+#20 0x0000000010cb0be5 in sxclPowerMeter::fnExecute(char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*) ()
+#21 0x0000000010c5e8a1 in CPEUpdatePower(Tcl_Interp*, char*) ()
+#22 0x0000000010c95101 in CPEReportNativePower(void*, Tcl_Interp*, int, char**) ()
+#23 0x000000000e33fa52 in reportPowerCmd(void*, Tcl_Interp*, int, char**) ()
+#24 0x00000000101538a9 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#25 0x000000001013c864 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#26 0x0000000012a21610 in TclInvokeStringCommand ()
+#27 0x0000000012a25eb7 in TclNRRunCallbacks ()
+#28 0x0000000012a27fa0 in TclEvalEx ()
+#29 0x0000000012aeec24 in TclSubstTokens ()
+#30 0x0000000012a27dda in TclEvalEx ()
+#31 0x0000000012a289a6 in Tcl_EvalEx ()
+#32 0x0000000012a289c5 in Tcl_Eval ()
+#33 0x000000000ce1e4d9 in qtfTclEval(char*, bool) ()
+#34 0x000000000cdc49f7 in qtfsItem::fUpdateVar() ()
+#35 0x00007f026e0ec4ca in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#36 0x00007f026ee4dbe2 in QAbstractButton::clicked(bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#37 0x00007f026eb72f83 in QAbstractButtonPrivate::emitClicked() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#38 0x00007f026eb73fe3 in QAbstractButtonPrivate::click() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#39 0x00007f026eb740cc in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#40 0x00007f026e7b744b in QWidget::event(QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#41 0x00007f026e76136c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#42 0x00007f026e769e56 in QApplication::notify(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#43 0x00007f026e0d1e8d in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#44 0x00007f026e7695e3 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#45 0x00007f026e7e160d in QETWidget::translateMouseEvent(_XEvent const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#46 0x00007f026e7dfbbe in QApplication::x11ProcessEvent(_XEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#47 0x00007f026e80873e in QEventDispatcherX11::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#48 0x00007f026faebe5a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#49 0x00007f026e0d002f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#50 0x00007f026e0d032d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#51 0x00007f026e0d75a9 in QCoreApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#52 0x00007f026faee87f in TqApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#53 0x0000000003958069 in edi_app_init(Tcl_Interp*) ()
+#54 0x0000000012ae2f17 in Tcl_MainEx ()
+#55 0x0000000003368176 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+[New LWP 11670]
+[New LWP 11669]
+[New LWP 26317]
+[New LWP 26316]
+[New LWP 24037]
+[New LWP 24036]
+[New LWP 22930]
+[New LWP 22929]
+[New LWP 22617]
+[New LWP 22600]
+[New LWP 22596]
+[New LWP 22595]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007f0268a7fa89 in waitpid () from /lib64/libc.so.6
+
+Thread 13 (Thread 0x7f0265f85700 (LWP 22595)):
+#0  0x00007f0268aaff73 in select () from /lib64/libc.so.6
+#1  0x0000000012b26118 in NotifierThreadProc ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 12 (Thread 0x7f025f479700 (LWP 22596)):
+#0  0x00007f0268a7fe2d in nanosleep () from /lib64/libc.so.6
+#1  0x00007f0268a7fcc4 in sleep () from /lib64/libc.so.6
+#2  0x000000000e550f7a in syiPeakMem(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 11 (Thread 0x7f025eb77700 (LWP 22600)):
+#0  0x00007f02698b7e3d in nanosleep () from /lib64/libpthread.so.0
+#1  0x00000000049b48f6 in rdaiLicRecheck(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 10 (Thread 0x7f025bf09700 (LWP 22617)):
+#0  0x00007f02698b8361 in sigwait () from /lib64/libpthread.so.0
+#1  0x00000000038b35fd in ctrlCHandle(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f0247271700 (LWP 22929)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f026dfa89f6 in QWaitCondition::wait(QMutex*, unsigned long) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f026ecb4dde in QFileInfoGatherer::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#3  0x00007f026dfa7f4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x0000000003b00ad9 in create_head(void*) ()
+#5  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f0246a70700 (LWP 22930)):
+#0  0x00007f0268aaff73 in select () from /lib64/libc.so.6
+#1  0x00007f026e10359b in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f026e107d73 in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#3  0x00007f026e108472 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x00007f026e0d002f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#5  0x00007f026e0d032d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#6  0x00007f026dfa539f in QThread::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#7  0x00007f026e0add93 in QInotifyFileSystemWatcherEngine::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#8  0x00007f026dfa7f4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x0000000003b00ad9 in create_head(void*) ()
+#10 0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#11 0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f02368c9700 (LWP 24036)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f024557f700 (LWP 24037)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f0244d7e700 (LWP 26316)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110da0f in VcdEventsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f0244b7d700 (LWP 26317)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110d12f in Vcd_CBsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f02336b5700 (LWP 11669)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110da0f in VcdEventsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f02334b4700 (LWP 11670)):
+#0  0x00007f02698b4965 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000001110d12f in Vcd_CBsThread::ThreadMain() ()
+#2  0x00000000125f6ddd in Mproc_Thread::hThreadMain() ()
+#3  0x00000000125f6fc4 in Mproc_Thread::hThreadDriver() ()
+#4  0x00000000125f7009 in Mproc_PthreadsThreadLauncher ()
+#5  0x0000000003b00ad9 in create_head(void*) ()
+#6  0x00007f02698b0dd5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f0268ab8ead in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f02727de200 (LWP 22527)):
+#0  0x00007f0268a7fa89 in waitpid () from /lib64/libc.so.6
+#1  0x00007f02689fdde2 in do_system () from /lib64/libc.so.6
+#2  0x00007f02689fe191 in system () from /lib64/libc.so.6
+#3  0x000000000e537389 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x000000000e5376fb in syStackTrace ()
+#5  0x00000000038b68f5 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x000000000e78af12 in TAPropertyObject::getPropertyValue(TAProperty*) ()
+#8  0x0000000010e07dcd in Pmnl_Net::createData() ()
+#9  0x0000000010df297e in Pmnl_Netlist::gNet(char const*, Pmnl_Net*&) const ()
+#10 0x0000000010fa5357 in Pmnl_Netlist::matchDesignObject(Pmattr_Annot*, int, Pmnl_DebugFlag const&, char const*, std::string, char, int&, int&, Pmnl_Net*&, bool&, bool&, bool&, bool*) ()
+#11 0x0000000010f787bd in vcdFindVCDNodeP(char const*) ()
+#12 0x000000001110bc66 in VcdVarCmd(TVcdEnv*, TVcdVarType, int, StringBuf_st*, long long, TVcdRef*) ()
+#13 0x0000000011113b0c in vcdparse() ()
+#14 0x000000001110d3b8 in VcdParseDumpFileMT(TVcdEnv*, _IO_FILE*) ()
+#15 0x0000000011109a07 in VcdCmd(int, char**, char const*, char, char, char, char, char, char, double, bool, bool, bool, bool, double, double, int) ()
+#16 0x0000000010f7e34e in VCD_Parser::Parse() ()
+#17 0x0000000010f76ac5 in Pmnli_VCD::Pmnli_VCD(char const*, char const*, char const*, char, double*, double*, unsigned int, unsigned int, int&, float&, float&, Pmnl_Netlist*&, Pmparser_Reporter*) ()
+#18 0x0000000010e634c9 in Pmio_PowerMeterData::fnProcessVcd(Pmio_VcdFileInfo*, int, double*, double*, unsigned int, Pmparser_Reporter&) ()
+#19 0x0000000010e72ad5 in Pmio_PowerMeterData::fnProcessSimData(bool, Pmio_SimDataType) ()
+#20 0x0000000010cb0be5 in sxclPowerMeter::fnExecute(char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*) ()
+#21 0x0000000010c5e8a1 in CPEUpdatePower(Tcl_Interp*, char*) ()
+#22 0x0000000010c95101 in CPEReportNativePower(void*, Tcl_Interp*, int, char**) ()
+#23 0x000000000e33fa52 in reportPowerCmd(void*, Tcl_Interp*, int, char**) ()
+#24 0x00000000101538a9 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#25 0x000000001013c864 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#26 0x0000000012a21610 in TclInvokeStringCommand ()
+#27 0x0000000012a25eb7 in TclNRRunCallbacks ()
+#28 0x0000000012a27fa0 in TclEvalEx ()
+#29 0x0000000012aeec24 in TclSubstTokens ()
+#30 0x0000000012a27dda in TclEvalEx ()
+#31 0x0000000012a289a6 in Tcl_EvalEx ()
+#32 0x0000000012a289c5 in Tcl_Eval ()
+#33 0x000000000ce1e4d9 in qtfTclEval(char*, bool) ()
+#34 0x000000000cdc49f7 in qtfsItem::fUpdateVar() ()
+#35 0x00007f026e0ec4ca in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#36 0x00007f026ee4dbe2 in QAbstractButton::clicked(bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#37 0x00007f026eb72f83 in QAbstractButtonPrivate::emitClicked() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#38 0x00007f026eb73fe3 in QAbstractButtonPrivate::click() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#39 0x00007f026eb740cc in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#40 0x00007f026e7b744b in QWidget::event(QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#41 0x00007f026e76136c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#42 0x00007f026e769e56 in QApplication::notify(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#43 0x00007f026e0d1e8d in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#44 0x00007f026e7695e3 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#45 0x00007f026e7e160d in QETWidget::translateMouseEvent(_XEvent const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#46 0x00007f026e7dfbbe in QApplication::x11ProcessEvent(_XEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#47 0x00007f026e80873e in QEventDispatcherX11::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#48 0x00007f026faebe5a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#49 0x00007f026e0d002f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#50 0x00007f026e0d032d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#51 0x00007f026e0d75a9 in QCoreApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#52 0x00007f026faee87f in TqApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#53 0x0000000003958069 in edi_app_init(Tcl_Interp*) ()
+#54 0x0000000012ae2f17 in Tcl_MainEx ()
+#55 0x0000000003368176 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 22527] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+
+*** Memory Usage v#1 (Current mem = 1178.520M, initial mem = 179.684M) ***
+*** Message Summary: 29 warning(s), 4 error(s)
+
+--- Ending "Innovus" (totcpu=1:02:06, real=22:57:41, mem=1178.5M) ---

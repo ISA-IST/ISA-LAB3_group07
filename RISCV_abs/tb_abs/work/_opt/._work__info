@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa07/Desktop/ISA-LAB3_group07/ISA-LAB3_group07/RISCV_abs/tb_abs
 T_opt
-V^UK0^8=ODK=_HA1PJaE^=0
+VN6T3kU:CP<IFO:z5lCYK52
 06 7 4 ./work tb_RISC fast 0
 o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_RISC/RV=../innovus/RISCV_ABS_innovus.sdf -suppress 1948
 tExplicit 1
@@ -136,7 +136,7 @@ M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Edata_memory
-w1609325925
+w1609091686
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 31
@@ -157,7 +157,7 @@ M2 ieee std_logic_1164
 M1 ieee numeric_std
 l21
 L15
-Vjzc[4Kl4aoYBjPBz?jJLP0
+VMDjCZJ6]Db>Eb1hCiG?d@0
 OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1

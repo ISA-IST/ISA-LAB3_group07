@@ -68,7 +68,7 @@ CTRL_GEN : PROCESS(OPCODE)
 
 						WHEN "0010011"  =>       --ADDI, ANDI, SRAI
 							SEL_MUX_MEM <= "10";
-							ALU_SRC1 <= '1'; -- ATTENZIONE!!
+							ALU_SRC1 <= '1'; 
 							ALU_OP <= "11";
 							REG_WRITE <= '1'; --(INSERTED LATER)
 

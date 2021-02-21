@@ -14,10 +14,10 @@ analyze -f vhdl -lib  WORK ../src/forwarding_unit.vhd
 analyze -f vhdl -lib  WORK ../src/RISC-V-forward.vhd
 
 
-elaborate RISC_V -arch beh -lib WORK > ./elaborate_RISCV_ABS_max_speed2.txt
+elaborate RISC_V -arch beh -lib WORK > ./elaborate_RISCV_ABS_max_speed4.txt
 uniquify
 link
-create_clock -name  MY_CLK -period 2.62 CLK
+create_clock -name  MY_CLK -period 2.70 CLK
 set_dont_touch_network MY_CLK
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 
@@ -29,12 +29,12 @@ set_load $OLOAD [all_outputs]
 
 compile -exact_map
 
-check_design > check_design_RISCV_ABS_max_speed2.txt
-report_timing > ./timing/timing_RISC_ABS_max_speed2.txt
-report_area > ./area/area_RISC_ABS_max_speed2.txt
+check_design > check_design_RISCV_ABS_max_speed4.txt
+report_timing > ./timing/timing_RISC_ABS_max_speed4.txt
+report_area > ./area/area_RISC_ABS_max_speed4.txt
 ungroup -all -flatten
 
-change_names -hierarchy -rules verilog
-write_sdf ../netlist/RISC_ABS_max_speed2.sdf
-write -f verilog -hierarchy -output ../netlist/RISC_ABS_max_speed2.v
-write_sdc ../netlist/RISC_ABS_max_speed2.sdc
+#change_names -hierarchy -rules verilog
+#write_sdf ../netlist/RISC_ABS_max_speed2.sdf
+#write -f verilog -hierarchy -output ../netlist/RISC_ABS_max_speed2.v
+#write_sdc ../netlist/RISC_ABS_max_speed2.sdc
